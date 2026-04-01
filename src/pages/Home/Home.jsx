@@ -4,6 +4,7 @@ const Home = () => {
      return (
           <div>
                <Hero></Hero>
+               <div className="border bg-secondary h-screen"></div>
           </div>
      );
 };

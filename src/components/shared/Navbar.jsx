@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-2 group">
           <img src="/public/Promozen-logo.png" className="w-10" alt="" />
-          <span className="text-white font-bold text-xl tracking-tight poppins">
+          <span className="text-white font-bold text-2xl tracking-tight poppins">
             Promo<span className="text-primary">zen</span>
           </span>
         </Link>

@@ -2,15 +2,15 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full bg-[#0B0B0B] overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen w-full bg-[#0B0B0B] overflow-hidden flex items-center justify-center ">
       {/* Background Grid - ঐ ইমেজের মতো গ্রিড ইফেক্ট দিতে */}
-      <div className="absolute inset-0 z-0 opacity-30" 
+      <div className="absolute inset-0 z-0 opacity-35" 
         style={{ backgroundImage: `linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)`, backgroundSize: '60px 60px' }}>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-24 lg:pt-0 flex flex-col lg:flex-row items-center gap-12">
-        <div className="flex-1 space-y-6 text-center lg:text-left">
+      <div className="relative z-10 lg:max-w-3/4 border mx-auto px-6 pt-24 lg:pt-0 flex flex-col lg:flex-row items-center gap-14">
+        <div className="flex-4 space-y-6 text-center lg:text-left">
            <span className="inline-block px-4 py-1.5 rounded-full bg-accent border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
              ● Premium Digital Agency
            </span>
@@ -25,8 +25,8 @@ const Hero = () => {
         </div>
         
         {/* Right side image section matching your reference */}
-        <div className="flex-1 relative">
-          <img src="/public/Promozen team.jpeg" alt="" />
+        <div className="flex-3 relative">
+          <img src="/public/Promozen team.jpeg" className='rounded-2xl w-fit h-[450px]' alt="" />
         </div>
       </div>
     </section>

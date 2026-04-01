@@ -1,0 +1,11 @@
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+        <h2 className='text-4xl text-secondary font-semibold text-center mt-20'>Hey This is Promozen</h2>
+    </div>
+  );
+};
+
+export default App;

@@ -50,12 +50,10 @@ const Navbar = () => {
         </Link>
 
         <div className="flex gap-10">
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-9 inter">
             <NavLink to="/" className={({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : 'text-accent'}`}>Home</NavLink>
             <NavLink to="/about" className="text-sm font-medium text-white hover:text-primary transition-colors">About</NavLink>
-
             {/* Services Dropdown Trigger */}
             <div
               className="relative group"

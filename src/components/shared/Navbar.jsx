@@ -11,8 +11,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  // Scroll effect logic
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -35,15 +35,15 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
-          ? "bg-secondary/80 backdrop-blur-lg border-b border-white/5 py-3"
-          : "bg-transparent py-5"
+        ? "bg-secondary/80 backdrop-blur-lg border-b border-white/5 py-3"
+        : "bg-transparent py-5"
         }`}
     >
       <div className="lg:max-w-3/4 mx-auto px-5 lg:px-5 flex items-center justify-between">
 
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-2 group">
-          <img src="/public/Promozen-logo.png" className="w-10" alt="" />
+          <img src="/Promozen-logo.png" className="w-10" alt="Logo" />
           <span className="text-white font-bold text-2xl tracking-tight poppins">
             Promo<span className="text-primary">zen</span>
           </span>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-9 inter">
             <NavLink to="/" className={({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : 'text-accent'}`}>Home</NavLink>
             <NavLink to="/about" className="text-sm font-medium text-white hover:text-primary transition-colors">About</NavLink>
-            {/* Services Dropdown Trigger */}
+
             <div
               className="relative group"
               onMouseEnter={() => setServicesOpen(true)}
@@ -64,7 +64,6 @@ const Navbar = () => {
                 Services <HiChevronDown className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Mega Menu Dropdown */}
               <AnimatePresence>
                 {servicesOpen && (
                   <motion.div
@@ -80,7 +79,7 @@ const Navbar = () => {
                           to={`/services/${item.title.toLowerCase().replace(/ /g, '-')}`}
                           className="flex gap-4 p-3 rounded-lg hover:bg-primary/5 transition-all group/item"
                         >
-                          <div className="text-primary text-2xl transition-transform bg-primary/5 py-5 px-5 rounded-xl flex items-center">
+                          <div className="text-primary text-xl transition-transform bg-primary/5 py-3 px-3 rounded-xl flex items-center ">
                             {item.icon}
                           </div>
                           <div>
@@ -103,53 +102,78 @@ const Navbar = () => {
             <NavLink to="/contact" className="text-sm font-medium text-white hover:text-primary transition-colors">Contact</NavLink>
           </div>
 
-          {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Link to="/contact" className="hidden md:block bg-primary hover:bg-yellow-500 text-secondary px-6 py-2.5 rounded-lg font-bold text-sm transition-all hover:shadow-[0_0_20px_rgba(242,201,76,0.3)] active:scale-95">
+            <Link to="/contact" className="hidden md:block bg-primary text-secondary px-6 py-2.5 rounded-lg font-bold inter text-sm transition-all hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.1)] active:scale-95">
               Get Started
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-white text-3xl cursor-pointer"
+              className="lg:hidden text-base-100/90 text-3xl cursor-pointer"
             >
               {mobileMenuOpen ? <HiXMark /> : <HiBars3 />}
             </button>
           </div>
         </div>
       </div>
-
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "tween", duration: 0.4 }}
-            className="fixed inset-0 h-screen w-full bg-secondary z-[110] flex flex-col p-8 lg:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className={`fixed inset-0 h-fit w-full z-[110] flex flex-col p-6 lg:hidden transition-all duration-400 inter
+              ${scrolled
+                ? "mt-16 bg-[#0B0B0B] backdrop-blur-3xl "
+                : "mt-20 bg-[#0B0B0B]/60 backdrop-blur-xl "
+              }`}
           >
-            <div className="flex justify-between items-center mb-10">
-              <span className="text-white font-bold text-2xl">Promo<span className="text-primary">zen</span></span>
-              <HiXMark className="text-white text-4xl cursor-pointer" onClick={() => setMobileMenuOpen(false)} />
-            </div>
+            {/* Nav Links [Mark: Change] */}
+            <div className="flex flex-col gap-8 text-lg font-medium overflow-y-auto pb-10">
+              <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Home</NavLink>
+              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>About</NavLink>
 
-            <div className="flex flex-col gap-6 text-xl font-medium">
-              <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-primary transition-colors">Home</Link>
-              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-primary transition-colors">About</Link>
+              <div className="flex flex-col">
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="flex items-center justify-between text-base-100/75 w-full text-left"
+                >
+                  Services
+                  <HiChevronDown className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180 text-primary' : ''}`} />
+                </button>
 
-              <div className="border-y border-white/10 py-4">
-                <p className="text-gray-500 text-sm mb-4 uppercase tracking-widest">Our Services</p>
-                <div className="grid grid-cols-1 gap-4 max-h-[300px] overflow-y-auto pr-2">
-                  {serviceItems.map((item, idx) => (
-                    <Link key={idx} to="/" className="flex items-center gap-3 text-white text-base">
-                      <span className="text-primary">{item.icon}</span> {item.title}
-                    </Link>
-                  ))}
-                </div>
+                <AnimatePresence>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-y-scroll flex flex-col gap-5 mt-5 ml-2 border-l border-base-100/10 pl-5"
+                    >
+                      {serviceItems?.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/services/${item.title.toLowerCase().replace(/ /g, '-')}`}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center gap-3 text-base-100/55 text-sm hover:text-primary transition-colors"
+                        >
+                          <span className="text-primary text-lg">{item.icon}</span>
+                          {item.title}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
-              <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-primary transition-colors">Portfolio</Link>
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-primary text-secondary text-center py-4 rounded-xl mt-4 font-bold">Get Started</Link>
+              <NavLink to="/portfolio" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Portfolio</NavLink>
+              <NavLink to="/team" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Team</NavLink>
+              <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Contact</NavLink>
+              {/* Mobile CTA [Mark: Change] */}
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-primary text-secondary text-center text-[15px] py-2.5 rounded-xl mt-3 font-bold tracking-wide active:scale-95 transition-transform">
+                Get Started
+              </Link>
             </div>
           </motion.div>
         )}

@@ -6,6 +6,7 @@ import {
   FiTarget, FiSearch, FiShare2, FiPenTool,
   FiYoutube, FiTrendingUp, FiLayers, FiCode
 } from "react-icons/fi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +21,9 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const activeClass = ({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`
+  const desktopActiveClass = ({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary font-semibold' : 'text-base-100/85'}` 
 
   const serviceItems = [
     { title: "Digital Marketing", desc: "Strategic campaigns that drive ROI", icon: <FiTarget /> },
@@ -52,15 +56,15 @@ const Navbar = () => {
         <div className="flex gap-10">
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-9 inter">
-            <NavLink to="/" className={({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : 'text-accent'}`}>Home</NavLink>
-            <NavLink to="/about" className="text-sm font-medium text-white hover:text-primary transition-colors">About</NavLink>
+            <NavLink to="/" className={desktopActiveClass}>Home</NavLink>
+            <NavLink to="/about" className={desktopActiveClass}>About</NavLink>
 
             <div
               className="relative group"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-white hover:text-primary transition-colors cursor-pointer">
+              <button className="flex items-center gap-1 text-sm font-medium text-base-100/85 hover:text-primary transition-colors cursor-pointer">
                 Services <HiChevronDown className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -90,16 +94,16 @@ const Navbar = () => {
                       ))}
                     </div>
                     <div className="mt-6 pt-4 border-t border-white/5">
-                      <Link to="/services" className="text-primary text-xs font-bold hover:underline">View All Services →</Link>
+                      <Link to="/services" className="text-primary flex items-center gap-1 group text-xs font-bold hover:underline">View All Services <FaArrowRightLong /></Link>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
-            <NavLink to="/portfolio" className="text-sm font-medium text-white hover:text-primary transition-colors">Portfolio</NavLink>
-            <NavLink to="/team" className="text-sm font-medium text-white hover:text-primary transition-colors">Team</NavLink>
-            <NavLink to="/contact" className="text-sm font-medium text-white hover:text-primary transition-colors">Contact</NavLink>
+            <NavLink to="/portfolio" className={desktopActiveClass}>Portfolio</NavLink>
+            <NavLink to="/team" className={desktopActiveClass}>Team</NavLink>
+            <NavLink to="/contact" className={desktopActiveClass}>Contact</NavLink>
           </div>
 
           <div className="flex items-center gap-4">
@@ -131,8 +135,8 @@ const Navbar = () => {
           >
             {/* Nav Links [Mark: Change] */}
             <div className="flex flex-col gap-8 text-lg font-medium overflow-y-auto pb-10">
-              <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Home</NavLink>
-              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>About</NavLink>
+              <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Home</NavLink>
+              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={activeClass}>About</NavLink>
 
               <div className="flex flex-col">
                 <button
@@ -167,9 +171,9 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              <NavLink to="/portfolio" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Portfolio</NavLink>
-              <NavLink to="/team" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Team</NavLink>
-              <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`}>Contact</NavLink>
+              <NavLink to="/portfolio" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Portfolio</NavLink>
+              <NavLink to="/team" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Team</NavLink>
+              <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Contact</NavLink>
               {/* Mobile CTA [Mark: Change] */}
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-primary text-secondary text-center text-[15px] py-2.5 rounded-xl mt-3 font-bold tracking-wide active:scale-95 transition-transform">
                 Get Started

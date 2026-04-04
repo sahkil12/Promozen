@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Subtle Glow */}
       <div className="absolute top-1/4 md:top-1/10 -right-20 md:right-20 w-[550px] h-96 bg-primary/10 blur-[110px] rounded-full"></div>
 
-      <div className="absolute bottom-1/4 left-20 lg:bottom-1/16 lg:left-220 w-[300px] h-80 bg-primary/10 blur-[110px] rounded-full hidden md:flex"></div>
+      <div className="absolute bottom-1/4 left-20 lg:bottom-1/6 lg:left-220 w-[300px] h-80 bg-primary/10 blur-[110px] rounded-full hidden md:flex"></div>
 
       <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-3 md:px-6 flex flex-col lg:flex-row items-center gap-16 lg:gap-12 inter pt-10 md:pt-0">
         {/* Left Side: Content */}

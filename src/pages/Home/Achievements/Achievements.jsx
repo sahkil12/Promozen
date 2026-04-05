@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
      FiGlobe,
@@ -7,6 +6,7 @@ import {
      FiClock,
      FiCheckCircle
 } from 'react-icons/fi';
+import { cardVariants, containerVariants, textContainerVariants, textVariants } from '../../../utils/animationsValue';
 
 const Achievements = () => {
      // Stats Card Data
@@ -36,7 +36,6 @@ const Achievements = () => {
                desc: "Round-the-clock support to ensure your campaigns never miss a beat."
           }
      ];
-
      // Trust Points Data
      const trustPoints = [
           "Google Ads & Meta Ads Certified Team",
@@ -72,10 +71,16 @@ const Achievements = () => {
                          </p>
                     </div>
                     {/* Stats Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                    <motion.div
+                         variants={containerVariants}
+                         initial="hidden"
+                         whileInView='show'
+                         viewport={{ once: true }}
+                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
                          {stats.map((stat, index) => (
                               <motion.div
                                    key={index}
+                                   variants={cardVariants}
                                    whileHover={{ y: -8 }}
                                    className="group p-8 rounded-2xl bg-[#121212]/50 border border-base-100/5 hover:border-primary/40 transition-all duration-500 text-center"
                               >
@@ -89,29 +94,36 @@ const Achievements = () => {
                                    </p>
                               </motion.div>
                          ))}
-                    </div>
-
+                    </motion.div>
                     {/* Why Clients Trust Us Section */}
                     <div className="relative p-12 rounded-[2rem] bg-[#121212]/30 border border-primary/5 overflow-hidden hover:border-primary/20 transition-colors">
                          {/* Internal Glow */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
                          <h3 className="text-2xl font-bold text-center mb-12 poppins">
                               Why Clients <span className="text-primary">Trust Us</span>
                          </h3>
 
-                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
+                         <motion.div
+                              variants={textContainerVariants}
+                              initial="hidden"
+                              whileInView='show'
+                              viewport={{ once: true }}
+                              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
                               {trustPoints.map((point, index) => (
-                                   <div key={index} className="flex items-center gap-4 group">
+                                   <motion.div
+                                        variants={textVariants}
+                                        key={index}
+                                        className="flex items-center gap-4 group">
                                         <div className="flex-shrink-0 text-primary text-xl group-hover:scale-125 transition-transform">
                                              <FiCheckCircle />
                                         </div>
                                         <span className="text-gray-300 group-hover:text-base-100 transition-colors">
                                              {point}
                                         </span>
-                                   </div>
+                                   </motion.div >
                               ))}
-                         </div>
+                         </motion.div >
                     </div>
                </div>
           </section>

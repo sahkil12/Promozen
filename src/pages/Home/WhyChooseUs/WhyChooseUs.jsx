@@ -76,6 +76,7 @@ const WhyChooseUs = () => {
                          variants={containerVariants}
                          initial="hidden"
                          whileInView='show'
+                         viewport={{ once: true }}
                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                          {features.map((feature, index) => (
                               <motion.div
@@ -87,7 +88,6 @@ const WhyChooseUs = () => {
                                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-primary/15 flex items-center justify-center text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
                                         {feature.icon}
                                    </div>
-
                                    {/* Text Content */}
                                    <div>
                                         <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors poppins">

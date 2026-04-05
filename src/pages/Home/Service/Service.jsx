@@ -42,15 +42,22 @@ const Service = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0, transition: { duration: 0.32, ease: "easeIn" } },
   };
 
 
   return (
     <section className="relative py-24 bg-secondary overflow-hidden border-t border-base-300/5 inter">
-
+      <div
+        className="absolute inset-0 z-0 opacity-10"
+        style={{
+          backgroundImage: `linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      ></div>
       <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
+
         {/* Header Section */}
         <div className="mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
@@ -74,7 +81,7 @@ const Service = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group relative p-8 rounded-2xl bg-[#121212] border border-primary/10 hover:border-primary/45 transition-all duration-300 flex flex-col h-full hover:drop-shadow[0_0_20px_rgba(242,201,76,0.1)] active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] hover:-translate-y-2.5 active:-translate-y-2.5
+              className="group relative p-8 rounded-2xl bg-[#121212] border-2 border-primary/5 hover:border-primary/25 transition-all duration-300 flex flex-col h-full hover:drop-shadow[0_0_20px_rgba(242,201,76,0.1)] active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] hover:-translate-y-2.5 active:-translate-y-2.5
               "
             >
               <Link to={service.link}>

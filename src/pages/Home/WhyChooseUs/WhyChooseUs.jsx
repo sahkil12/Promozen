@@ -7,6 +7,7 @@ import {
      FiShield,
      FiHeart
 } from 'react-icons/fi';
+import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 
 const WhyChooseUs = () => {
      const features = [
@@ -70,17 +71,16 @@ const WhyChooseUs = () => {
                               We don't just deliver services — we deliver results that transform your business.
                          </p>
                     </div>
-
                     {/* Features Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <motion.div
+                         variants={containerVariants}
+                         initial="hidden"
+                         whileInView='show'
+                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                          {features.map((feature, index) => (
                               <motion.div
                                    key={index}
-                                   initial={{ opacity: 0, y: 20 }}
-                                   whileInView={{ opacity: 1, y: 0 }}
-                                   viewport={{ once: true }}
-                                   transition={{ delay: index * 0.1 }}
-                                   whileHover={{ y: -5 }}
+                                   variants={cardVariants}
                                    className="group relative p-8 rounded-2xl bg-[#121212]/50 border-2 border-primary/5 hover:border-primary/25 transition-all duration-500 flex items-start gap-5"
                               >
                                    {/* Icon Box */}
@@ -102,7 +102,7 @@ const WhyChooseUs = () => {
                                    <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity -z-10"></div>
                               </motion.div>
                          ))}
-                    </div>
+                    </motion.div>
                </div>
           </section>
      );

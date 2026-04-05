@@ -3,6 +3,7 @@ import { FiSearch, FiShare2, FiPenTool, FiArrowRight, FiCode, FiLayers } from 'r
 import { IoColorPaletteOutline } from 'react-icons/io5';
 import { TfiAnnouncement } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
+import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 
 const Service = () => {
   const services = [
@@ -30,22 +31,7 @@ const Service = () => {
       icon: <FiCode />,
       link: "services/web-development"
     }
-  ];
-
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.09,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.32, ease: "easeIn" } },
-  };
-
+  ]; 
 
   return (
     <section className="relative py-24 bg-secondary overflow-hidden border-t border-base-300/5 inter">

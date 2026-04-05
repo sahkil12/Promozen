@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full bg-[#0B0B0B] overflow-hidden flex items-center justify-center pt-20">
+    <section className="relative min-h-screen w-full bg-secondary overflow-hidden flex items-center justify-center pt-20">
       {/* Background Grid */}
       <div
         className="absolute inset-0 z-0 opacity-30"

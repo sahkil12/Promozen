@@ -4,9 +4,9 @@ import Navbar from "../components/shared/Navbar";
 
 const MainLayout = () => {
      return (
-          <div className="bg-base-200 text-accent overflow-x-hidden">
+          <div className="bg-secondary text-accent overflow-x-hidden">
                <Navbar></Navbar>
-               <section className="min-h-[calc(100vh-743px)]">
+               <section className="min-h-[calc(100vh-460px)]">
                     <Outlet></Outlet>
                </section>
                <Footer></Footer>

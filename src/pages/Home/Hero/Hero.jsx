@@ -1,22 +1,8 @@
-import { FiArrowUpRight, FiPlayCircle } from "react-icons/fi";
 import { motion } from 'framer-motion';
+import { FiArrowUpRight, FiPlayCircle } from "react-icons/fi";
+import { heroChildVariants, heroContainerVariants } from "../../../utils/animationsValue";
 
 const Hero = () => {
-
-  const heroContainerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: .20
-      },
-    }
-  }
-
-  const heroChildVariants = {
-    hidden: { opacity: 0, y: 35 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
 
   return (
     <section className="relative min-h-screen w-full bg-secondary overflow-hidden flex items-center justify-center pt-20">
@@ -52,7 +38,7 @@ const Hero = () => {
           {/* Heading */}
           <motion.h1
             variants={heroChildVariants}
-            className="text-5xl poppins md:text-6xl lg:text-7xl font-bold text-white leading-tight lg:leading-[1.1]">
+            className="text-5xl poppins md:text-6xl lg:text-7xl font-bold text-base-100 leading-tight lg:leading-[1.1]">
             We Grow Your <br />
             Brand <span className="text-primary drop-shadow-[0_0_15px_rgba(242,201,76,0.3)]">Digitally</span>
           </motion.h1>
@@ -69,7 +55,7 @@ const Hero = () => {
             <button className="btn btn-primary h-auto py-4 px-8 rounded-xl font-bold text-base border-none hover:scale-105 transition-transform flex items-center gap-2 group text-base-200">
               Start a Project <FiArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
-            <button className="btn btn-ghost h-auto py-4 px-8 rounded-xl font-bold text-base text-white border border-white/10 hover:bg-white/5 flex items-center gap-2">
+            <button className="btn btn-ghost h-auto py-4 px-8 rounded-xl font-bold text-base text-base-100 border border-base-100/10 hover:bg-base-100/5 flex items-center gap-2">
               <FiPlayCircle size={22} className="text-primary animate-pulse" /> View Our Work
             </button>
           </motion.div>
@@ -89,24 +75,24 @@ const Hero = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="flex-5 relative group">
-          <div className="relative p-2 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent border border-white/5 backdrop-blur-sm shadow-2xl hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] transition-all duration-300 hover:-translate-y-1.5">
+          <div className="relative p-2 rounded-[2rem] bg-gradient-to-br from-base-100/10 to-transparent border border-base-100/5 backdrop-blur-sm shadow-2xl hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] transition-all duration-300 hover:-translate-y-1.5">
             <img
               src="/Promozen team.jpeg"
               className="rounded-[1.8rem] w-full h-[560px] object-cover object-top"
               alt="Promozen Team"
             />
             {/* Team Info Overlay */}
-            <div className="absolute bottom-4 left-6 right-6 p-5 rounded-2xl bg-secondary/60 backdrop-blur-md border border-white/10 flex items-center gap-4">
+            <div className="absolute bottom-4 left-6 right-6 p-5 rounded-2xl bg-secondary/60 backdrop-blur-md border border-base-100/10 flex items-center gap-4">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></div>
               <div>
-                <p className="text-white font-bold text-sm">The Promozen Team</p>
+                <p className="text-base-100 font-bold text-sm">The Promozen Team</p>
                 <p className="text-gray-400 text-[10px] uppercase tracking-wider">Ready to grow your brand</p>
               </div>
             </div>
           </div>
           {/* Background decorative element */}
-          <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border-2 border-primary/15 
-          rounded-[2rem] transition-all group-hover:-bottom-4 group-hover:-right-4"></div>
+          <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border-2 border-primary/10  
+          rounded-[2rem] transition-all group-hover:-bottom-4 group-hover:-right-4 group-active:-bottom-4 group-active:-right-4"></div>
         </motion.div>
       </div>
     </section>

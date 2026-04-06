@@ -4,6 +4,7 @@ import { IoColorPaletteOutline } from 'react-icons/io5';
 import { TfiAnnouncement } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
+import BgGridDesign from '../../../utils/BgGridDesign';
 
 const Service = () => {
   const services = [
@@ -31,19 +32,14 @@ const Service = () => {
       icon: <FiCode />,
       link: "services/web-development"
     }
-  ]; 
+  ];
 
   return (
     <section className="relative py-24 bg-secondary overflow-hidden border-t border-base-300/5 inter">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{
-          backgroundImage: `linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}
-      ></div>
-      <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
+      {/* Background Grid Effect */}
+      <BgGridDesign />
 
+      <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
         {/* Header Section */}
         <div className="mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">

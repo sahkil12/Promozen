@@ -8,6 +8,7 @@ import {
      FiHeart
 } from 'react-icons/fi';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
+import BgGridDesign from '../../../utils/BgGridDesign';
 
 const WhyChooseUs = () => {
      const features = [
@@ -46,16 +47,10 @@ const WhyChooseUs = () => {
      return (
           <section className="relative py-24 bg-secondary overflow-hidden inter">
                {/* Background Grid Effect */}
-               <div
-                    className="absolute inset-0 z-0 opacity-10"
-                    style={{
-                         backgroundImage: `linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)`,
-                         backgroundSize: '60px 60px'
-                    }}
-               ></div>
+               <BgGridDesign />
 
                <div
-                    className="absolute top-1/4 md:top-1/3 -right-20 md:left-60 w-[450px] h-80 bg-primary/10 blur-[110px] rounded-full">
+                    className="absolute top-1/4 md:top-1/3 -right-20 md:left-50 w-[400px] h-80 bg-primary/10 blur-[110px] rounded-full">
                </div>
 
                <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">

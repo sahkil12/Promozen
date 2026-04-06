@@ -6,14 +6,14 @@ import Services from "../pages/Services/Services";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import Team from "../pages/Team/Team";
 import Contact from "../pages/Contact/Contact";
-import DigitalMarketing from "../pages/Home/Service/DigitalMarketing/DigitalMarketing";
-import MotionGraphics from '../pages/Home/Service/MotionGraphics/MotionGraphics';
-import SEO_Optimization from '../pages/Home/Service/SEO_Optimization/SEO_Optimization';
-import SocialMediaDesign from "../pages/Home/Service/SocialMediaDesign/SocialMediaDesign";
-import SocialMediaMarketing from "../pages/Home/Service/SocialMediaMarketing/SocialMediaMarketing";
-import WebDevelopment from "../pages/Home/Service/WebDevelopment/WebDevelopment";
-import YouTubeThumbnail from "../pages/Home/Service/YouTubeThumbnail/YouTubeThumbnail";
-import YouTubeVideoSEO from "../pages/Home/Service/YouTubeVideoSEO/YouTubeVideoSEO";
+import DigitalMarketing from "../pages/Services/DigitalMarketing/DigitalMarketing";
+import MotionGraphics from '../pages/Services/MotionGraphics/MotionGraphics';
+import SEO_Optimization from '../pages/Services/SEO_Optimization/SEO_Optimization';
+import SocialMediaDesign from "../pages/Services/SocialMediaDesign/SocialMediaDesign";
+import SocialMediaMarketing from "../pages/Services/SocialMediaMarketing/SocialMediaMarketing";
+import WebDevelopment from "../pages/Services/WebDevelopment/WebDevelopment";
+import YouTubeThumbnail from "../pages/Services/YouTubeThumbnail/YouTubeThumbnail";
+import YouTubeVideoSEO from "../pages/Services/YouTubeVideoSEO/YouTubeVideoSEO";
 
 export const router = createBrowserRouter([
      {

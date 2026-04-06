@@ -7,6 +7,7 @@ import {
      FiCheckCircle
 } from 'react-icons/fi';
 import { cardVariants, containerVariants, textContainerVariants, textVariants } from '../../../utils/animationsValue';
+import BgGridDesign from '../../../utils/BgGridDesign';
 
 const Achievements = () => {
      // Stats Card Data
@@ -49,13 +50,10 @@ const Achievements = () => {
      return (
           <section className="relative py-24 bg-secondary text-base-100 overflow-hidden inter">
                {/* Background Grid Effect */}
+               <BgGridDesign />
                <div
-                    className="absolute inset-0 z-0 opacity-10"
-                    style={{
-                         backgroundImage: `linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)`,
-                         backgroundSize: '60px 60px'
-                    }}
-               ></div>
+                    className="absolute top-1/10 md:top-1/7 -right-20 md:right-80 w-[320px] h-80 bg-primary/10 blur-[120px] rounded-full">
+               </div>
 
                <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
                     {/* Header */}

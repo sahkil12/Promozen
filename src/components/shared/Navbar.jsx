@@ -27,19 +27,19 @@ const Navbar = () => {
 
   const serviceItems = [
     { title: "Digital Marketing", desc: "Strategic campaigns that drive ROI", icon: <FiTarget /> },
+    { title: "Web Development", desc: "Modern, responsive websites", icon: <FiCode /> },
+    { title: "Motion Graphics", desc: "Captivating brand animations", icon: <FiLayers /> },
     { title: "SEO Optimization", desc: "Dominate search rankings", icon: <FiSearch /> },
     { title: "Social Media Marketing", desc: "Build brand presence & community", icon: <FiShare2 /> },
     { title: "Social Media Design", desc: "Scroll-stopping creatives", icon: <FiPenTool /> },
     { title: "YouTube Thumbnail Design", desc: "High-CTR thumbnail design", icon: <FiYoutube /> },
     { title: "YouTube Video SEO", desc: "Optimize for visibility & growth", icon: <FiTrendingUp /> },
-    { title: "Motion Graphics", desc: "Captivating brand animations", icon: <FiLayers /> },
-    { title: "Web Development", desc: "Modern, responsive websites", icon: <FiCode /> },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
-        ? "bg-secondary/80 backdrop-blur-lg border-b border-white/5 py-3"
+        ? "bg-secondary/80 backdrop-blur-lg border-b border-base-100/5 py-3.5"
         : "bg-transparent py-5"
         }`}
     >
@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-2 group">
           <img src="/Promozen-logo.png" className="w-10" alt="Logo" />
-          <span className="text-white font-bold text-2xl tracking-tight poppins">
+          <span className="text-base-100 font-bold text-2xl tracking-tight poppins">
             Promo<span className="text-primary">zen</span>
           </span>
         </Link>
@@ -74,26 +74,26 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full -left-48 mt-4 w-[650px] bg-accent border border-white/10 rounded-xl p-6 shadow-2xl overflow-hidden"
+                    className="absolute top-full -left-48 mt-4 w-[650px] bg-accent border border-base-100/10 rounded-xl p-6 shadow-2xl overflow-hidden"
                   >
                     <div className="grid grid-cols-2 gap-4">
                       {serviceItems.map((item, index) => (
                         <Link
                           key={index}
-                          to={`/services/${item.title.toLowerCase().replace(/ /g, '-')}`}
+                          to={`/services/${item.title.toLowerCase().replace(/ /g, '_')}`}
                           className="flex gap-4 p-3 rounded-lg hover:bg-primary/5 transition-all group/item"
                         >
                           <div className="text-primary text-xl transition-transform bg-primary/5 py-3 px-3 rounded-xl flex items-center ">
                             {item.icon}
                           </div>
                           <div>
-                            <h4 className="text-white font-semibold text-sm mb-1">{item.title}</h4>
+                            <h4 className="text-base-100 font-semibold text-sm mb-1">{item.title}</h4>
                             <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
                           </div>
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-6 pt-4 border-t border-white/5">
+                    <div className="mt-6 pt-4 border-t border-base-100/5">
                       <Link to="/services" className="text-primary flex items-center gap-1 group text-xs font-bold hover:underline">View All Services <FaArrowRightLong /></Link>
                     </div>
                   </motion.div>

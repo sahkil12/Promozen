@@ -4,7 +4,7 @@ import Navbar from "../components/shared/Navbar";
 
 const MainLayout = () => {
      return (
-          <div className="bg-secondary text-accent overflow-x-hidden">
+          <div className="bg-secondary text-accent overflow-x-hidden inter">
                <Navbar></Navbar>
                <section className="min-h-[calc(100vh-460px)]">
                     <Outlet></Outlet>

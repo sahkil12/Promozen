@@ -102,7 +102,7 @@ const Hero = () => {
 const StatItem = ({ number, label }) => (
   <div className="text-center lg:text-left space-y-1">
     <h3 className="text-2xl lg:text-3xl font-black text-primary drop-shadow-[0_0_50px_rgba(242,201,76,0.3)]">{number}</h3>
-    <p className="text-gray-500 text-[11px] uppercase tracking-widest font-semibold">{label}</p>
+    <p className="text-[#a1a1a1] text-[11px] uppercase tracking-widest font-semibold">{label}</p>
   </div>
 );
 

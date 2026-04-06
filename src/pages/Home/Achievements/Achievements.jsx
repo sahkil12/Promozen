@@ -48,7 +48,7 @@ const Achievements = () => {
      ];
 
      return (
-          <section className="relative py-24 bg-secondary text-base-100 overflow-hidden inter">
+          <section className="relative py-16 lg:py-20 bg-secondary text-base-100 overflow-hidden inter">
                {/* Background Grid Effect */}
                <BgGridDesign />
                <div

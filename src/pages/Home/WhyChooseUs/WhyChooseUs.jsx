@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
      ];
 
      return (
-          <section className="relative py-24 bg-secondary overflow-hidden inter">
+          <section className="relative py-16 lg:py-20 bg-secondary overflow-hidden inter">
                {/* Background Grid Effect */}
                <BgGridDesign />
 

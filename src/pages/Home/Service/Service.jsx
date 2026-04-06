@@ -35,7 +35,7 @@ const Service = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-secondary overflow-hidden border-t border-base-300/5 inter">
+    <section className="relative py-16 lg:py-20 bg-secondary overflow-hidden border-t border-base-300/5 inter">
       {/* Background Grid Effect */}
       <BgGridDesign />
 
@@ -45,7 +45,7 @@ const Service = () => {
           <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
             What We Do
           </span>
-          <h2 className="text-4xl poppins md:text-5xl font-bold text-white mb-5">
+          <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
             Services That <span className="text-primary">Drive Growth</span>
           </h2>
           <p className="text-[#a1a1a1] max-w-2xl text-lg leading-relaxed">
@@ -73,7 +73,7 @@ const Service = () => {
                   {service.icon}
                 </div>
                 {/* Content */}
-                <h3 className="text-xl font-semibold poppins text-white mb-4 group-hover:text-primary transition-colors group-active:text-primary">
+                <h3 className="text-xl font-semibold poppins text-base-100 mb-4 group-hover:text-primary transition-colors group-active:text-primary">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-grow">

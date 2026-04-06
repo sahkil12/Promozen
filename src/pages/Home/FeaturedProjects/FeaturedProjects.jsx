@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FiEye, FiExternalLink, FiArrowRight } from 'react-icons/fi';
 import BgGridDesign from '../../../utils/BgGridDesign';
+import { Link } from 'react-router-dom';
 
 const FeaturedProjects = () => {
      const projects = [
@@ -9,44 +9,42 @@ const FeaturedProjects = () => {
                category: "Web Development",
                title: "E-Commerce Redesign",
                desc: "Modern e-commerce platform with 40% conversion boost",
-               imageColor: "bg-[#121212]", // Placeholder background color
+               image: '/public/b4-style-project-pm.jpeg',
                link: "#"
           },
           {
                category: "Social Media Design",
                title: "Restaurant Brand Kit",
                desc: "Complete social media branding package",
-               imageColor: "bg-[#1A1F2C]", // Blue-ish dark background from image
+               image: '/public/ctg-blood-connect.webp',
                link: "#"
           },
           {
                category: "Motion Graphics",
                title: "Product Launch Video",
                desc: "Cinematic product reveal animation",
-               imageColor: "bg-[#221F26]", // Purple-ish dark background from image
+               image: '/public/promozen-design.jpeg',
                link: "#"
           }
      ];
 
      return (
-          <section className="relative py-24 bg-[#0B0B0B] text-white">
-               <div className="max-w-7xl mx-auto px-6">
+          <section className="relative py-16 lg:py-20 bg-secondary text-base-100 inter">
+               <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
                     {/* Background Grid Effect */}
                     <BgGridDesign />
-                    
                     {/* Header Section */}
                     <div className="mb-16">
-                         <span className="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">
+                         <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
                               Our Work
                          </span>
-                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                         <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
                               Featured <span className="text-primary">Projects</span>
                          </h2>
-                         <p className="text-gray-400 max-w-xl text-lg leading-relaxed">
+                         <p className="text-[#a1a1a1] max-w-2xl text-lg leading-relaxed">
                               Explore our latest work and see how we deliver results.
                          </p>
                     </div>
-
                     {/* Projects Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                          {projects.map((project, index) => (
@@ -56,48 +54,52 @@ const FeaturedProjects = () => {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true }}
                                    transition={{ delay: index * 0.1 }}
-                                   className="group relative"
+                                   className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/35 hover:shadow-[0_0_50px_rgba(242,201,76,0.10)]"
                               >
-                                   {/* Image/Thumbnail Container */}
-                                   <div className={`relative aspect-square rounded-2xl ${project.imageColor} border border-white/5 overflow-hidden transition-all duration-500 group-hover:border-primary/40 group-hover:shadow-[0_0_30px_rgba(242,201,76,0.05)]`}>
+                                   <Link
+                                        className=''>
+                                        {/* Image/Thumbnail Container */}
+                                        <div className={`relative overflow-hidden rounded-t-xl`}>
 
-                                        {/* Image Placeholder text (R/P like image) */}
-                                        <div className="absolute inset-0 flex items-center justify-center text-[8rem] font-black text-white/5 select-none">
-                                             {project.title.charAt(0)}
+                                             {/* Image Placeholder text (R/P like image) */}
+                                             <div className="rounded-t-2xl flex items-center justify-center ">
+                                                  <img src={project.image} className='h-[270px] w-full object-cover' alt="" />
+                                             </div>
+
+                                             {/* Hover Overlay & Buttons */}
+                                             <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                                                  <button className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 cursor-pointer transition-transform">
+                                                       <FiEye />
+                                                  </button>
+                                                  <button className="w-12 h-12 cursor-pointer rounded-xl bg-base-100/5 text-base-100 border border-base-100/10 flex items-center justify-center text-xl backdrop-blur-sm hover:bg-base-100/20 transition-all">
+                                                       <FiExternalLink />
+                                                  </button>
+                                             </div>
                                         </div>
 
-                                        {/* Hover Overlay & Buttons */}
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                             <button className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 transition-transform">
-                                                  <FiEye />
-                                             </button>
-                                             <button className="w-12 h-12 rounded-xl bg-white/10 text-white border border-white/10 flex items-center justify-center text-xl backdrop-blur-sm hover:bg-white/20 transition-all">
-                                                  <FiExternalLink />
-                                             </button>
+                                        {/* Project Info */}
+                                        <div className="p-6 bg-base-200 rounded-b-2xl">
+                                             <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-2">
+                                                  {project.category}
+                                             </span>
+                                             <h3 className="text-lg font-semibold text-base-100 mb-2 group-hover:text-primary transition-colors poppins">
+                                                  {project.title}
+                                             </h3>
+                                             <p className="text-[#a1a1a1] text-sm leading-relaxed">
+                                                  {project.desc}
+                                             </p>
                                         </div>
-                                   </div>
-
-                                   {/* Project Info */}
-                                   <div className="mt-6">
-                                        <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-2">
-                                             {project.category}
-                                        </span>
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                             {project.title}
-                                        </h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed">
-                                             {project.desc}
-                                        </p>
-                                   </div>
+                                   </Link>
                               </motion.div>
                          ))}
                     </div>
-
                     {/* Footer Link */}
                     <div className="mt-16 text-center">
-                         <button className="text-primary font-bold hover:gap-3 inline-flex items-center gap-2 transition-all group">
+                         <Link
+                              to={'/portfolio'}
+                              className="text-primary font-bold hover:gap-3 inline-flex items-center gap-2 transition-all group">
                               View All Projects <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                         </button>
+                         </Link>
                     </div>
                </div>
           </section>

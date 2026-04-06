@@ -54,31 +54,28 @@ const FeaturedProjects = () => {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true }}
                                    transition={{ delay: index * 0.1 }}
-                                   className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/35 hover:shadow-[0_0_50px_rgba(242,201,76,0.10)]"
+                                   className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)] active:border-primary/35 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]"
                               >
                                    <Link
                                         className=''>
-                                        {/* Image/Thumbnail Container */}
+                                        {/* Image Container */}
                                         <div className={`relative overflow-hidden rounded-t-xl`}>
-
-                                             {/* Image Placeholder text (R/P like image) */}
+                                             {/* Image */}
                                              <div className="rounded-t-2xl flex items-center justify-center ">
-                                                  <img src={project.image} className='h-[270px] w-full object-cover' alt="" />
+                                                  <img src={project.image} className='h-60 md:h-[270px] w-full object-cover group-hover:scale-105 transition-all duration-300' alt="" />
                                              </div>
-
                                              {/* Hover Overlay & Buttons */}
-                                             <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                                             <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-lg">
                                                   <button className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 cursor-pointer transition-transform">
                                                        <FiEye />
                                                   </button>
-                                                  <button className="w-12 h-12 cursor-pointer rounded-xl bg-base-100/5 text-base-100 border border-base-100/10 flex items-center justify-center text-xl backdrop-blur-sm hover:bg-base-100/20 transition-all">
+                                                  {/* <button className="w-12 h-12 cursor-pointer rounded-xl bg-base-100/5 text-base-100 border border-base-100/10 flex items-center justify-center text-xl backdrop-blur-sm hover:bg-base-100/20 transition-all">
                                                        <FiExternalLink />
-                                                  </button>
+                                                  </button> */}
                                              </div>
                                         </div>
-
                                         {/* Project Info */}
-                                        <div className="p-6 bg-base-200 rounded-b-2xl">
+                                        <div className="p-6 bg-base-200 rounded-b-2xl h-40">
                                              <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-2">
                                                   {project.category}
                                              </span>
@@ -97,7 +94,7 @@ const FeaturedProjects = () => {
                     <div className="mt-16 text-center">
                          <Link
                               to={'/portfolio'}
-                              className="text-primary font-bold hover:gap-3 inline-flex items-center gap-2 transition-all group">
+                              className="text-primary hidden font-bold hover:gap-3  items-center gap-2 transition-all group hover:underline">
                               View All Projects <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                          </Link>
                     </div>

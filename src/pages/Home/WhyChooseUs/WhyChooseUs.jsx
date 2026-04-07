@@ -82,14 +82,16 @@ const WhyChooseUs = () => {
                                    </div>
                                    {/* Text Content */}
                                    <div>
-                                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors poppins">
+                                        <h3 className="text-lg font-bold text-base-100 mb-2 group-hover:text-primary transition-colors poppins">
                                              {feature.title}
                                         </h3>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                              {feature.desc}
                                         </p>
                                    </div>
-
+                                   {/* Bottom Decorative Line */}
+                                   <div className="absolute bottom-px overflow-hidden rounded-full left-0 w-0 h-[3px] bg-primary/75 transition-all duration-500 group-hover:w-[95%] ml-2.5 group-active:w-[95%]"></div>
+                                   
                                    {/* Subtle Hover Glow */}
                                    <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity -z-10"></div>
                               </motion.div>

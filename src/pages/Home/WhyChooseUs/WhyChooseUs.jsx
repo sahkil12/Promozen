@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fi';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
+import SectionHeader from '../../../utils/SectionHeader';
 
 const WhyChooseUs = () => {
      const features = [
@@ -55,17 +56,13 @@ const WhyChooseUs = () => {
 
                <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
                     {/* Header Section */}
-                    <div className="text-center mb-16">
-                         <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
-                              Why Promozen
-                         </span>
-                         <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
-                              Why Brands <span className="text-primary">Choose Us</span>
-                         </h2>
-                         <p className="text-[#a1a1a1] max-w-2xl mx-auto text-lg leading-relaxed">
-                              We don't just deliver services — we deliver results that transform your business.
-                         </p>
-                    </div>
+                    <SectionHeader
+                         header="Why Promozen"
+                         title1="Why Brands"
+                         title2="Choose Us"
+                         subtitle="We don't just deliver services — we deliver results that transform your business."
+                         center={true}
+                    />
                     {/* Features Grid */}
                     <motion.div
                          variants={containerVariants}

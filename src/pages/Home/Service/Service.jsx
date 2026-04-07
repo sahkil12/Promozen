@@ -5,6 +5,7 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
+import SectionHeader from '../../../utils/SectionHeader';
 
 const Service = () => {
   const services = [
@@ -41,17 +42,13 @@ const Service = () => {
 
       <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
         {/* Header Section */}
-        <div className="mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
-            What We Do
-          </span>
-          <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
-            Services That <span className="text-primary">Drive Growth</span>
-          </h2>
-          <p className="text-[#a1a1a1] max-w-2xl text-lg leading-relaxed">
-            From strategy to execution, we provide end-to-end digital solutions tailored to your brand.
-          </p>
-        </div>
+        <SectionHeader
+          header="What We Do"
+          title1="Services That"
+          title2="Drive Growth"
+          subtitle=" From strategy to execution, we provide end-to-end digital solutions tailored to your brand."
+          center={false}
+        />
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}

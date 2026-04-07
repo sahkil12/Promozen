@@ -22,6 +22,9 @@ const FeaturedProjects = () => {
                          subtitle=" Explore our latest work and see how we deliver results."
                          center={false}
                     />
+                    <div
+                         className="absolute top-1/10 md:top-8 -right-20 md:right-80 w-[380px] h-80 bg-primary/15 blur-[120px] rounded-full">
+                    </div>
                     {/* grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                          {projects?.map((project, index) => (

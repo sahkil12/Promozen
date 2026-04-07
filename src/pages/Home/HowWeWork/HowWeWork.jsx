@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fi';
 import { FaRegLightbulb } from "react-icons/fa";
 import SectionHeader from '../../../utils/SectionHeader';
+import BgGridDesign from '../../../utils/BgGridDesign';
 
 const HowWeWork = () => {
      const steps = [
@@ -17,7 +18,7 @@ const HowWeWork = () => {
           },
           {
                id: "02",
-               icon: <FaRegLightbulb  />,
+               icon: <FaRegLightbulb />,
                title: "Strategy",
                desc: "We craft a tailored digital strategy aligned with your business objectives and market opportunities."
           },
@@ -36,8 +37,9 @@ const HowWeWork = () => {
      ];
 
      return (
-          <section className="relative py-24 bg-[#0B0B0B] text-base-100 overflow-hidden inter">
-               <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
+          <section className="relative  bg-secondary overflow-hidden inter">
+               <div className="relative py-16 lg:py-20fe z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
+                    <BgGridDesign />
                     {/* Header */}
                     <SectionHeader
                          header="Our Process"
@@ -46,6 +48,7 @@ const HowWeWork = () => {
                          subtitle="A proven 4-step process that delivers consistent, exceptional results."
                          center={true}
                     />
+
                     {/* Steps Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                          {steps.map((step, index) => (

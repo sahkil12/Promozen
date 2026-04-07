@@ -3,6 +3,7 @@ import { FiEye, FiExternalLink, FiArrowRight } from 'react-icons/fi';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import { Link } from 'react-router-dom';
 import projectsData from "../../../../public/Api/projects.json"
+import SectionHeader from '../../../utils/SectionHeader';
 
 const FeaturedProjects = () => {
      const projects = projectsData.projects;
@@ -14,17 +15,13 @@ const FeaturedProjects = () => {
                          <BgGridDesign />
                     </div>
                     {/* header */}
-                    <div className="mb-16">
-                         <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
-                              Our Work
-                         </span>
-                         <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
-                              Featured <span className="text-primary">Projects</span>
-                         </h2>
-                         <p className="text-[#a1a1a1] max-w-2xl text-lg leading-relaxed">
-                              Explore our latest work and see how we deliver results.
-                         </p>
-                    </div>
+                    <SectionHeader
+                         header="Our Work"
+                         title1="Featured"
+                         title2="Projects"
+                         subtitle=" Explore our latest work and see how we deliver results."
+                         center={false}
+                    />
                     {/* grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                          {projects?.map((project, index) => (

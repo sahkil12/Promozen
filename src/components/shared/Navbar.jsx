@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   const activeClass = ({ isActive }) => `${isActive ? 'text-primary' : 'text-base-100/75'}`
-  const desktopActiveClass = ({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary font-semibold' : 'text-base-100/85'}` 
+  const desktopActiveClass = ({ isActive }) => `text-sm font-medium hover:text-primary transition-colors ${isActive ? 'text-primary font-semibold' : 'text-base-100/85'}`
 
   const serviceItems = [
     { title: "Digital Marketing", desc: "Strategic campaigns that drive ROI", icon: <FiTarget /> },
@@ -44,7 +44,6 @@ const Navbar = () => {
         }`}
     >
       <div className="lg:max-w-3/4 mx-auto px-5 lg:px-5 flex items-center justify-between">
-
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-2 group">
           <img src="/Promozen-logo.png" className="w-10" alt="Logo" />
@@ -158,7 +157,7 @@ const Navbar = () => {
                       {serviceItems?.map((item, idx) => (
                         <Link
                           key={idx}
-                          to={`/services/${item.title.toLowerCase().replace(/ /g, '-')}`}
+                          to={`/services/${item.title.toLowerCase().replace(/ /g, '_')}`}
                           onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center gap-3 text-base-100/55 text-sm hover:text-primary transition-colors"
                         >
@@ -174,7 +173,7 @@ const Navbar = () => {
               <NavLink to="/portfolio" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Portfolio</NavLink>
               <NavLink to="/team" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Team</NavLink>
               <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={activeClass}>Contact</NavLink>
-              {/* Mobile CTA [Mark: Change] */}
+              {/* Mobile CTA */}
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-primary text-secondary text-center text-[15px] py-2.5 rounded-xl mt-3 font-bold tracking-wide active:scale-95 transition-transform">
                 Get Started
               </Link>

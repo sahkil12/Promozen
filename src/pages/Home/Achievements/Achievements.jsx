@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi';
 import { cardVariants, containerVariants, textContainerVariants, textVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
+import SectionHeader from '../../../utils/SectionHeader';
 
 const Achievements = () => {
      // Stats Card Data
@@ -57,17 +58,13 @@ const Achievements = () => {
 
                <div className="relative z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
                     {/* Header */}
-                    <div className="text-center mb-16">
-                         <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4 block">
-                              Our Achievements
-                         </span>
-                         <h2 className="text-4xl poppins md:text-5xl font-bold text-base-100 mb-5">
-                              Numbers That <span className="text-primary">Speak</span>
-                         </h2>
-                         <p className="text-[#a1a1a1] max-w-2xl mx-auto text-lg leading-relaxed">
-                              Real results, real impact — here's what sets us apart from the rest.
-                         </p>
-                    </div>
+                    <SectionHeader
+                         header="Our Achievements"
+                         title1="Numbers That"
+                         title2="Speak"
+                         subtitle="Real results, real impact — here's what sets us apart from the rest."
+                         center={true}
+                    />
                     {/* Stats Grid */}
                     <motion.div
                          variants={containerVariants}

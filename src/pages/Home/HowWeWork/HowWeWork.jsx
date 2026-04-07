@@ -69,7 +69,7 @@ const HowWeWork = () => {
                                         {step.icon}
                                    </div>
                                    {/* Content */}
-                                   <h3 className="text-xl font-bold text-base-100 mb-4 group-hover:text-primary transition-colors">
+                                   <h3 className="text-xl font-semibold text-base-100 mb-4 group-hover:text-primary transition-colors poppins">
                                         {step.title}
                                    </h3>
                                    <p className="text-[#a1a1a1] text-sm leading-relaxed">

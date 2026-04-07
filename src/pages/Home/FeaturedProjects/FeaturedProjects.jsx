@@ -35,7 +35,7 @@ const FeaturedProjects = () => {
                                    viewport={{ once: true }}
                                    transition={{ delay: index * 0.1 }}
                                    className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]
-                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)"
+                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]"
                               >
                                    {/* image */}
                                    <div className="relative overflow-hidden rounded-t-xl">

@@ -26,3 +26,18 @@ html {
 .inter {
   font-family: "Inter", sans-serif;
 }
+
+/* default dot */
+/* inactive dot = white */
+.custom-pagination .swiper-pagination-bullet {
+  background-color: rgb(199, 181, 127) !important;
+  opacity: .5 !important;
+  scale: 1.1;
+}
+
+/* active dot = primary */
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #ffd249 !important;
+  opacity: 1 !important;
+  scale: 1.4;
+}

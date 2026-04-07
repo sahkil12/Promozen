@@ -34,19 +34,20 @@ const FeaturedProjects = () => {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true }}
                                    transition={{ delay: index * 0.1 }}
-                                   className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]"
+                                   className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]
+                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)"
                               >
                                    {/* image */}
                                    <div className="relative overflow-hidden rounded-t-xl">
                                         <img
                                              src={project.thumbnail}
                                              alt={project.title}
-                                             className="h-60 md:h-[270px] w-full object-cover group-hover:scale-105 transition-all duration-300"
+                                             className="h-60 md:h-[270px] w-full object-cover group-hover:scale-105 transition-all duration-300 group-active:scale-105 "
                                         />
                                         {/* hover overlay */}
-                                        <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                                        <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity group-active:opacity-100  duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
                                              <button
-                                                  className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 transition-transform cursor-pointer"
+                                                  className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 active:scale-110 transition-transform cursor-pointer"
                                              >
                                                   <FiEye />
                                              </button>
@@ -57,7 +58,7 @@ const FeaturedProjects = () => {
                                         <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-2">
                                              {project.category}
                                         </span>
-                                        <h3 className="text-lg font-semibold text-base-100 mb-2 group-hover:text-primary transition-colors poppins">
+                                        <h3 className="text-lg font-semibold text-base-100 mb-2 group-hover:text-primary transition-colors poppins group-active:text-primary">
                                              {project.title}
                                         </h3>
                                         <p className="text-[#a1a1a1] text-sm leading-relaxed line-clamp-3">
@@ -71,10 +72,10 @@ const FeaturedProjects = () => {
                     <div className="mt-16 text-center">
                          <Link
                               to="/portfolio"
-                              className="text-primary inline-flex font-bold hover:gap-3 items-center gap-2 transition-all group"
+                              className="text-primary inline-flex font-bold hover:gap-3 active:gap-3 items-center gap-2 transition-all group"
                          >
                               View All Projects
-                              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                              <FiArrowRight />
                          </Link>
                     </div>
                </div>

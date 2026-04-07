@@ -77,7 +77,7 @@ const Achievements = () => {
                                    key={index}
                                    variants={cardVariants}
                                    whileHover={{ y: -8 }}
-                                   className="group p-8 rounded-2xl bg-[#121212]/50 border border-base-100/5 hover:border-primary/40 transition-all duration-500 text-center"
+                                   className="group p-8 rounded-2xl bg-[#121212]/50 border border-base-100/5 hover:border-primary/40 active:border-primary/40 transition-all duration-500 text-center"
                               >
                                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl border border-primary/15 mx-auto text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
                                         {stat.icon}
@@ -91,7 +91,7 @@ const Achievements = () => {
                          ))}
                     </motion.div>
                     {/* Why Clients Trust Us Section */}
-                    <div className="relative p-12 rounded-[2rem] bg-[#121212]/30 border border-primary/5 overflow-hidden hover:border-primary/20 transition-colors">
+                    <div className="relative p-12 rounded-[2rem] bg-[#121212]/30 border border-primary/5 overflow-hidden hover:border-primary/20 active:border-primary/20 transition-colors">
                          {/* Internal Glow */}
                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
@@ -113,7 +113,7 @@ const Achievements = () => {
                                         <div className="flex-shrink-0 text-primary text-xl group-hover:scale-125 transition-transform">
                                              <FiCheckCircle />
                                         </div>
-                                        <span className="text-gray-300 group-hover:text-base-100 transition-colors">
+                                        <span className="text-gray-300 group-hover:text-base-100 transition-colors group-active:text-base-100">
                                              {point}
                                         </span>
                                    </motion.div >

@@ -13,25 +13,25 @@ const Service = () => {
       title: "Digital Marketing",
       desc: "Strategic digital campaigns that drive real results and maximize your ROI across all channels.",
       icon: <TfiAnnouncement />,
-      link: "services/digital-marketing"
+      link: "services/digital_marketing"
     },
     {
       title: "SEO Optimization",
       desc: "Dominate search rankings with data-driven SEO strategies that bring organic traffic to your doorstep.",
       icon: <FiSearch />,
-      link: "services/seo-optimization"
+      link: "services/seo_optimization"
     },
     {
       title: "Social Media Design",
       desc: "Scroll-stopping social media creatives that capture attention and drive engagement.",
       icon: <IoColorPaletteOutline size={28} />,
-      link: "services/social-media-design"
+      link: "services/social_media_design"
     },
     {
       title: "Web Development",
       desc: "Modern, responsive, and high-performance websites built with the latest technologies.",
       icon: <FiCode />,
-      link: "services/web-development"
+      link: "services/web_development"
     }
   ];
 

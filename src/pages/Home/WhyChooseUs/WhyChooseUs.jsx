@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
                               <motion.div
                                    key={index}
                                    variants={cardVariants}
-                                   className="group relative p-8 rounded-2xl bg-[#121212]/50 border-2 border-primary/5 hover:border-primary/25 transition-all duration-500 flex items-start gap-5"
+                                   className="group relative p-8 rounded-2xl bg-[#121212]/50 border-2 border-primary/5 hover:border-primary/25 active:border-primary/25    transition-all duration-500 flex items-start gap-5"
                               >
                                    {/* Icon Box */}
                                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-primary/15 flex items-center justify-center text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
                                    </div>
                                    {/* Text Content */}
                                    <div>
-                                        <h3 className="text-lg font-bold text-base-100 mb-2 group-hover:text-primary transition-colors poppins">
+                                        <h3 className="text-lg font-bold text-base-100 mb-2 group-hover:text-primary group-active:text-primary transition-colors poppins">
                                              {feature.title}
                                         </h3>
                                         <p className="text-gray-400 text-sm leading-relaxed">

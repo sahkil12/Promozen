@@ -8,24 +8,24 @@ import { Link } from 'react-router-dom';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Arif Rahman",
-      role: "Founder & CEO",
-      bgColor: "bg-gray-800"
+      name: "Mustafa Tazwer",
+      role: "Web Developer",
+      image: "/Images/Team/team-1.jpeg"
     },
     {
-      name: "Nusrat Jahan",
-      role: "Creative Director",
-      bgColor: "bg-gray-700"
+      name: "Mohinul islam",
+      role: "Graphics Designer",
+      image: "/Images/Team/team-2.jpeg"
     },
     {
       name: "Tanvir Hossain",
-      role: "Lead Developer",
-      bgColor: "bg-gray-800"
+      role: "SEO Experts",
+      image: "/Images/Team/team-3.jpeg"
     },
     {
-      name: "Fatima Khan",
-      role: "Marketing Strategist",
-      bgColor: "bg-gray-700"
+      name: "Morshed Khan",
+      role: "Motion Design Expert",
+      image: "/Images/Team/team-6.jpeg"
     }
   ];
 
@@ -51,18 +51,20 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative rounded-3xl bg-[#121212]/50 border transition-all duration-500 overflow-hidden border-base-100/5 hover:border-primary/50`}
+              className={`group relative rounded-3xl bg-base-200/55 border-2 transition-all duration-500 overflow-hidden border-primary/5 hover:border-primary/35 active:border-primary/35
+              hover:shadow-primary/20 active:shadow-primary/20 shadow-2xl/50 cursor-pointer
+                `}
             >
               {/* Image Placeholder */}
-              <div className={`relative  ${member.bgColor} transition-transform duration-500 group-hover:scale-105`}>
-                <img src="" alt="" className='h-90' />
+              <div className={`relative transition-transform duration-500 group-hover:scale-105`}>
+                <img src={member.image} alt="" className='h-fit w-full' />
                 {/* Social Icons Overlay */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden p-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden p-2">
                   {[FaFacebookF, FaLinkedinIn, FaTwitter].map((Icon, i) => (
                     <a
                       key={i}
                       href="#"
-                      className="w-8 h-8 rounded-full bg-primary/90 flex items-center justify-center text-base-200 text-xs hover:bg-primary hover:-translate-y-1 hover:scale-105 transition-all duration-300 active:-translate-y-1 active:scale-105"
+                      className="w-10 h-10 rounded-xl bg-primary/90 flex items-center justify-center text-base-200 text-xs hover:bg-primary hover:-translate-y-1 hover:scale-105 transition-all duration-300 active:-translate-y-1 active:scale-105"
                     >
                       <Icon size={14} />
                     </a>

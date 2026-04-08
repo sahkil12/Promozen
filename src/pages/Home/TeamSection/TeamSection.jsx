@@ -10,22 +10,45 @@ const TeamSection = () => {
     {
       name: "Mustafa Tazwer",
       role: "Web Developer",
-      image: "/Images/Team/team-1.jpeg"
+      image: "/Images/Team/team-1.jpeg",
+      social: {
+        facebook: "https://facebook.com/",
+        linkedin: "https://linkedin.com/",
+        twitter: "https://twitter.com/"
+      },
+      experience: '',
+      description: '',
+      skills: ['']
     },
     {
       name: "Mohinul islam",
       role: "Graphics Designer",
-      image: "/Images/Team/team-2.jpeg"
+      image: "/Images/Team/team-2.jpeg",
+      social: {
+        facebook: "https://facebook.com/",
+        linkedin: "https://linkedin.com/",
+        twitter: "https://twitter.com/"
+      }
     },
     {
       name: "Tanvir Hossain",
-      role: "SEO Experts",
-      image: "/Images/Team/team-3.jpeg"
+      role: "SEO Expert",
+      image: "/Images/Team/team-3.jpeg",
+      social: {
+        facebook: "https://facebook.com/",
+        linkedin: "https://linkedin.com/",
+        twitter: "https://twitter.com/"
+      }
     },
     {
       name: "Morshed Khan",
       role: "Motion Design Expert",
-      image: "/Images/Team/team-6.jpeg"
+      image: "/Images/Team/team-6.jpeg",
+      social: {
+        facebook: "https://facebook.com/",
+        linkedin: "https://linkedin.com/",
+        twitter: "https://twitter.com/"
+      }
     }
   ];
 
@@ -57,18 +80,30 @@ const TeamSection = () => {
             >
               {/* Image Placeholder */}
               <div className={`relative transition-transform duration-500 group-hover:scale-105`}>
-                <img src={member.image} alt="" className='h-fit w-full' />
+                {/* image */}
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className='h-fit w-full' />
                 {/* Social Icons Overlay */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden p-2">
-                  {[FaFacebookF, FaLinkedinIn, FaTwitter].map((Icon, i) => (
+
+                  {[
+                    { icon: FaFacebookF, link: member.social.facebook },
+                    { icon: FaLinkedinIn, link: member.social.linkedin },
+                    { icon: FaTwitter, link: member.social.twitter }
+                  ].map(({ icon: Icon, link }, i) => (
                     <a
                       key={i}
-                      href="#"
-                      className="w-10 h-10 rounded-xl bg-primary/90 flex items-center justify-center text-base-200 text-xs hover:bg-primary hover:-translate-y-1 hover:scale-105 transition-all duration-300 active:-translate-y-1 active:scale-105"
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-primary/95 flex items-center justify-center text-base-200 text-xs hover:bg-primary hover:-translate-y-1 hover:scale-105 transition-all duration-300 active:-translate-y-1 active:scale-105"
                     >
                       <Icon size={14} />
                     </a>
                   ))}
+
                 </div>
               </div>
               {/* Content */}

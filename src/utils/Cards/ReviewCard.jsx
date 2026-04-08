@@ -9,8 +9,8 @@ const ReviewCard = ({ review, isActive }) => {
                     ${isActive ? "opacity-100 scale-100 -translate-y-4 drop-shadow-[0_0_40px_rgba(242,201,76,0.1)] border-primary/30" : "border-base-100/5 opacity-35 scale-90"}`}
           >
                {/* Quote Icon */}
-               <div className="absolute top-6 left-8 text-6xl text-primary/40 group-hover:text-primary/60 transition-colors pointer-events-none">
-                    <PiQuotes size={40} />
+               <div className="absolute top-4 left-8 text-6xl text-primary/40 group-hover:text-primary/60 transition-colors pointer-events-none">
+                    <PiQuotes size={45} />
                </div>
                {/* Stars */}
                <div className="flex gap-1 mt-10 mb-6">

@@ -1,0 +1,34 @@
+{
+     "reviews": [
+          {
+               "name": "Rafiq Hasan",
+               "role": "CEO, TechBangla",
+               "comment": "Promozen transformed our online presence completely. Our organic traffic increased by 300% in just 3 months. Their team is professional, creative, and always delivers on time. Highly recommended!",
+               "stars": 5
+          },
+          {
+               "name": "Sarah Ahmed",
+               "role": "Founder, StyleHub BD",
+               "comment": "The social media designs are absolutely stunning. Our engagement doubled since we started working with Promozen. They understand brand aesthetics like no one else.",
+               "stars": 5
+          },
+          {
+               "name": "Kamal Uddin",
+               "role": "Director, FreshMart",
+               "comment": "Professional, responsive, and incredibly talented team. They delivered our website ahead of schedule and it looks world-class. The ROI from their digital marketing is exceptional.",
+               "stars": 5
+          },
+          {
+               "name": "Imran Khan",
+               "role": "Owner, GreenLeaf Organics",
+               "comment": "From motion graphics to social media management, Promozen handles everything with such quality. Our brand looks premium now and customers notice the difference. Outstanding work!",
+               "stars": 5
+          },
+          {
+               "name": "Fatima Begum",
+               "role": "Marketing Head, EduFirst",
+               "comment": "Their YouTube SEO service helped us grow from 500 to 50,000 subscribers in 6 months. Incredible results and always transparent with their reporting.",
+               "stars": 5
+          }
+     ]
+}

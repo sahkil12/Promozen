@@ -4,7 +4,7 @@ import SectionHeader from "../../../utils/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import ReviewCard from "../../../utils/Cards/ReviewCard";
-
+import reviewsData from "../../../../public/Api/reviews.json"
 // IMPORTANT CSS
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,38 +12,7 @@ import "swiper/css/pagination";
 
 const Testimonials = () => {
 
-     const reviews = [
-          {
-               name: "Rafiq Hasan",
-               role: "CEO, TechBangla",
-               comment: "Promozen transformed our online presence completely. Our organic traffic increased by 300% in just 3 months. Their team is professional, creative, and always delivers on time. Highly recommended!",
-               stars: 5
-          },
-          {
-               name: "Sarah Ahmed",
-               role: "Founder, StyleHub BD",
-               comment: "The social media designs are absolutely stunning. Our engagement doubled since we started working with Promozen. They understand brand aesthetics like no one else.",
-               stars: 5
-          },
-          {
-               name: "Kamal Uddin",
-               role: "Director, FreshMart",
-               comment: "Professional, responsive, and incredibly talented team. They delivered our website ahead of schedule and it looks world-class. The ROI from their digital marketing is exceptional.",
-               stars: 5
-          },
-          {
-               name: "Imran Khan",
-               role: "Owner, GreenLeaf Organics",
-               comment: "From motion graphics to social media management, Promozen handles everything with such quality. Our brand looks premium now and customers notice the difference. Outstanding work!",
-               stars: 5
-          },
-          {
-               name: "Fatima Begum",
-               role: "Marketing Head, EduFirst",
-               comment: "Their YouTube SEO service helped us grow from 500 to 50,000 subscribers in 6 months. Incredible results and always transparent with their reporting.",
-               stars: 5
-          }
-     ];
+     const reviews = reviewsData.reviews
 
      return (
           <section className="relative bg-secondary overflow-hidden inter">
@@ -102,7 +71,7 @@ const Testimonials = () => {
 
                               className="pb-10"
                          >
-                              {reviews.map((review, index) => (
+                              {reviews?.map((review, index) => (
                                    <SwiperSlide key={index}>
                                         {({ isActive }) => (
                                              <ReviewCard
@@ -118,17 +87,16 @@ const Testimonials = () => {
                     <div className="flex justify-center items-center max-w-62 mx-auto">
                          {/* Left Arrow */}
                          <button
-                              className="custom-prev bg-base-100 w-16 h-11 rounded-full flex justify-center items-center transition hover:bg-primary active:bg-primary cursor-pointer"
+                              className="custom-prev bg-primary/75 w-16 h-11 rounded-full flex justify-center items-center transition hover:bg-primary active:bg-primary cursor-pointer"
                               aria-label="Previous Review"
                          >
                               <FaArrowLeft className="text-base-200" />
                          </button>
-
                          {/* Pagination Dots */}
                          <div className={`custom-pagination flex justify-center w-fit`}></div>
                          {/*Right Arrow */}
                          <button
-                              className="custom-next bg-base-100 w-16 h-11 rounded-full flex justify-center items-center transition hover:bg-primary active:bg-primary cursor-pointer"
+                              className="custom-next bg-primary/75 w-16 h-11 rounded-full flex justify-center items-center transition hover:bg-primary active:bg-primary cursor-pointer"
                               aria-label="Next Review"
                          >
                               <FaArrowRight className="text-base-200" />

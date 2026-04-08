@@ -79,7 +79,7 @@ const Service = () => {
                 {/* Learn More Link */}
                 <a
                   href={service.link}
-                  className="inline-flex opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden items-center gap-2 text-primary text-sm font-bold hover:gap-3 active:gap-3 transition-all"
+                  className="inline-flex opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden items-center gap-2 text-primary text-sm font-bold hover:gap-3 active:gap-3 transition-all group-active:opacity-100 group-active:translate-y-0"
                 >
                   Learn More <FiArrowRight />
                 </a>

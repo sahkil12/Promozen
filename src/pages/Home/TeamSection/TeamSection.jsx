@@ -5,6 +5,7 @@ import SectionHeader from '../../../utils/SectionHeader';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import { Link } from 'react-router-dom';
 import CTA from '../CTA/CTA';
+import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -67,27 +68,29 @@ const TeamSection = () => {
           center={true}
         />
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView='show'
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              variants={cardVariants}
               className={`group relative rounded-3xl bg-base-200/55 border-2 transition-all duration-500 overflow-hidden border-primary/5 hover:border-primary/35 active:border-primary/35
               hover:shadow-primary/20 active:shadow-primary/20 shadow-2xl/50 cursor-pointer
                 `}
             >
               {/* Image Placeholder */}
-              <div className={`relative transition-transform duration-500 group-hover:scale-105`}>
+              <div className={`relative transition-transform duration-500 group-hover:scale-105 overflow-hidden`}>
                 {/* image */}
                 <img
                   src={member.image}
                   alt={member.name}
-                  className='h-fit w-full' />
+                  className='h-86 w-full' />
                 {/* Social Icons Overlay */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-300 overflow-hidden p-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-400 overflow-hidden p-2">
 
                   {[
                     { icon: FaFacebookF, link: member.social.facebook },
@@ -118,7 +121,7 @@ const TeamSection = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
         {/* Footer Link */}
         <div className="flex justify-center mb-28 md:mb-40">
           <Link

@@ -5,8 +5,8 @@ import { PiQuotes } from 'react-icons/pi';
 const ReviewCard = ({ review, isActive }) => {
      return (
           <motion.div
-               className={`group relative p-10 rounded-3xl bg-[#121212]/50 border hover:border-primary/30 transition-all duration-500 my-10 hover:drop-shadow-[0_0_40px_rgba(242,201,76,0.1)]
-                    ${isActive ? "opacity-100 scale-100 -translate-y-4 drop-shadow-[0_0_40px_rgba(242,201,76,0.1)] border-primary/30" : "border-base-100/5 opacity-35 scale-90"}`}
+               className={`group relative p-10 rounded-3xl bg-base-200/25 border hover:border-primary/30 transition-all duration-600 my-14 hover:drop-shadow-[0_0_40px_rgba(242,201,76,0.1)]
+                    ${isActive ? "opacity-100 scale-100 -translate-y-9 h-96 drop-shadow-[0_0_40px_rgba(242,201,76,0.1)] border-primary/30" : "border-base-100/5 opacity-35 scale-90"}`}
           >
                {/* Quote Icon */}
                <div className="absolute top-4 left-8 text-6xl text-primary/40 group-hover:text-primary/60 transition-colors pointer-events-none">

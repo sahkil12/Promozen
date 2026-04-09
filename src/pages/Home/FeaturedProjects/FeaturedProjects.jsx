@@ -4,6 +4,7 @@ import BgGridDesign from '../../../utils/BgGridDesign';
 import { Link } from 'react-router-dom';
 import projectsData from "../../../../public/Api/projects.json"
 import SectionHeader from '../../../utils/SectionHeader';
+import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 
 const FeaturedProjects = () => {
      const projects = projectsData.projects;
@@ -26,16 +27,18 @@ const FeaturedProjects = () => {
                          className="absolute top-1/10 md:top-8 -right-20 md:right-80 w-[380px] h-80 bg-primary/15 blur-[120px] rounded-full">
                     </div>
                     {/* grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <motion.div
+                         variants={containerVariants}
+                         initial="hidden"
+                         whileInView='show'
+                         viewport={{ once: true }}
+                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                          {projects?.map((project, index) => (
                               <motion.div
                                    key={index}
-                                   initial={{ opacity: 0, y: 20 }}
-                                   whileInView={{ opacity: 1, y: 0 }}
-                                   viewport={{ once: true }}
-                                   transition={{ delay: index * 0.1 }}
+                                   variants={cardVariants}
                                    className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]
-                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]"
+                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)] cursor-pointer"
                               >
                                    {/* image */}
                                    <div className="relative overflow-hidden rounded-t-xl">
@@ -67,7 +70,7 @@ const FeaturedProjects = () => {
                                    </div>
                               </motion.div>
                          ))}
-                    </div>
+                    </motion.div>
                     {/* footer button */}
                     <div className="mt-16 text-center">
                          <Link

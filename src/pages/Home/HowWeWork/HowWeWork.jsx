@@ -7,6 +7,7 @@ import {
 import { FaRegLightbulb } from "react-icons/fa";
 import SectionHeader from '../../../utils/SectionHeader';
 import BgGridDesign from '../../../utils/BgGridDesign';
+import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 
 const HowWeWork = () => {
      const steps = [
@@ -49,19 +50,21 @@ const HowWeWork = () => {
                          center={true}
                     />
                     {/* Steps Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <motion.div
+                         variants={containerVariants}
+                         initial="hidden"
+                         whileInView='show'
+                         viewport={{ once: true }}
+                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                          {steps.map((step, index) => (
                               <motion.div
                                    key={index}
-                                   initial={{ opacity: 0, y: 20 }}
-                                   whileInView={{ opacity: 1, y: 0 }}
-                                   viewport={{ once: true }}
-                                   transition={{ delay: index * 0.1 }}
-                                   whileHover={{ y: -10 }}
-                                   className="group relative p-8 rounded-2xl bg-[#0f0e0e] border border-base-100/5 hover:border-primary/40 transition-all duration-500 overflow-hidden hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.05)] "
+                                   variants={cardVariants}
+                                   className="group relative p-8 rounded-2xl bg-base-200/40 border border-base-100/5 hover:border-primary/40 transition-all duration-500 overflow-hidden hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.05)] hover:-translate-y-2 active:-translate-y-2 active:border-primary/40
+                                   active:drop-shadow-[0_0_20px_rgba(242,201,76,0.05)]"
                               >
                                    {/* Step Number */}
-                                   <div className="absolute top-4 right-6 text-4xl font-black text-base-100/5 group-hover:text-primary/20 transition-colors ">
+                                   <div className="absolute top-4 right-6 text-4xl font-black text-base-100/5 group-hover:text-primary/20 group-active:text-primary/20 transition-colors ">
                                         {step.id}
                                    </div>
                                    {/* Icon Box */}
@@ -69,7 +72,7 @@ const HowWeWork = () => {
                                         {step.icon}
                                    </div>
                                    {/* Content */}
-                                   <h3 className="text-xl font-semibold text-base-100 mb-4 group-hover:text-primary transition-colors poppins">
+                                   <h3 className="text-xl font-semibold text-base-100 mb-4 group-hover:text-primary group-active:text-primary transition-colors poppins">
                                         {step.title}
                                    </h3>
                                    <p className="text-[#a1a1a1] text-sm leading-relaxed">
@@ -79,7 +82,7 @@ const HowWeWork = () => {
                                    <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-primary/80 transition-all duration-500 group-hover:w-full group-active:w-full"></div>
                               </motion.div>
                          ))}
-                    </div>
+                    </motion.div>
                </div>
           </section>
      );

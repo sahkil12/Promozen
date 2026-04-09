@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import BgGridDesign from "../../../utils/BgGridDesign";
 import SectionHeader from "../../../utils/SectionHeader";
@@ -30,7 +31,12 @@ const Testimonials = () => {
                          center={true}
                     />
                     {/* swiper */}
-                    <div className="max-w-7xl mx-auto">
+                    <motion.div
+                         initial={{ opacity: 0, y: 60 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.65 }}
+                         viewport={{ once: true }}
+                         className="max-w-7xl mx-auto">
                          <Swiper
                               modules={[Navigation, Pagination, Autoplay]}
                               slidesPerView={1}
@@ -82,7 +88,7 @@ const Testimonials = () => {
                                    </SwiperSlide>
                               ))}
                          </Swiper>
-                    </div>
+                    </motion.div>
                     {/* arrows */}
                     <div className="flex justify-center items-center max-w-62 mx-auto">
                          {/* Left Arrow */}

@@ -1,39 +1,12 @@
 import { motion } from 'framer-motion';
-import { FiSearch, FiShare2, FiPenTool, FiArrowRight, FiCode, FiLayers } from 'react-icons/fi';
-import { IoColorPaletteOutline } from 'react-icons/io5';
-import { TfiAnnouncement } from "react-icons/tfi";
+import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
+import { services } from '../../../utils/cardsData';
 
 const Service = () => {
-  const services = [
-    {
-      title: "Digital Marketing",
-      desc: "Strategic digital campaigns that drive real results and maximize your ROI across all channels.",
-      icon: <TfiAnnouncement />,
-      link: "services/digital_marketing"
-    },
-    {
-      title: "SEO Optimization",
-      desc: "Dominate search rankings with data-driven SEO strategies that bring organic traffic to your doorstep.",
-      icon: <FiSearch />,
-      link: "services/seo_optimization"
-    },
-    {
-      title: "Social Media Design",
-      desc: "Scroll-stopping social media creatives that capture attention and drive engagement.",
-      icon: <IoColorPaletteOutline size={28} />,
-      link: "services/social_media_design"
-    },
-    {
-      title: "Web Development",
-      desc: "Modern, responsive, and high-performance websites built with the latest technologies.",
-      icon: <FiCode />,
-      link: "services/web_development"
-    }
-  ];
 
   return (
     <section className="relative py-16 lg:py-20 bg-secondary overflow-hidden border-t border-base-300/5 inter">
@@ -56,7 +29,7 @@ const Service = () => {
           whileInView='show'
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {services?.map((service, index) => (
             <motion.div
               key={index}
               variants={cardVariants}

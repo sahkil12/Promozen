@@ -1,49 +1,10 @@
 import { motion } from 'framer-motion';
-import {
-     FiTarget,
-     FiZap,
-     FiUsers,
-     FiBarChart2,
-     FiShield,
-     FiHeart
-} from 'react-icons/fi';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
+import { features } from '../../../utils/cardsData';
 
 const WhyChooseUs = () => {
-     const features = [
-          {
-               title: "Result-Driven Approach",
-               desc: "Every campaign is designed to deliver measurable, impactful results that grow your bottom line.",
-               icon: <FiTarget />
-          },
-          {
-               title: "Fast Execution",
-               desc: "We move fast without compromising quality. Your time matters to us.",
-               icon: <FiZap />
-          },
-          {
-               title: "Experienced Team",
-               desc: "50+ happy clients trust us to grow their digital presence with our expert team.",
-               icon: <FiUsers />
-          },
-          {
-               title: "Data-Driven Strategy",
-               desc: "Decisions backed by analytics, not guesswork. Every move is strategic.",
-               icon: <FiBarChart2 />
-          },
-          {
-               title: "Premium Quality Service",
-               desc: "No shortcuts. We deliver world-class quality in every project we touch.",
-               icon: <FiShield />
-          },
-          {
-               title: "Client Satisfaction",
-               desc: "98% client satisfaction rate. We treat your brand like our own.",
-               icon: <FiHeart />
-          }
-     ];
 
      return (
           <section className="relative py-16 lg:py-20 bg-secondary overflow-hidden inter">
@@ -70,11 +31,11 @@ const WhyChooseUs = () => {
                          whileInView='show'
                          viewport={{ once: true }}
                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                         {features.map((feature, index) => (
+                         {features?.map((feature, index) => (
                               <motion.div
                                    key={index}
                                    variants={cardVariants}
-                                   className="group relative p-8 rounded-2xl bg-[#121212]/50 border-2 border-primary/5 hover:border-primary/25 active:border-primary/25    transition-all duration-500 flex items-start gap-5"
+                                   className="group relative p-8 rounded-2xl bg-base-200/25 border-2 border-primary/5 hover:border-primary/25 active:border-primary/25    transition-all duration-500 flex items-start gap-5"
                               >
                                    {/* Icon Box */}
                                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-primary/15 flex items-center justify-center text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">

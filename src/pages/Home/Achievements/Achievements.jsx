@@ -1,43 +1,12 @@
 import { motion } from 'framer-motion';
-import {
-     FiGlobe,
-     FiAward,
-     FiTrendingUp,
-     FiClock,
-     FiCheckCircle
-} from 'react-icons/fi';
+import { FiCheckCircle } from 'react-icons/fi';
 import { cardVariants, containerVariants, textContainerVariants, textVariants } from '../../../utils/animationsValue';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
+import { stats } from '../../../utils/cardsData';
 
 const Achievements = () => {
-     // Stats Card Data
-     const stats = [
-          {
-               icon: <FiGlobe />,
-               value: "10+",
-               label: "Industries Served",
-               desc: "From e-commerce to healthcare, we deliver results across diverse sectors."
-          },
-          {
-               icon: <FiAward />,
-               value: "50+",
-               label: "Brands Transformed",
-               desc: "Trusted by leading brands to elevate their digital presence."
-          },
-          {
-               icon: <FiTrendingUp />,
-               value: "3x",
-               label: "Average ROI Increase",
-               desc: "Our clients see an average of 3x return on their marketing investment."
-          },
-          {
-               icon: <FiClock />,
-               value: "24/7",
-               label: "Dedicated Support",
-               desc: "Round-the-clock support to ensure your campaigns never miss a beat."
-          }
-     ];
+
      // Trust Points Data
      const trustPoints = [
           "Google Ads & Meta Ads Certified Team",
@@ -72,12 +41,12 @@ const Achievements = () => {
                          whileInView='show'
                          viewport={{ once: true }}
                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                         {stats.map((stat, index) => (
+                         {stats?.map((stat, index) => (
                               <motion.div
                                    key={index}
                                    variants={cardVariants}
                                    whileHover={{ y: -8 }}
-                                   className="group p-8 rounded-2xl bg-[#121212]/50 border border-base-100/5 hover:border-primary/40 active:border-primary/40 transition-all duration-500 text-center"
+                                   className="group p-8 rounded-2xl bg-base-200/25 border border-base-100/5 hover:border-primary/40 active:border-primary/40 transition-all duration-500 text-center"
                               >
                                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl border border-primary/15 mx-auto text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
                                         {stat.icon}
@@ -109,7 +78,7 @@ const Achievements = () => {
                                    <motion.div
                                         variants={textVariants}
                                         key={index}
-                                        className="flex items-center gap-4 group">
+                                        className="flex items-center gap-4 group cursor-pointer">
                                         <div className="flex-shrink-0 text-primary text-xl group-hover:scale-125 transition-transform">
                                              <FiCheckCircle />
                                         </div>

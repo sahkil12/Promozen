@@ -4,6 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import SectionHeader from '../../../utils/SectionHeader';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import { Link } from 'react-router-dom';
+import CTA from '../CTA/CTA';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -119,7 +120,7 @@ const TeamSection = () => {
           ))}
         </div>
         {/* Footer Link */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-28 md:mb-40">
           <Link
             to={'/team'}
             className="flex items-center gap-2 text-primary font-bold group"
@@ -128,6 +129,8 @@ const TeamSection = () => {
             <FiArrowRight className="group-hover:translate-x-1 group-active:translate-x-1 transition-transform" />
           </Link>
         </div>
+        {/* cta card */}
+        <CTA></CTA>
       </div>
     </section>
   );

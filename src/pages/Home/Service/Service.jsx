@@ -33,7 +33,7 @@ const Service = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group relative p-8 rounded-2xl bg-[#121212] border-2 border-primary/5 hover:border-primary/25 transition-all duration-300 flex flex-col h-full hover:drop-shadow[0_0_20px_rgba(242,201,76,0.1)] active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] hover:-translate-y-2.5 active:-translate-y-2.5
+              className="group relative p-8 rounded-2xl bg-base-200/50 border-2 border-primary/5 hover:border-primary/25 transition-all duration-300 flex flex-col h-full hover:drop-shadow[0_0_20px_rgba(242,201,76,0.1)] active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] hover:-translate-y-2.5 active:-translate-y-2.5
               "
             >
               <Link to={service.link}>

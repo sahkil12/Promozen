@@ -29,7 +29,7 @@ const About = () => {
                               </h2>
 
                               {/* Description */}
-                              <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl">
+                              <p className="text-[#a1a1a1] text-lg leading-relaxed mb-10 max-w-xl">
                                    At Promozen, we don't just provide services; we build digital legacies.
                                    Our team of experts is dedicated to pushing the boundaries of what's possible in the digital landscape.
                               </p>
@@ -42,7 +42,7 @@ const About = () => {
                                         "Dedicated Partnership"
                                    ].map((item, index) => (
                                         <div key={index} className="flex items-center gap-3 group">
-                                             <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all">
+                                             <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-base-200 transition-all">
                                                   <FiCheckCircle className="text-sm" />
                                              </div>
                                              <span className="text-base-100 font-medium group-hover:text-primary transition-colors">
@@ -52,7 +52,7 @@ const About = () => {
                                    ))}
                               </div>
                               {/* CTA Button */}
-                              <div className='flex items-center gap-4'>
+                              <div className='flex items-center gap-4 flex-wrap'>
                                    <Link
                                         to={'/contact'}
                                         className="group flex w-fit items-center gap-3 bg-primary text-base-200 font-bold py-4 px-10 rounded-2xl transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)] active:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)]">
@@ -62,12 +62,11 @@ const About = () => {
 
                                    <Link
                                         to={'/portfolio'}
-                                        className="flex items-center gap-2 border border-base-100/10 text-base-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 hover:text-primary hover:border-primary/50 active:text-primary active:border-primary/50">
+                                        className="flex items-center gap-2 border border-base-100/10 text-base-100 font-semibold py-4 px-10 rounded-xl transition-all duration-300 hover:text-primary hover:border-primary/50 active:text-primary active:border-primary/50">
                                         See Our Work
                                    </Link>
                               </div>
                          </motion.div>
-
                          {/* Right Side: Image Placeholder with Effects */}
                          <motion.div
                               initial={{ opacity: 0, scale: 0.9 }}
@@ -81,19 +80,17 @@ const About = () => {
 
                               {/* Image Box */}
                               <div className="relative z-10 h-fit rounded-[2.5rem] bg-base-200/60 border border-base-100/5 overflow-hidden group">
-                                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-60"></div>
+                                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-all"></div>
 
                                    <img
                                         src="/Promozen team.jpeg"
                                         alt="promozen team"
-                                        className='h-full'
+                                        className='h-full w-full object-cover'
                                    />
                               </div>
-
                               {/* Decorative Element */}
                               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 blur-2xl rounded-full"></div>
                          </motion.div>
-
                     </div>
                </div>
           </section>

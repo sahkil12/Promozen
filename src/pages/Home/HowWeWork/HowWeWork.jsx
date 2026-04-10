@@ -5,7 +5,7 @@ import { cardVariants, containerVariants } from '../../../utils/animationsValue'
 import { steps } from '../../../utils/cardsData';
 
 const HowWeWork = () => {
-    
+
      return (
           <section className="relative  bg-secondary overflow-hidden inter">
                <div className="relative py-16 lg:py-20fe z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
@@ -18,6 +18,9 @@ const HowWeWork = () => {
                          subtitle="A proven 4-step process that delivers consistent, exceptional results."
                          center={true}
                     />
+                    <div
+                         className="absolute top-1/3 md:top-1/3 -right-20 md:left-10 w-[400px] h-44 bg-primary/15 blur-[120px] rounded-full">
+                    </div>
                     {/* Steps Grid */}
                     <motion.div
                          variants={containerVariants}

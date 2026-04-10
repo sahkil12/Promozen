@@ -18,7 +18,7 @@ const Testimonials = () => {
      return (
           <section className="relative bg-secondary overflow-hidden inter">
 
-               <div className="relative py-16 lg:py-20 z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
+               <div className="relative py-16 lg:py-24 z-10 w-full xl:max-w-[75%] mx-auto px-4 md:px-6">
 
                     <div className="pointer-events-none">
                          <BgGridDesign />

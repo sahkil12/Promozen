@@ -67,6 +67,9 @@ const TeamSection = () => {
           title2="Experts"
           center={true}
         />
+        <div
+          className="absolute bottom-1/5 md:top-1/2 right-1/3 md:right-10 w-[400px] h-44 bg-primary/15 blur-[120px] rounded-full">
+        </div>
         {/* Team Grid */}
         <motion.div
           variants={containerVariants}

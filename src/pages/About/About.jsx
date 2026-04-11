@@ -19,7 +19,7 @@ const About = () => {
                               <div className="poppins inline-flex items-center gap-2 bg-base-200 border border-primary/25 rounded-full px-4 py-2 mb-8">
                                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                                    <span className="text-primary text-[13px] font-medium tracking-wide uppercase">
-                                        Learn More About Us
+                                        More About Us
                                    </span>
                               </div>
                               {/* Main Heading */}
@@ -42,7 +42,7 @@ const About = () => {
                                         "Dedicated Partnership"
                                    ].map((item, index) => (
                                         <div key={index} className="flex items-center gap-3 group">
-                                             <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-base-200 transition-all">
+                                             <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-base-200 transition-all cursor-pointer">
                                                   <FiCheckCircle className="text-sm" />
                                              </div>
                                              <span className="text-base-100 font-medium group-hover:text-primary transition-colors">

@@ -230,8 +230,7 @@ const About = () => {
                                         variants={cardVariants}
                                         className="bg-base-200/50 border border-primary/10 p-10 
                                         rounded-3xl flex flex-col items-center justify-center text-center group hover:border-primary/30 transition-all duration-300 
-                                        hover:shadow-2xl/80 hover:shadow-primary/15
-                                        "
+                                        hover:shadow-2xl/80 hover:shadow-primary/15 active:border-primary/30 active:shadow-2xl/80 active:shadow-primary/15"
                                    >
                                         {/* Icon Box */}
                                         <IconBox icon={item.icon} className='mb-6 w-16 h-16' />

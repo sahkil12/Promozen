@@ -18,7 +18,7 @@ export const aboutMissions = [
           points: [
                "Expand globally while maintaining quality",
                "Pioneer new digital strategies",
-               "Build long-term partnerships"
+               "Build long-term partnerships "
           ]
      }
 ]

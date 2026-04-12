@@ -3,6 +3,7 @@ import SectionHeader from '../../../utils/SectionHeader';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import { steps } from '../../../utils/cardsData';
+import IconBox from '../../../utils/IconBox';
 
 const HowWeWork = () => {
 
@@ -40,9 +41,7 @@ const HowWeWork = () => {
                                         {step.id}
                                    </div>
                                    {/* Icon Box */}
-                                   <div className="w-14 h-14 rounded-2xl border border-primary/20 bg-primary/5 flex items-center justify-center text-primary text-2xl mb-8 transition-all duration-300 shadow-[0_0_15px_rgba(242,201,76,0.1)] group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
-                                        {step.icon}
-                                   </div>
+                                   <IconBox icon={step.icon} className="mb-8" />
                                    {/* Content */}
                                    <h3 className="text-xl font-semibold text-base-100 mb-4 group-hover:text-primary group-active:text-primary transition-colors poppins">
                                         {step.title}

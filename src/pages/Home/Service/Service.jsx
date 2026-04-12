@@ -5,6 +5,7 @@ import { cardVariants, containerVariants } from '../../../utils/animationsValue'
 import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
 import { services } from '../../../utils/cardsData';
+import IconBox from '../../../utils/IconBox';
 
 const Service = () => {
 
@@ -37,11 +38,8 @@ const Service = () => {
               "
             >
               <Link to={service.link}>
-                {/* Icon Container */}
-                <div className="w-14 h-14 rounded-2xl border border-primary/15 flex items-center justify-center text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20 
-                ">
-                  {service.icon}
-                </div>
+                {/* Icon box */}
+                <IconBox icon={service.icon} className="mb-8" />
                 {/* Content */}
                 <h3 className="text-xl font-semibold poppins text-base-100 mb-4 group-hover:text-primary transition-colors group-active:text-primary">
                   {service.title}

@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiCheckCircle, FiTarget, FiEye, FiAward, FiHeart, FiZap, FiUsers, FiShield, FiTrendingUp } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import { aboutMissions, timeline, values } from '../../utils/About_page_data';
+import { aboutMissions, stats, timeline, values } from '../../utils/About_page_data';
 import IconBox from '../../utils/IconBox';
+import CTA from '../Home/CTA/CTA';
 
 const About = () => {
 
      return (
-          <section className="inter bg-secondary py-24 md:py-28 px-6 overflow-hidden text-base-100">
-               <div className="w-full xl:max-w-[75%] mx-auto py-8 md:py-14 px-4 md:px-6">
+          <section className="inter bg-secondary py-24 md:py-28 overflow-hidden text-base-100">
+
+               <div className="py-8 md:py-14 ">
                     {/* header part */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full xl:max-w-[75%] px-4 md:px-6">
                          {/* Left Side: Content */}
                          <motion.div
                               initial={{ opacity: 0, x: -40 }}
@@ -98,10 +100,10 @@ const About = () => {
                          </motion.div>
                     </div>
                     {/* 2. Mission & Vision */}
-                    <section className="py-20 md:pt-36 text-base-100">
-                         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <section className="py-24 md:mt-20 text-base-100 bg-base-200 w-full">
+                         <div className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 w-full xl:max-w-[75%] mx-auto">
                               {aboutMissions?.map((item, i) => (
-                                   <motion.div key={i} className="bg-base-200 p-10 rounded-xl border-2 border-primary/10 hover:border-primary/25 transition-all duration-300 group hover:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)] active:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)]">
+                                   <motion.div key={i} className="bg-base-200 p-6 md:p-10 rounded-xl border-2 border-primary/10 hover:border-primary/25 transition-all duration-300 group active:border-primary/25 hover:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)] active:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)]">
                                         {/* Icon box */}
                                         <IconBox icon={item.icon} className='mb-6' />
 
@@ -120,7 +122,7 @@ const About = () => {
                          </div>
                     </section>
                     {/* 3. Our Journey (Timeline) */}
-                    <section className="py-16 overflow-hidden">
+                    <section className="py-16 overflow-hidden w-full xl:max-w-[65%] px-4 md:px-6 mx-auto">
                          <div className="max-w-7xl mx-auto">
                               <div className="text-center mb-20">
                                    <span className="text-primary poppins font-bold uppercase tracking-widest text-sm">Our Journey</span>
@@ -148,7 +150,8 @@ const About = () => {
                                                   {/* Content Card */}
                                                   <div className="w-full ml-12 md:ml-0 md:w-[40%]">
                                                        <div className="bg-base-300/50 p-8 rounded-2xl border border-primary/10 hover:border-primary/25 transition-all duration-300 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(242,201,76,0.1)]
-                                                       group hover:-translate-y-2
+                                                       group hover:-translate-y-2 active:border-primary/25 
+                                                       active:shadow-[0_0_25px_rgba(242,201,76,0.1)] active:-translate-y-2
                                                        ">
 
                                                             <span className={`text-primary font-bold text-sm uppercase mb-2 block ${i % 2 === 0 && 'md:text-right'} ${i % 2 !== 0 && 'md:text-left text-left'}`}>
@@ -169,12 +172,12 @@ const About = () => {
                          </div>
                     </section>
                     {/* 4. What Drives Us (Values) */}
-                    <section className="py-16">
+                    <section className="py-16 bg-base-200">
                          <div className="text-center mb-16">
                               <span className="text-primary poppins font-bold uppercase tracking-widest text-sm">Our Values</span>
                               <h2 className="poppins text-4xl font-bold mt-4">What Drives <span className="text-primary">Us</span></h2>
                          </div>
-                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full xl:max-w-[75%] px-4 md:px-6 mx-auto">
                               {values?.map((val, index) => (
                                    <div
                                         key={index}
@@ -200,115 +203,36 @@ const About = () => {
                               ))}
                          </div>
                     </section>
+                    {/* 5. Stats Section */}
+                    <section className="pt-20 pb-30">
+                         <div className="w-full xl:max-w-[75%] px-4 md:px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                              {stats.map((item, index) => (
+                                   <div
+                                        key={index}
+                                        className="bg-base-200/50 border border-primary/10 p-10 
+                                        rounded-3xl flex flex-col items-center justify-center text-center group hover:border-primary/30 transition-all duration-300 
+                                        hover:shadow-2xl/80 hover:shadow-primary/15
+                                        "
+                                   >
+                                        {/* Icon Box */}
+                                        <IconBox icon={item.icon} className='mb-6 w-16 h-16' />
+                                        {/* Value */}
+                                        <h3 className="poppins text-3xl md:text-4xl font-bold text-primary mb-2 shadow-primary/20 drop-shadow-sm">
+                                             {item.value}
+                                        </h3>
+                                        {/* Label */}
+                                        <p className="inter text-base-100/60 font-medium tracking-wide uppercase text-xs md:text-sm">
+                                             {item.label}
+                                        </p>
+                                   </div>
+                              ))}
+                         </div>
+                    </section>
+
+                    <CTA></CTA>
                </div>
           </section>
      );
 };
 
 export default About;
-
-
-
-
-// import { motion } from 'framer-motion';
-// import { FiArrowUpRight, FiCheckCircle, FiTarget, FiEye, FiAward, FiHeart, FiZap, FiUsers, FiShield, FiTrendingUp } from 'react-icons/fi';
-// import { Link } from 'react-router-dom';
-
-// const About = () => {
-//     const fadeIn = {
-//         initial: { opacity: 0, y: 20 },
-//         whileInView: { opacity: 1, y: 0 },
-//         viewport: { once: true },
-//         transition: { duration: 0.6 }
-//     };
-
-//     return (
-//         <main className="bg-secondary text-base-100 overflow-hidden inter">
-
-//   {/* 4. What Drives Us (Values) */}
-//   <section className="py-24 px-6 bg-base-200/50">
-//       <div className="max-w-7xl mx-auto text-center mb-16">
-//           <span className="text-primary poppins font-bold uppercase tracking-widest text-sm">Our Values</span>
-//           <h2 className="poppins text-4xl font-bold mt-4">What Drives <span className="text-primary">Us</span></h2>
-//       </div>
-//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-//           {[
-//               { title: "Excellence", icon: <FiAward />, desc: "We strive for perfection in every project we undertake." },
-//               { title: "Passion", icon: <FiHeart />, desc: "Our love for digital marketing fuels our creativity." },
-//               { title: "Innovation", icon: <FiZap />, desc: "Always staying ahead with the latest technologies." },
-//               { title: "Collaboration", icon: <FiUsers />, desc: "We work as an extension of your team." },
-//               { title: "Transparency", icon: <FiShield />, desc: "Open communication and honest reporting at every step." },
-//               { title: "Results", icon: <FiTrendingUp />, desc: "Focusing on metrics that actually grow your business." }
-//           ].map((val, i) => (
-//               <div key={i} className="bg-base-300 p-8 rounded-2xl border border-white/5 hover:bg-primary/5 transition-all">
-//                   <div className="text-primary text-3xl mb-4">{val.icon}</div>
-//                   <h4 className="poppins text-xl font-bold mb-2">{val.title}</h4>
-//                   <p className="text-[#a1a1a1] text-sm">{val.desc}</p>
-//               </div>
-//           ))}
-//       </div>
-//   </section>
-
-
-
-//             {/* 5. Stats Section */}
-//             <section className="py-20 px-6">
-//                 <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-//                     {[
-//                         { label: "Projects Completed", value: "200+" },
-//                         { label: "Happy Clients", value: "50+" },
-//                         { label: "Years Experience", value: "1+" },
-//                         { label: "Client Retention", value: "98%" }
-//                     ].map((stat, i) => (
-//                         <div key={i} className="text-center p-8 bg-base-300 rounded-3xl border border-white/5">
-//                             <h3 className="text-4xl font-bold text-primary mb-2">{stat.value}</h3>
-//                             <p className="text-[#a1a1a1] text-sm font-medium">{stat.label}</p>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </section>
-
-//             {/* 6. Meet The Experts */}
-//             <section className="py-24 px-6">
-//                 <div className="max-w-7xl mx-auto text-center mb-16">
-//                     <span className="text-primary poppins font-bold uppercase tracking-widest text-sm">Our Team</span>
-//                     <h2 className="poppins text-4xl font-bold mt-4">Meet the <span className="text-primary">Experts</span></h2>
-//                 </div>
-//                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-//                     {[
-//                         { name: "Arif Rahman", role: "Founder & CEO", img: "https://i.ibb.co/vzPRY87/team1.jpg" },
-//                         { name: "Nusrat Jahan", role: "Creative Director", img: "https://i.ibb.co/Vv0mRkM/team2.jpg" },
-//                         { name: "Tanvir Hossain", role: "Lead Developer", img: "https://i.ibb.co/vzPRY87/team1.jpg" },
-//                         { name: "Fatima Khan", role: "Marketing Strategist", img: "https://i.ibb.co/Vv0mRkM/team2.jpg" }
-//                     ].map((member, i) => (
-//                         <motion.div key={i} {...fadeIn} className="group">
-//                             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
-//                                 <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-//                             </div>
-//                             <h4 className="poppins text-xl font-bold">{member.name}</h4>
-//                             <p className="text-primary text-sm font-medium">{member.role}</p>
-//                         </motion.div>
-//                     ))}
-//                 </div>
-//             </section>
-
-//             {/* 7. CTA Section */}
-//             <section className="py-24 px-6">
-//                 <div className="max-w-5xl mx-auto bg-primary rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group">
-//                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full -mr-32 -mt-32 transition-transform group-hover:scale-150 duration-700" />
-//                     <h2 className="poppins text-secondary text-4xl md:text-5xl font-bold mb-6 relative z-10">
-//                         Ready to Join 50+ Brands <br /> That Trust Us?
-//                     </h2>
-//                     <p className="text-secondary/80 text-lg mb-10 max-w-xl mx-auto relative z-10">
-//                         Let's discuss how Promozen can help your brand grow digitally.
-//                     </p>
-//                     <Link to="/contact" className="inline-block bg-secondary text-primary font-black py-5 px-12 rounded-2xl hover:scale-105 transition-transform relative z-10">
-//                         Get In Touch
-//                     </Link>
-//                 </div>
-//             </section>
-//         </main>
-//     );
-// };
-
-// export default About;

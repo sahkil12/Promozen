@@ -1,4 +1,4 @@
-import { FiAward, FiEye, FiHeart, FiShield, FiTarget, FiTrendingUp, FiUsers, FiZap } from "react-icons/fi";
+import { FiAward, FiBriefcase, FiClock, FiEye, FiHeart, FiShield, FiSmile, FiTarget, FiTrendingUp, FiUsers, FiZap } from "react-icons/fi";
 
 export const aboutMissions = [
      {
@@ -78,3 +78,26 @@ export const values = [
           desc: "Focusing on metrics that actually grow your business."
      }
 ]
+
+export const stats = [
+     {
+          label: "Projects Completed",
+          value: "200+",
+          icon: <FiBriefcase />,
+     },
+     {
+          label: "Happy Clients",
+          value: "50+",
+          icon: <FiSmile />,
+     },
+     {
+          label: "Years Experience",
+          value: "1+",
+          icon: <FiClock />,
+     },
+     {
+          label: "Success Rate",
+          value: "98%",
+          icon: <FiTrendingUp />,
+     }
+];

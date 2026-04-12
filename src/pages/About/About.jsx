@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
-import { FiArrowUpRight, FiCheckCircle, FiTarget, FiEye, FiAward, FiHeart, FiZap, FiUsers, FiShield, FiTrendingUp } from 'react-icons/fi';
+import { FiArrowUpRight, FiCheckCircle } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { aboutMissions, stats, timeline, values } from '../../utils/About_page_data';
 import IconBox from '../../utils/IconBox';
 import CTA from '../Home/CTA/CTA';
+import { cardVariants, containerVariants } from '../../utils/animationsValue';
 
 const About = () => {
 
      return (
-          <section className="inter bg-secondary py-24 md:py-28 overflow-hidden text-base-100">
+          <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
 
                <div className="py-8 md:py-14 ">
                     {/* header part */}
@@ -100,8 +101,14 @@ const About = () => {
                          </motion.div>
                     </div>
                     {/* 2. Mission & Vision */}
-                    <section className="py-24 md:mt-20 text-base-100 bg-base-200 w-full">
-                         <div className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 w-full xl:max-w-[75%] mx-auto">
+                    <section
+                         className="py-24 mt-20 md:mt-24 text-base-100 bg-base-200 w-full">
+                         <motion.div
+                              initial={{ opacity: 0, y: 60 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5 }}
+                              viewport={{ once: true }}
+                              className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 w-full xl:max-w-[75%] mx-auto">
                               {aboutMissions?.map((item, i) => (
                                    <motion.div key={i} className="bg-base-200 p-6 md:p-10 rounded-xl border-2 border-primary/10 hover:border-primary/25 transition-all duration-300 group active:border-primary/25 hover:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)] active:drop-shadow-[0_0_30px_rgba(242,201,76,0.07)]">
                                         {/* Icon box */}
@@ -119,7 +126,7 @@ const About = () => {
                                         </ul>
                                    </motion.div>
                               ))}
-                         </div>
+                         </motion.div>
                     </section>
                     {/* 3. Our Journey (Timeline) */}
                     <section className="py-16 overflow-hidden w-full xl:max-w-[65%] px-4 md:px-6 mx-auto">
@@ -133,14 +140,14 @@ const About = () => {
                               <div className="relative">
                                    <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-5 h-full w-[2px] bg-primary/30" />
 
-                                   <div className="space-y-6">
+                                   <div className="space-y-6 md:space-y-2">
                                         {timeline?.map((step, i) => (
                                              <motion.div
                                                   key={i}
-                                                  initial={{ opacity: 0, y: 30 }}
+                                                  initial={{ opacity: 0, y: 35 }}
                                                   whileInView={{ opacity: 1, y: 0 }}
                                                   viewport={{ once: true }}
-                                                  transition={{ delay: i * 0.1 }}
+                                                  transition={{ delay: i * 0.2 }}
                                                   className={`relative flex items-center justify-between w-full ${i % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
                                              >
                                                   {/* Empty Space for Zig-Zag (Desktop Only) */}
@@ -177,10 +184,16 @@ const About = () => {
                               <span className="text-primary poppins font-bold uppercase tracking-widest text-sm">Our Values</span>
                               <h2 className="poppins text-4xl font-bold mt-4">What Drives <span className="text-primary">Us</span></h2>
                          </div>
-                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full xl:max-w-[75%] px-4 md:px-6 mx-auto">
+                         <motion.div
+                              variants={containerVariants}
+                              initial="hidden"
+                              whileInView='show'
+                              viewport={{ once: true }}
+                              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full xl:max-w-[75%] px-4 md:px-6 mx-auto">
                               {values?.map((val, index) => (
-                                   <div
+                                   <motion.div
                                         key={index}
+                                        variants={cardVariants}
                                         className="group relative p-8 rounded-2xl bg-base-200/35 border-2 border-primary/5 hover:border-primary/25 active:border-primary/25    transition-all duration-500 flex items-start gap-5"
                                    >
                                         {/* Icon Box */}
@@ -199,16 +212,22 @@ const About = () => {
 
                                         {/* Subtle Hover Glow */}
                                         <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity -z-10"></div>
-                                   </div>
+                                   </motion.div>
                               ))}
-                         </div>
+                         </motion.div>
                     </section>
                     {/* 5. Stats Section */}
                     <section className="pt-20 pb-30">
-                         <div className="w-full xl:max-w-[75%] px-4 md:px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                         <motion.div
+                              variants={containerVariants}
+                              initial="hidden"
+                              whileInView='show'
+                              viewport={{ once: true }}
+                              className="w-full xl:max-w-[75%] px-4 md:px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                               {stats.map((item, index) => (
-                                   <div
+                                   <motion.div
                                         key={index}
+                                        variants={cardVariants}
                                         className="bg-base-200/50 border border-primary/10 p-10 
                                         rounded-3xl flex flex-col items-center justify-center text-center group hover:border-primary/30 transition-all duration-300 
                                         hover:shadow-2xl/80 hover:shadow-primary/15
@@ -224,11 +243,11 @@ const About = () => {
                                         <p className="inter text-base-100/60 font-medium tracking-wide uppercase text-xs md:text-sm">
                                              {item.label}
                                         </p>
-                                   </div>
+                                   </motion.div>
                               ))}
-                         </div>
+                         </motion.div>
                     </section>
-
+                    {/* cta section */}
                     <CTA></CTA>
                </div>
           </section>

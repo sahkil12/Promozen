@@ -10,7 +10,7 @@ const CTA = () => {
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: .6 }}
                viewport={{ once: true }}
-               className="px-0 md:px-6 inter">
+               className="px-4 md:px-6 inter mb-28">
                <div className="max-w-5xl mx-auto">
                     {/* Main CTA Container */}
                     <div className="relative overflow-hidden rounded-4xl bg-base-200/40 border border-primary/20 py-12 px-4 md:px-10 text-center">

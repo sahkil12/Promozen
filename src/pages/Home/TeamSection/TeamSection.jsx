@@ -86,7 +86,7 @@ const TeamSection = () => {
           ))}
         </motion.div>
         {/* Footer Link */}
-        <div className="flex justify-center mb-28 md:mb-40">
+        <div className="flex justify-center ">
           <Link
             to={'/team'}
             className="flex items-center gap-2 text-primary font-bold group"
@@ -96,7 +96,7 @@ const TeamSection = () => {
           </Link>
         </div>
         {/* cta card */}
-        <CTA></CTA>
+        {/* <CTA></CTA> */}
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
 import { services } from '../../../utils/cardsData';
 import ServiceCard from '../../../utils/Cards/ServiceCard';
+import { Link } from 'react-router-dom';
 
 const Service = () => {
 
@@ -29,7 +30,7 @@ const Service = () => {
           whileInView='show'
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services?.map((service, index) => (
+          {services?.slice(0, 4)?.map((service, index) => (
             <ServiceCard
               key={index}
               cardVariants={cardVariants}
@@ -39,12 +40,12 @@ const Service = () => {
         </motion.div>
         {/* Bottom Link */}
         <div className="mt-14 text-center">
-          <a
-            href="/services"
+          <Link
+            to="/services"
             className="inline-flex items-center text-lg group gap-1 text-primary font-bold"
           >
             View All Services <FiArrowRight className='group-hover:ml-2 transition-all duration-300' />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

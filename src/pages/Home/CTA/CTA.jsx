@@ -3,14 +3,14 @@ import { HiSparkles } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const CTA = () => {
+const CTA = ({mb}) => {
      return (
           <motion.section
                initial={{ opacity: 0, y: 40 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: .6 }}
                viewport={{ once: true }}
-               className="px-4 md:px-6 inter mb-28">
+               className={`px-4 md:px-6 inter ${mb}`}>
                <div className="max-w-5xl mx-auto">
                     {/* Main CTA Container */}
                     <div className="relative overflow-hidden rounded-4xl bg-base-200/40 border border-primary/20 py-12 px-4 md:px-10 text-center">

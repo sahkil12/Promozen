@@ -1,6 +1,8 @@
 import { FaRegLightbulb } from "react-icons/fa";
-import { FiAward, FiBarChart2, FiClock, FiCode, FiGlobe, FiHeart, FiMessageSquare, FiSearch, FiShield, FiTarget, FiTrendingUp, FiUsers, FiZap } from "react-icons/fi";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { FiAward, FiBarChart2, FiClock, FiCode, FiGlobe, FiHeart, FiMessageSquare, FiSearch, FiShare2, FiShield, FiTarget, FiTrendingUp, FiUsers, FiYoutube, FiZap } from "react-icons/fi";
 import { IoColorPaletteOutline } from "react-icons/io5";
+import { LuFilm } from "react-icons/lu";
 import { TfiAnnouncement } from "react-icons/tfi";
 
 
@@ -97,24 +99,40 @@ export const services = [
           title: "Digital Marketing",
           desc: "Strategic digital campaigns that drive real results and maximize your ROI across all channels.",
           icon: <TfiAnnouncement />,
-          link: "services/digital_marketing"
      },
      {
           title: "SEO Optimization",
           desc: "Dominate search rankings with data-driven SEO strategies that bring organic traffic to your doorstep.",
           icon: <FiSearch />,
-          link: "services/seo_optimization"
      },
      {
           title: "Social Media Design",
           desc: "Scroll-stopping social media creatives that capture attention and drive engagement.",
           icon: <IoColorPaletteOutline size={28} />,
-          link: "services/social_media_design"
      },
      {
           title: "Web Development",
           desc: "Modern, responsive, and high-performance websites built with the latest technologies.",
           icon: <FiCode />,
-          link: "services/web_development"
+     },
+     {
+          icon: <FiShare2 />,
+          title: "Social Media Marketing",
+          desc: "Boost your brand awareness and engage with your audience through effective social media campaigns.",
+     },
+     {
+          icon: <FaArrowTrendUp />,
+          title: "YouTube Video SEO",
+          desc: "Optimize your video content for maximum visibility and subscriber growth on YouTube.",
+     },
+     {
+          icon: <LuFilm />,
+          title: "Motion Graphics",
+          desc: "Tell your brand story with engaging animations and high-quality motion graphics that capture attention.",
+     },
+     {
+          icon: <FiYoutube />,
+          title: "YouTube Thumbnail Design",
+          desc: "High-CTR thumbnails designed to stand out and get your videos the clicks they deserve.",
      }
 ];

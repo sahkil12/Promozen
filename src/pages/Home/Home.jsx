@@ -20,8 +20,8 @@ const Home = () => {
                <HowWeWork />
                <Testimonials />
                <TeamSection />
-               <FAQs></FAQs>
-               <CTA></CTA>
+               <FAQs />
+               <CTA mb={"mb-24 md:mb-28"} />
           </div >
      );
 };

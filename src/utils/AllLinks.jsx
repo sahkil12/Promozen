@@ -37,11 +37,11 @@ export const quickLinks = [
 ];
 
 export const serviceLinks = [
-  { name: "Digital Marketing", link: "#" },
-  { name: "SEO Optimization", link: "#" },
-  { name: "Social Media Marketing", link: "#" },
-  { name: "Web Development", link: "#" },
-  { name: "Motion Graphics", link: "#" },
+  { name: "Digital Marketing", link: "/services/digital_marketing" },
+  { name: "SEO Optimization", link: "/services/seo_optimization" },
+  { name: "Social Media Marketing", link: "/services/social_media_marketing" },
+  { name: "Web Development", link: "/services/web_development" },
+  { name: "Motion Graphics", link: "/services/motion_graphics" },
   { name: "View All Services", link: "/services" }
 ];
 

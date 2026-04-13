@@ -14,7 +14,6 @@ const Contact = () => {
                icon: <FiPhone />,
                title: "Phone",
                value: "+880 1345 295225",
-               value2: "+880 1744 597267",
                link: "tel:+8801345295225"
           },
           {
@@ -30,6 +29,8 @@ const Contact = () => {
                link: "#"
           }
      ];
+
+     const inputClass = "w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/20 focus:drop-shadow-[0_0_15px_rgba(242,201,76,0.06)] transition-all duration-300"
 
      return (
           <section className="bg-secondary py-24 md:py-32 text-base-100 inter">
@@ -54,30 +55,41 @@ const Contact = () => {
                          >
                               <form className="space-y-6">
                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {/* name */}
                                         <input
                                              type="text"
                                              placeholder="Your Name"
-                                             className="w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/50 transition-all"
+                                             name='name'
+                                             className={`${inputClass}`}
                                         />
+                                        {/* email */}
                                         <input
                                              type="email"
+                                             name='email'
                                              placeholder="Your Email"
-                                             className="w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/50 transition-all"
+                                             className={`${inputClass}`}
                                         />
                                    </div>
+                                   {/* subject */}
                                    <input
                                         type="text"
+                                        name='subject'
                                         placeholder="Subject"
-                                        className="w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/50 transition-all"
+                                        className={`${inputClass}`}
                                    />
+                                   {/* your message */}
                                    <textarea
-                                        rows="6"
+                                        rows="8"
+                                        name='message'
                                         placeholder="Your Message"
-                                        className="w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/50 transition-all resize-none"
+                                        className={`${inputClass} resize-none`}
                                    ></textarea>
-
-                                   <button className="flex items-center gap-2 bg-primary text-base-200 font-bold py-4 px-10 cursor-pointer rounded-xl hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.3)] group transition-all">
-                                        Send Message <FiSend className='group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform group-active:translate-x-1 group-active:-translate-y-1'/>
+                                   {/* submit button */}
+                                   <button
+                                        type='button'
+                                        className="flex items-center gap-2 bg-primary text-base-200 font-bold py-4 px-10 cursor-pointer rounded-xl hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.3)] group transition-all">
+                                        Send Message
+                                        <FiSend className='group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform group-active:translate-x-1 group-active:-translate-y-1' />
                                    </button>
                               </form>
                          </motion.div>
@@ -90,9 +102,11 @@ const Contact = () => {
                               className="lg:col-span-5 space-y-5"
                          >
                               {contactDetails.map((info, index) => (
-                                   <div key={index} className="bg-base-200/50 border border-base-100/5 p-5 rounded-2xl flex items-center gap-5 group hover:border-primary/25 transition-all duration-300 hover:-translate-y-1.5 active:border-primary/25 active:-translate-y-1.5">
-
-                                        <IconBox icon={info.icon} className='' />
+                                   <div
+                                        key={index}
+                                        className="bg-base-200/50 border border-base-100/5 p-5 rounded-2xl flex items-center gap-5 group hover:border-primary/25 transition-all duration-300 hover:-translate-y-1.5 active:border-primary/25 active:-translate-y-1.5">
+                                        {/* Icon Box */}
+                                        <IconBox icon={info.icon} />
                                         <div>
                                              <p className="text-xs poppins text-base-100/56 uppercase tracking-wider font-bold">{info.title}</p>
                                              <p className="text-base-100/90 font-medium mt-1">{info.value}</p>
@@ -101,7 +115,6 @@ const Contact = () => {
                               ))}
                          </motion.div>
                     </div>
-
                     {/* Map Section */}
                     <motion.div
                          initial={{ opacity: 0, y: 30 }}

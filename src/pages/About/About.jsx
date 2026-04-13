@@ -11,7 +11,7 @@ const About = () => {
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
 
-               <div className="py-8 md:py-14 ">
+               <div className="py-8 md:py-14">
                     {/* header part */}
                     <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full xl:max-w-[75%] px-4 md:px-6">
                          {/* Left Side: Content */}

@@ -1,0 +1,81 @@
+{
+     "teams": [
+          {
+               "name": "Mustafa Tazwer",
+               "role": "Web Developer",
+               "image": "/Images/Team/team-1.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "https://linkedin.com/",
+                    "twitter": "https://twitter.com/"
+               },
+               "experience": "1+ year experience",
+               "description": "Building modern, responsive, and high-performance web applications using the latest technologies to help businesses grow faster.",
+               "skills": [
+                    "React",
+                    "Next.js",
+                    "MongoDB",
+                    "Express.js",
+                    "Node.js",
+                    "TypeScript"
+               ]
+          },
+          {
+               "name": "Mohinul Islam",
+               "role": "Graphics Designer",
+               "image": "/Images/Team/team-2.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "https://linkedin.com/",
+                    "twitter": "https://twitter.com/"
+               },
+               "experience": "2+ years experience",
+               "description": "Creating visually appealing designs, branding materials, and digital assets that enhance user engagement and brand identity.",
+               "skills": [
+                    "Photoshop",
+                    "Illustrator",
+                    "Figma",
+                    "Branding",
+                    "UI Design"
+               ]
+          },
+          {
+               "name": "Tanvir Hossain",
+               "role": "SEO Expert",
+               "image": "/Images/Team/team-3.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "https://linkedin.com/",
+                    "twitter": "https://twitter.com/"
+               },
+               "experience": "2+ years experience",
+               "description": "Optimizing websites to rank higher on search engines, increase organic traffic, and improve overall online visibility.",
+               "skills": [
+                    "SEO",
+                    "Keyword Research",
+                    "On-page SEO",
+                    "Technical SEO",
+                    "Google Analytics"
+               ]
+          },
+          {
+               "name": "Morshed Khan",
+               "role": "Motion Design Expert",
+               "image": "/Images/Team/team-6.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "https://linkedin.com/",
+                    "twitter": "https://twitter.com/"
+               },
+               "experience": "3+ years experience",
+               "description": "Designing engaging motion graphics and animations that bring ideas to life and create impactful visual storytelling.",
+               "skills": [
+                    "After Effects",
+                    "Premiere Pro",
+                    "Motion Graphics",
+                    "Animation",
+                    "Video Editing"
+               ]
+          }
+     ]
+}

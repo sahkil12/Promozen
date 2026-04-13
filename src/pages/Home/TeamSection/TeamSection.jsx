@@ -6,53 +6,11 @@ import { Link } from 'react-router-dom';
 import CTA from '../CTA/CTA';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import TeamCard from '../../../utils/Cards/TeamCard';
+import fullTeams from '../../../../public/Api/teams.json'
 
 const TeamSection = () => {
-  const teamMembers = [
-    {
-      name: "Mustafa Tazwer",
-      role: "Web Developer",
-      image: "/Images/Team/team-1.jpeg",
-      social: {
-        facebook: "https://facebook.com/",
-        linkedin: "https://linkedin.com/",
-        twitter: "https://twitter.com/"
-      },
-      experience: '1+ year experience',
-      description: 'Building Modern Website with responsive & modern features and technology to grow your business more fastest.',
-      skills: ['react, next.js, mongodb, express.js, node.js, typescript']
-    },
-    {
-      name: "Mohinul islam",
-      role: "Graphics Designer",
-      image: "/Images/Team/team-2.jpeg",
-      social: {
-        facebook: "https://facebook.com/",
-        linkedin: "https://linkedin.com/",
-        twitter: "https://twitter.com/"
-      }
-    },
-    {
-      name: "Tanvir Hossain",
-      role: "SEO Expert",
-      image: "/Images/Team/team-3.jpeg",
-      social: {
-        facebook: "https://facebook.com/",
-        linkedin: "https://linkedin.com/",
-        twitter: "https://twitter.com/"
-      }
-    },
-    {
-      name: "Morshed Khan",
-      role: "Motion Design Expert",
-      image: "/Images/Team/team-6.jpeg",
-      social: {
-        facebook: "https://facebook.com/",
-        linkedin: "https://linkedin.com/",
-        twitter: "https://twitter.com/"
-      }
-    }
-  ];
+
+   const teamMembers = fullTeams?.teams
 
   return (
     <section className="relative py-16 lg:py-20 bg-secondary text-base-100 overflow-hidden inter">

@@ -31,7 +31,7 @@ export const timeline = [
      },
      {
           year: "2025 Q2",
-          title: "First 10 Clients",
+          title: "First 20 Clients",
           desc: "Quickly gained trust with exceptional quality, serving 20+ brands across diverse industries."
      },
      {
@@ -41,7 +41,7 @@ export const timeline = [
      },
      {
           year: "2025 Q4",
-          title: "30+ Happy Clients",
+          title: "50+ Happy Clients",
           desc: "Reached the milestone of 50+ satisfied clients with a 98% satisfaction rate."
      }
 ]

@@ -29,11 +29,11 @@ const CTA = () => {
                               </span>
                          </div>
                          {/* Title */}
-                         <h2 className="text-3xl sm:text-4xl poppins lg:text-5xl font-bold text-base-100 mb-6 leading-tight max-w-3xl mx-auto">
+                         <h2 className="text-3xl sm:text-4xl poppins font-bold text-base-100 mb-6 leading-tight max-w-3xl mx-auto">
                               Ready to <span className="text-primary">Transform</span> Your Brand?
                          </h2>
                          {/* Description */}
-                         <p className="text-[#a1a1a1] text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                         <p className="text-[#a1a1a1] text-base max-w-xl mx-auto mb-10 leading-relaxed">
                               Join 50+ brands that trust Promozen to grow their digital presence.
                               Get in touch and let's take your business to the next level.
                          </p>
@@ -42,7 +42,7 @@ const CTA = () => {
                               {/* Primary Button */}
                               <Link
                                    to={'/contact'}
-                                   className="group flex items-center gap-2 bg-primary text-base-200 font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)]">
+                                   className="group flex items-center gap-2 bg-primary text-base-200 font-bold py-3.5 px-8 rounded-xl transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)]">
                                    Start Your Project
                                    <FiArrowRight
                                         size={18}
@@ -51,7 +51,7 @@ const CTA = () => {
                               {/* Secondary Link */}
                               <Link
                                    to={'/portfolio'}
-                                   className="flex items-center gap-2 border border-base-100/10 text-base-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 hover:text-primary hover:border-primary/50 active:text-primary active:border-primary/50">
+                                   className="flex items-center gap-2 border border-base-100/10 text-base-100 font-bold py-3.5 px-10 rounded-xl transition-all duration-300 hover:text-primary hover:border-primary/50 active:text-primary active:border-primary/50">
                                    View Portfolio
                               </Link>
                          </div>

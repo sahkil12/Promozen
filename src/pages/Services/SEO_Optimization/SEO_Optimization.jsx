@@ -1,64 +1,68 @@
 import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
+import { IoLayersOutline } from "react-icons/io5";
+import { FiLayers } from "react-icons/fi";
+import { FaChartBar } from "react-icons/fa";
+import { AiOutlineSafety } from "react-icons/ai";
 
 const SEO_Optimization = () => {
 
      const serviceData = {
-          badge: "",
+          badge: "SEO",
 
           header: {
-               title1: "",
-               title2: "",
-               subtitle: ""
+               title1: "SEO",
+               title2: "Optimization",
+               subtitle: "We establish your brand as an authority in your industry and drive long-term organic growth. Our approach combines technical expertise with creative content strategies, ensuring your website not only ranks higher but also delivers an exceptional user experience that converts visitors into customers."
           },
 
           serviceImage: web_dev,
-          serviceAlt: "",
+          serviceAlt: "seo optimization",
 
           statsData: [
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
+               { label: "Avg. Organic Growth", value: "500%" },
+               { label: "Avg. Ranking Position", value: "Top 3" },
+               { label: "Keywords on Page 1", value: "85%" },
+               { label: "Sites Optimized", value: "60+" },
           ],
 
           about: {
-               des1: "",
+               des1: "Our SEO services go beyond basic keyword optimization. We implement comprehensive technical SEO, content strategy, and link building campaigns.",
 
-               des2: ""
+               des2: "We establish your brand as an authority in your industry and drive long-term organic growth. Our approach combines technical expertise with creative content strategies, ensuring your website not only ranks higher but also delivers an exceptional user experience that converts visitors into customers."
           },
 
           benefitsData: [
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Technical SEO audit & fixes",
+                    "Keyword research & strategy",
+                    "On-page & off-page optimization",
+                    "Link building campaigns",
                ],
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Local SEO optimization",
+                    "Content strategy & creation",
+                    "Schema markup implementation",
+                    "Core Web Vitals optimization",
                ],
           ],
 
           featuresData: [
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: AiOutlineSafety,
+                    title: "White-Hat Only",
+                    desc: "We use only ethical, Google-approved SEO practices for lasting results."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FiLayers ,
+                    title: "Full-Stack SEO",
+                    desc: "Technical, on-page, off-page, and content — we cover every angle."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FaChartBar ,
+                    title: "Transparent Reporting",
+                    desc: "Detailed monthly reports with rankings, traffic, and actionable insights."
                },
 
           ],
@@ -66,29 +70,29 @@ const SEO_Optimization = () => {
           processData: [
                {
                     id: "01",
-                    title: "",
-                    desc: ""
+                    title: "SEO Audit",
+                    desc: "Comprehensive analysis of your website's SEO health, technical issues, and ranking opportunities."
                },
                {
                     id: "02",
-                    title: "",
-                    desc: ""
+                    title: "Keyword Strategy",
+                    desc: "Research and target the most valuable keywords with high intent and reasonable competition."
                },
                {
                     id: "03",
-                    title: "",
-                    desc: ""
+                    title: "On & Off-Page SEO",
+                    desc: "Optimize your site architecture, content, and build authority through quality backlinks."
                },
                {
                     id: "04",
-                    title: "",
-                    desc: ""
+                    title: "Track & Scale",
+                    desc: "Monitor rankings, analyze traffic patterns, and continuously improve to stay ahead."
                }
           ],
 
-          toolsData: ["", "", "", "", "", ""],
+          toolsData: ["Ahrefs", "SEMrush", "Google Search Console", "Screaming Frog", "Moz", "Surfer SEO"],
 
-          relatedServices: services.slice(1, 4)
+          relatedServices: services.slice(5, 8)
      }
 
 

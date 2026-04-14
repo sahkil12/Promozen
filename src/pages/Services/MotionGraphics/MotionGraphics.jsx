@@ -2,8 +2,9 @@ import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
 import { AiOutlineSafety } from "react-icons/ai";
-import { IoFlashOutline } from "react-icons/io5";
+import { IoFlashOutline, IoLayersOutline } from "react-icons/io5";
 import { BsLayers } from "react-icons/bs";
+import { FiLayers } from "react-icons/fi";
 
 const MotionGraphics = () => {
 
@@ -49,7 +50,7 @@ const MotionGraphics = () => {
 
           featuresData: [
                {
-                    icon: BsLayers ,
+                    icon: FiLayers ,
                     title: "Creative Excellence",
                     desc: "Our animations are crafted by experienced motion designers with a keen eye for detail."
                },

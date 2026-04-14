@@ -14,11 +14,13 @@ import SocialMediaMarketing from "../pages/Services/SocialMediaMarketing/SocialM
 import WebDevelopment from "../pages/Services/WebDevelopment/WebDevelopment";
 import YouTubeThumbnail from "../pages/Services/YouTubeThumbnail/YouTubeThumbnail";
 import YouTubeVideoSEO from "../pages/Services/YouTubeVideoSEO/YouTubeVideoSEO";
+import ErrorPage from "../components/shared/ErrorPage";
 
 export const router = createBrowserRouter([
      {
           path: "/",
-          element: <MainLayout />,
+          element: <MainLayout />, 
+          errorElement:<ErrorPage></ErrorPage>,
           children: [
                {
                     index: true,

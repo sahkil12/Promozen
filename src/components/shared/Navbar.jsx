@@ -43,7 +43,7 @@ const Navbar = () => {
         : "bg-transparent py-5"
         }`}
     >
-      <div className="lg:max-w-3/4 mx-auto px-5 lg:px-5 flex items-center justify-between">
+      <div className="w-full xl:max-w-3/4 mx-auto px-5 lg:px-5 flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-2 group">
           <img src="/Promozen-logo.png" className="w-10" alt="Logo" />

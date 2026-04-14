@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { FiCheckCircle, FiZap, FiLock, FiLayers, FiSearch, FiGlobe, FiBarChart, FiArrowUpRight } from 'react-icons/fi';
-import { FaCode, FaPaintBrush, FaRocket, FaHeadset } from 'react-icons/fa';
 import CTA from '../../Home/CTA/CTA';
 import { Link } from 'react-router-dom';
 import IconBox from './../../../utils/IconBox';
 import SectionHeader from './../../../utils/SectionHeader';
+import ServiceCard from './../../../utils/Cards/ServiceCard';
+import { services } from '../../../utils/cardsData'
 
 const WebDevelopment = () => {
 
@@ -18,7 +19,7 @@ const WebDevelopment = () => {
 
                <div className=''>
                     {/* 1. Hero Section */}
-                    <section className="pt-32 pb-20 w-full xl:max-w-[75%] mx-auto px-6 md:px-8">
+                    <section className="pt-32 pb-20 w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                               <motion.div
                                    initial={{ opacity: 0, x: -50 }}
@@ -33,7 +34,7 @@ const WebDevelopment = () => {
                                         </span>
                                    </div>
 
-                                   <h1 className="poppins text-5xl font-bold leading-tight mt-5">
+                                   <h1 className="poppins text-4xl sm:text-5xl font-bold leading-tight mt-5">
                                         {"Web"} <span className="text-primary">{"Development"}</span>
                                    </h1>
                                    <p className="text-[#a1a1a1] text-lg max-w-xl my-8">
@@ -66,7 +67,7 @@ const WebDevelopment = () => {
                          </div>
                     </section>
                     {/* 2. Stats Bar */}
-                    <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
                          {[
                               { label: "Projects Completed", value: "100+" },
                               { label: "Client Satisfaction", value: "99.9%" },
@@ -80,8 +81,8 @@ const WebDevelopment = () => {
                          ))}
                     </div>
                     {/* 3. Deliver & Benefits */}
-                    <section className="py-24 px-2">
-                         <div className="w-full xl:max-w-[75%] mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-20">
+                    <section className="py-20 px-0 sm:px-2">
+                         <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-20">
                               <div>
                                    <span className="text-primary font-semibold text-sm uppercase tracking-widest">ABOUT THIS SERVICE</span>
                                    <h2 className="poppins text-4xl font-bold mt-4 mb-6">What We <span className="text-primary">Deliver</span></h2>
@@ -90,7 +91,6 @@ const WebDevelopment = () => {
                                         <br />
                                         <br />
                                         From landing pages to full web applications, our development team creates fast, secure, and conversion-optimized digital experiences. We focus on clean code, modern frameworks, and user-centric design to deliver websites that not only look world-class but also perform exceptionally across all devices.
-
                                    </p>
                               </div>
                               <div>
@@ -115,8 +115,8 @@ const WebDevelopment = () => {
                          </div>
                     </section>
                     {/* 4. Why Promozen (Features) */}
-                    <section className="py-24 bg-accent/90">
-                         <div className="w-full xl:max-w-[75%] mx-auto px-6 md:px-8 text-center">
+                    <section className="py-20 bg-accent/90">
+                         <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-8 text-center">
                               {/* Header */}
                               <SectionHeader
                                    header={"WHY CHOOSE US"}
@@ -142,81 +142,65 @@ const WebDevelopment = () => {
                          </div>
                     </section>
                     {/* 5. Process (How We Work) */}
-                    <section className="py-24 px-2">
+                    <section className="py-20 px-0 sm:px-2">
                          <div className="w-full xl:max-w-[75%] mx-auto px-6 md:px-8">
                               <div className="mb-16">
                                    <SectionHeader
                                         header={"OUR PROCESS"}
                                         title1={"How We"}
                                         title2={"Work"}
+                                        subtitle={"A proven process that delivers consistent, exceptional results every time."}
                                         center={true}
                                    />
                               </div>
                               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                    {[
-                                        { id: "01", t: "Discovery", d: "Research and planning" },
-                                        { id: "02", t: "Design", d: "UI/UX Prototyping" },
-                                        { id: "03", t: "Development", d: "Writing clean code" },
-                                        { id: "04", t: "Launch", d: "Deployment & Support" },
+                                        { id: "01", title: "Discovery & Planning", des: "Understand your goals, audience, technical requirements, and competitive landscape." },
+                                        { id: "02", title: "Design & Prototype", des: "Create wireframes, visual designs, and interactive prototypes for approval." },
+                                        { id: "03", title: "Development", des: "Build your website with clean code, modern frameworks, and best practices." },
+                                        { id: "04", title: "Launch & Support", des: "Deploy, test, optimize, and provide ongoing maintenance and support." },
                                    ].map((step, i) => (
-                                        <div key={i} className="relative p-8 bg-base-200 rounded-2xl border border-base-100/5 overflow-hidden group">
-                                             <span className="absolute -top-4 -right-2 text-7xl font-black text-base-100/5 group-hover:text-primary/10 transition-colors">{step.id}</span>
-                                             <h4 className="text-xl font-bold mb-2 relative z-10">{step.t}</h4>
-                                             <p className="text-sm text-[#a1a1a1] relative z-10">{step.d}</p>
+                                        <div key={i} className="relative p-8 bg-base-200/90 rounded-2xl border border-primary/5 overflow-hidden group text-center hover:border-primary/30 active:border-primary/30 hover:-translate-y-1.5 active:-translate-y-1.5 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] transition-all duration-300">
+                                             <span className="absolute -top-1 right-0 text-5xl font-black text-base-100/5 group-hover:text-primary/15 group-active:text-primary/15 transition-colors duration-300">{step.id}</span>
+                                             <h4 className="text-xl font-bold mb-2.5 relative z-10 group-hover:text-primary group-active:text-primary transition-colors duration-300">{step.title}</h4>
+                                             <p className="text-sm text-[#a1a1a1] relative z-10">{step.des}</p>
                                         </div>
                                    ))}
                               </div>
                          </div>
                     </section>
                     {/* 6. Tools & Technologies */}
-                    <div className="py-20 text-center bg-base-300/50 border-y border-base-100/5">
-                         <h4 className="text-sm font-bold text-primary mb-8 uppercase tracking-[0.3em]">Tools & Technologies We Use</h4>
-                         <div className="flex flex-wrap justify-center gap-6 opacity-50">
+                    <div className="py-20 text-center bg-base-300/50 border-y border-base-100/5 px-4">
+                         <div className="text-center mb-12">
+                              <span className="text-primary font-semibold uppercase text-xs tracking-wider">Our Toolkit</span>
+                              <h2 className="text-3xl sm:text-4xl font-bold mt-2.5">Tools & Technologies We <span className="text-primary">Use</span></h2>
+                         </div>
+
+                         <div className="flex flex-wrap justify-center gap-6">
                               {["React", "Node.js", "MongoDB", "Tailwind", "Next.js", "Framer"].map((tool, i) => (
-                                   <span key={i} className="text-2xl font-bold poppins">{tool}</span>
+                                   <span
+                                        key={i}
+                                        className="text-sm rounded-full px-6 py-2 border border-primary/15 font-medium tracking-wider poppins hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.3)] hover:border-primary/30">{tool}</span>
                               ))}
                          </div>
                     </div>
-                    {/* 7. FAQ Section */}
-                    <section className="py-24 px-6 max-w-4xl mx-auto">
-                         <div className="text-center mb-12">
-                              <span className="text-primary font-bold uppercase text-xs">FAQ</span>
-                              <h2 className="text-4xl font-bold mt-2">Common <span className="text-primary">Questions</span></h2>
-                         </div>
-                         <div className="space-y-4">
-                              {[
-                                   "What technologies do you use?",
-                                   "Do you offer maintenance services?",
-                                   "How long does a website take to build?"
-                              ].map((q, i) => (
-                                   <div key={i} className="collapse collapse-plus bg-base-200 border border-base-100/5 rounded-2xl">
-                                        <input type="radio" name="my-accordion-3" defaultChecked={i === 0} />
-                                        <div className="collapse-title text-xl font-medium">{q}</div>
-                                        <div className="collapse-content text-[#a1a1a1]">
-                                             <p>We use modern MERN stack and latest frameworks to ensure high quality and scalability for your business.</p>
-                                        </div>
-                                   </div>
-                              ))}
-                         </div>
-                    </section>
-                    {/* 8. Related Services */}
-                    <section className="py-24 px-6 bg-base-200/20">
-                         <div className="max-w-7xl mx-auto text-center">
-                              <span className="text-primary font-bold">OUR SERVICES</span>
-                              <h2 className="text-4xl font-bold mt-2 mb-16">Related <span className="text-primary">Services</span></h2>
+                    {/* 7. Related Services */}
+                    <section className="py-20">
+                         <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
+                              <div className="mb-12">
+                                   <SectionHeader
+                                        header={"Our Services"}
+                                        title1={"Related"}
+                                        title2={"Services"}
+                                        center={true}
+                                   />
+                              </div>
                               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                   {[
-                                        { icon: <FiSearch />, t: "SEO Optimization", d: "Rank higher on Google" },
-                                        { icon: <FiGlobe />, t: "Digital Marketing", d: "Scale your brand online" },
-                                        { icon: <FiBarChart />, t: "Social Media", d: "Engage with your audience" },
-                                   ].map((s, i) => (
-                                        <div key={i} className="p-8 bg-base-300 border border-base-100/5 rounded-3xl text-left group hover:border-primary/20 transition-all">
-                                             <div className="text-primary text-3xl mb-6">{s.icon}</div>
-                                             <h4 className="text-xl font-bold mb-3">{s.t}</h4>
-                                             <p className="text-sm text-[#a1a1a1] mb-6">{s.d}</p>
-                                             <button className="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Learn More →</button>
-                                        </div>
-                                   ))}
+                                   {services.slice(0,3).map((service, index) => (<ServiceCard
+                                             key={index}
+                                             cardVariants={""}
+                                             service={service}
+                                        />))}
                               </div>
                          </div>
                     </section>

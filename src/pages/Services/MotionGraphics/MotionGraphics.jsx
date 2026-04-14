@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import motion_graphics from '../../../../public/Images/services/motion-graphics.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { AiOutlineSafety } from "react-icons/ai";
 import { IoFlashOutline } from "react-icons/io5";
@@ -16,7 +16,7 @@ const MotionGraphics = () => {
                subtitle: "From logo animations to explainer videos and social media motion content, we combine creativity with storytelling to create memorable visual experiences. Our animations are crafted to engage viewers, simplify complex ideas, and make your brand unforgettable across all platforms."
           },
 
-          serviceImage: web_dev,
+          serviceImage: motion_graphics,
           serviceAlt: "motion graphics",
 
           statsData: [

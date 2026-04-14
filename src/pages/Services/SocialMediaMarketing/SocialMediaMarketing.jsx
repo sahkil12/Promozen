@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import social_marketing from '../../../../public/Images/services/social-media-marketing.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { FiTarget } from "react-icons/fi";
 import { IoFlashOutline } from "react-icons/io5";
@@ -16,7 +16,7 @@ const SocialMediaMarketing = () => {
                subtitle: "Our team stays ahead of trends and algorithms to ensure your brand stays relevant and visible. We craft platform-specific strategies that resonate with your target audience, foster meaningful conversations, and drive measurable business outcomes through social channels."
           },
 
-          serviceImage: web_dev,
+          serviceImage: social_marketing,
           serviceAlt: "Social Media Marketing",
 
           statsData: [

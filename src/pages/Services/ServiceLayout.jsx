@@ -10,6 +10,8 @@ import { cardVariants, containerVariants, listContainer, listItem } from '../../
 const ServiceLayout = ({ data }) => {
      const { badge, header, serviceImage, serviceAlt, statsData, about, benefitsData, featuresData, processData, toolsData, relatedServices } = data
 
+     const commonClasses = "hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.15)] active:drop-shadow-[0_0_15px_rgba(242,201,76,0.15)] hover:border-primary/30 active:border-primary/30 hover:-translate-y-2 active:-translate-y-2`"
+     
      return (
           <div className="bg-secondary text-base-100 inter overflow-hidden">
 
@@ -58,8 +60,8 @@ const ServiceLayout = ({ data }) => {
                                    transition={{ duration: 0.5 }}
                                    className="relative"
                               >
-                                   <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                                   <img src={serviceImage} alt={serviceAlt} className="relative z-10 rounded-3xl border-2 border-base-100/5 shadow-2xl hover:border-primary/50 hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.3)]" />
+                                   <div className="absolute -inset-2 bg-primary/10 blur-3xl rounded-full"></div>
+                                   <img src={serviceImage} alt={serviceAlt} className="relative z-10 rounded-3xl border-2 border-base-100/5 shadow-lg hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.2)] active:drop-shadow-[0_0_30px_rgba(242,201,76,0.2)]" />
                               </motion.div>
                          </div>
                     </section>
@@ -149,7 +151,7 @@ const ServiceLayout = ({ data }) => {
                                                   key={i}
                                                   variants={cardVariants}
                                                   viewport={{ once: true }}
-                                                  className="bg-base-200 p-10 rounded-3xl border border-base-100/5 duration-300 transition-all group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] hover:border-primary/30 active:-translate-y-2 active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:border-primary/30">
+                                                  className={`${commonClasses} bg-base-200 p-10 rounded-3xl border border-base-100/5 transition-all duration-300`}>
                                                   {/* icon box */}
                                                   <IconBox icon={<Icon />} className='mb-8 mx-auto' />
 
@@ -182,7 +184,7 @@ const ServiceLayout = ({ data }) => {
                                    {processData.map((step, i) => (
                                         <motion.div
                                              variants={cardVariants}
-                                             key={i} className="relative p-8 bg-base-200/90 rounded-2xl border border-primary/5 overflow-hidden group text-center hover:border-primary/30 active:border-primary/30 hover:-translate-y-1.5 active:-translate-y-1.5 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] transition-all duration-300">
+                                             key={i} className={`${commonClasses} relative p-8 bg-base-200/90 rounded-2xl border border-primary/5 overflow-hidden group text-center transition-all duration-300`}>
                                              <span className="absolute -top-1 right-0 text-5xl font-black text-base-100/5 group-hover:text-primary/15 group-active:text-primary/15 transition-colors duration-300">{step.id}</span>
                                              <h4 className="text-xl font-bold mb-2.5 relative z-10 group-hover:text-primary group-active:text-primary transition-colors duration-300">{step.title}</h4>
                                              <p className="text-sm text-[#a1a1a1] relative z-10">{step.desc}</p>

@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import social_design from '../../../../public/Images/services/social-media-designjpg.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { FiLayers, FiTarget } from "react-icons/fi";
 import { IoFlashOutline } from "react-icons/io5";
@@ -15,7 +15,7 @@ const SocialMediaDesign = () => {
                subtitle: "From feed posts to stories and reels covers, we ensure every visual communicates your brand's premium quality. Our designers combine aesthetic excellence with strategic thinking, creating visuals that not only look beautiful but also drive action and engagement."
           },
 
-          serviceImage: web_dev,
+          serviceImage: social_design,
           serviceAlt: "Social Media Design",
 
           statsData: [

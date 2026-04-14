@@ -1,6 +1,6 @@
 import { services } from "../../../utils/cardsData";
 import ServiceLayout from "../ServiceLayout";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import digital_marketing from '../../../../public/Images/services/digital-marketing.jpg'
 import { FiTarget } from "react-icons/fi";
 import { FaChartBar } from "react-icons/fa";
 import { IoFlashOutline } from "react-icons/io5";
@@ -16,7 +16,7 @@ const DigitalMarketing = () => {
                     subtitle: "We analyze your market, identify opportunities, and craft multi-channel campaigns that drive real business results. Our team stays ahead of trends, algorithm changes, and industry shifts to ensure your brand maintains a competitive edge. From paid advertising to email campaigns, we create comprehensive strategies that engage your audience at every touchpoint of their journey."
                },
      
-               serviceImage: web_dev,
+               serviceImage: digital_marketing,
                serviceAlt: "digital marketing",
      
                statsData: [

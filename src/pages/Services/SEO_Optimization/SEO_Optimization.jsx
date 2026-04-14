@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import seo from '../../../../public/Images/services/seo-service.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { FiLayers } from "react-icons/fi";
 import { FaChartBar } from "react-icons/fa";
@@ -16,7 +16,7 @@ const SEO_Optimization = () => {
                subtitle: "We establish your brand as an authority in your industry and drive long-term organic growth. Our approach combines technical expertise with creative content strategies, ensuring your website not only ranks higher but also delivers an exceptional user experience that converts visitors into customers."
           },
 
-          serviceImage: web_dev,
+          serviceImage: seo,
           serviceAlt: "seo optimization",
 
           statsData: [

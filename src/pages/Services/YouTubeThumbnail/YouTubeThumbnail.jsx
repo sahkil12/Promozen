@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import youtube_thumbnail from '../../../../public/Images/services/youtube-thumbnail.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { FiLayers, FiTarget } from "react-icons/fi";
 import { FaChartBar } from "react-icons/fa";
@@ -15,7 +15,7 @@ const YouTubeThumbnail = () => {
                subtitle: "Every thumbnail is optimized for maximum visual impact using proven design principles, color psychology, and emotional triggers. We analyze top-performing thumbnails in your niche and create designs that stand out while staying true to your brand."
           },
 
-          serviceImage: web_dev,
+          serviceImage: youtube_thumbnail,
           serviceAlt: "YouTube Thumbnail Design",
 
           statsData: [

@@ -1,5 +1,5 @@
 import { services } from "../../../utils/cardsData";
-import web_dev from '../../../../public/Images/services/web_devlopment.webp'
+import youtube_seo from '../../../../public/Images/services/youtube-seo.jpg'
 import ServiceLayout from "../ServiceLayout";
 import { IoFlashOutline } from "react-icons/io5";
 import { FaChartBar } from "react-icons/fa";
@@ -16,7 +16,7 @@ const YouTubeVideoSEO = () => {
                subtitle: "We convert watchers into loyal subscribers through strategic optimization of every element — from titles and descriptions to tags, playlists, and end screens. Our comprehensive approach covers both on-video and channel-level optimization for maximum growth."
           },
 
-          serviceImage: web_dev,
+          serviceImage: youtube_seo,
           serviceAlt: "YouTube Video SEO",
 
           statsData: [

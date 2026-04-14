@@ -61,7 +61,7 @@ const About = () => {
                               <div className='flex items-center gap-4 flex-wrap'>
                                    <Link
                                         to={'/contact'}
-                                        className="group flex w-fit items-center gap-3 bg-primary text-base-200 font-bold py-4 px-10 rounded-2xl transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)] active:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)]">
+                                        className="group flex w-fit items-center gap-3 bg-primary text-base-200 font-bold py-4 px-10 rounded-xl transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)] active:drop-shadow-[0_0_10px_rgba(242,201,76,0.25)]">
                                         Work With Us
                                         <FiArrowUpRight className="text-xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform " />
                                    </Link>

@@ -161,7 +161,7 @@ const ServiceLayout = ({ data }) => {
                               <h2 className="text-3xl sm:text-4xl font-bold mt-2.5">Tools & Technologies We <span className="text-primary">Use</span></h2>
                          </div>
 
-                         <div className="flex flex-wrap justify-center gap-6">
+                         <div className="flex flex-wrap justify-center gap-5">
                               {toolsData.map((tool, i) => (
                                    <span
                                         key={i}

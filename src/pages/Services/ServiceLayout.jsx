@@ -5,9 +5,11 @@ import IconBox from '../../utils/IconBox';
 import SectionHeader from '../../utils/SectionHeader';
 import ServiceCard from '../../utils/Cards/ServiceCard';
 import CTA from '../Home/CTA/CTA';
+import { cardVariants, containerVariants, listContainer, listItem } from '../../utils/animationsValue';
 
 const ServiceLayout = ({ data }) => {
      const { badge, header, serviceImage, serviceAlt, statsData, about, benefitsData, featuresData, processData, toolsData, relatedServices } = data
+
      return (
           <div className="bg-secondary text-base-100 inter overflow-hidden">
 
@@ -18,6 +20,7 @@ const ServiceLayout = ({ data }) => {
                               <motion.div
                                    initial={{ opacity: 0, x: -50 }}
                                    animate={{ opacity: 1, x: 0 }}
+                                   transition={{ duration: 0.5 }}
                               >
                                    {/* Badge */}
                                    <div className="poppins inline-flex items-center gap-2 bg-primary/5 border border-primary/25 rounded-full px-4 py-2.5">
@@ -52,6 +55,7 @@ const ServiceLayout = ({ data }) => {
                               <motion.div
                                    initial={{ opacity: 0, scale: 0.8 }}
                                    animate={{ opacity: 1, scale: 1 }}
+                                   transition={{ duration: 0.5 }}
                                    className="relative"
                               >
                                    <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
@@ -60,50 +64,69 @@ const ServiceLayout = ({ data }) => {
                          </div>
                     </section>
                     {/* 2. Stats Bar */}
-                    <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
+                    <motion.div
+                         initial={{ opacity: 0, y: 40 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 0.4 }}
+                         className="w-full xl:max-w-[75%] mx-auto px-4 md:px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
                          {statsData.map((stat, i) => (
                               <div key={i} className="text-center">
                                    <h3 className="text-3xl poppins drop-shadow-[0_0_20px_rgba(242,201,76,0.3)] font-bold text-primary">{stat.value}</h3>
                                    <p className="text-sm text-[#a1a1a1] mt-1">{stat.label}</p>
                               </div>
                          ))}
-                    </div>
+                    </motion.div>
                     {/* 3. Deliver & Benefits */}
                     <section className="py-20 px-0 sm:px-2">
                          <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-20">
-                              <div>
+                              <motion.div
+                                   initial={{ opacity: 0, x: -30 }}
+                                   whileInView={{ opacity: 1, x: 0 }}
+                                   viewport={{ once: true }}
+                                   transition={{ direction: 0.4 }}
+                              >
                                    <span className="text-primary font-semibold text-sm uppercase tracking-widest">ABOUT THIS SERVICE</span>
-                                   <h2 className="poppins text-4xl font-bold mt-4 mb-6">What We <span className="text-primary">Deliver</span></h2>
+                                   <h2 className="poppins text-4xl font-bold mt-4 mb-6">What We<span className="text-primary">Deliver</span></h2>
                                    <p className="text-[#a1a1a1] leading-relaxed mb-6">
                                         {about.des1}
                                         <br />
                                         <br />
                                         {about.des2}
                                    </p>
-                              </div>
+                              </motion.div>
                               <div>
                                    <span className="text-primary pl-4 font-bold text-sm uppercase tracking-widest">WHAT YOU GET</span>
                                    <h2 className="poppins text-4xl pl-4 font-bold mt-4 mb-8">Key <span className="text-primary">Benefits</span></h2>
+
                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
 
                                         {benefitsData.map((column, i) => (
-                                             <ul key={i} className="grid gap-2">
+                                             <motion.ul
+                                                  key={i}
+                                                  variants={listContainer}
+                                                  initial="hidden"
+                                                  whileInView="visible"
+                                                  viewport={{ once: true }}
+                                                  className="grid gap-2"
+                                             >
                                                   {column?.map((item, j) => (
-                                                       <li
+                                                       <motion.li
                                                             key={j}
+                                                            variants={listItem}
                                                             className="flex items-center hover:bg-primary/10 active:bg-primary/10 text-neutral-300/80 gap-3 w-fit py-2.5 px-5 hover:text-base-100/90 active:text-base-100/90 transition-all cursor-pointer text-sm rounded-lg"
                                                        >
                                                             <FiCheckCircle className="text-primary" />
                                                             {item}
-                                                       </li>
+                                                       </motion.li>
                                                   ))}
-                                             </ul>
+                                             </motion.ul>
                                         ))}
                                    </div>
                               </div>
                          </div>
                     </section>
-                    {/* 4. Why Promozen (Features) */}
+                    {/* 4. Why Promozen */}
                     <section className="py-20 bg-accent/90">
                          <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-8 text-center">
                               {/* Header */}
@@ -113,22 +136,29 @@ const ServiceLayout = ({ data }) => {
                                    title2={header.title2}
                                    center={true}
                               />
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                              <motion.div
+                                   variants={containerVariants}
+                                   initial="hidden"
+                                   whileInView="show"
+                                   viewport={{ once: true }}
+                                   className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
                                    {featuresData.map((card, i) => {
                                         const Icon = card.icon
                                         return (
-                                             <div
+                                             <motion.div
                                                   key={i}
+                                                  variants={cardVariants}
+                                                  viewport={{ once: true }}
                                                   className="bg-base-200 p-10 rounded-3xl border border-base-100/5 duration-300 transition-all group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] hover:border-primary/30 active:-translate-y-2 active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:border-primary/30">
                                                   {/* icon box */}
                                                   <IconBox icon={<Icon />} className='mb-8 mx-auto' />
 
                                                   <h4 className="text-xl font-semibold mb-4 poppins group-hover:text-primary active:text-primary">{card.title}</h4>
                                                   <p className="text-[#a1a1a1] text-sm leading-relaxed">{card.desc}</p>
-                                             </div>
+                                             </motion.div>
                                         )
                                    })}
-                              </div>
+                              </motion.div>
                          </div>
                     </section>
                     {/* 5. Process (How We Work) */}
@@ -143,15 +173,22 @@ const ServiceLayout = ({ data }) => {
                                         center={true}
                                    />
                               </div>
-                              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                              <motion.div
+                                   variants={containerVariants}
+                                   initial="hidden"
+                                   whileInView="show"
+                                   viewport={{ once: true }}
+                                   className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                    {processData.map((step, i) => (
-                                        <div key={i} className="relative p-8 bg-base-200/90 rounded-2xl border border-primary/5 overflow-hidden group text-center hover:border-primary/30 active:border-primary/30 hover:-translate-y-1.5 active:-translate-y-1.5 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] transition-all duration-300">
+                                        <motion.div
+                                             variants={cardVariants}
+                                             key={i} className="relative p-8 bg-base-200/90 rounded-2xl border border-primary/5 overflow-hidden group text-center hover:border-primary/30 active:border-primary/30 hover:-translate-y-1.5 active:-translate-y-1.5 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_15px_rgba(242,201,76,0.1)] transition-all duration-300">
                                              <span className="absolute -top-1 right-0 text-5xl font-black text-base-100/5 group-hover:text-primary/15 group-active:text-primary/15 transition-colors duration-300">{step.id}</span>
                                              <h4 className="text-xl font-bold mb-2.5 relative z-10 group-hover:text-primary group-active:text-primary transition-colors duration-300">{step.title}</h4>
                                              <p className="text-sm text-[#a1a1a1] relative z-10">{step.desc}</p>
-                                        </div>
+                                        </motion.div>
                                    ))}
-                              </div>
+                              </motion.div>
                          </div>
                     </section>
                     {/* 6. Tools & Technologies */}
@@ -163,9 +200,14 @@ const ServiceLayout = ({ data }) => {
 
                          <div className="flex flex-wrap justify-center gap-5">
                               {toolsData.map((tool, i) => (
-                                   <span
+                                   <motion.span
                                         key={i}
-                                        className="text-sm rounded-full px-6 py-2 border border-primary/15 font-medium tracking-wider poppins hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.3)] hover:border-primary/30">{tool}</span>
+                                        initial={{ opacity: 0, y: 35 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        viewport={{ once: true }}
+                                        className="text-sm rounded-full px-6 py-2 border border-primary/15 font-medium tracking-wider poppins hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(242,201,76,0.3)] hover:border-primary/30">{tool}
+                                   </motion.span>
                               ))}
                          </div>
                     </div>
@@ -180,13 +222,18 @@ const ServiceLayout = ({ data }) => {
                                         center={true}
                                    />
                               </div>
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                              <motion.div
+                                   variants={containerVariants}
+                                   initial="hidden"
+                                   whileInView="show"
+                                   viewport={{ once: true }}
+                                   className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                    {relatedServices.map((service, index) => (<ServiceCard
                                         key={index}
-                                        cardVariants={""}
+                                        cardVariants={cardVariants}
                                         service={service}
                                    />))}
-                              </div>
+                              </motion.div>
                          </div>
                     </section>
                     {/* 9. Final CTA */}

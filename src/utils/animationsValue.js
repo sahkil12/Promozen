@@ -1,17 +1,17 @@
- export const heroContainerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: .20
-      },
-    }
-  }
+export const heroContainerVariants = {
+     hidden: {},
+     show: {
+          transition: {
+               staggerChildren: 0.15,
+               delayChildren: .20
+          },
+     }
+}
 
- export const heroChildVariants = {
-    hidden: { opacity: 0, y: 35 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
+export const heroChildVariants = {
+     hidden: { opacity: 0, y: 35 },
+     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export const containerVariants = {
      hidden: {},
@@ -63,5 +63,23 @@ export const item = {
                duration: 0.5,
                ease: "easeOut"
           }
+     }
+};
+
+export const listContainer = {
+     hidden: {},
+     visible: {
+          transition: {
+               staggerChildren: 0.045
+          }
+     }
+};
+
+export const listItem = {
+     hidden: { opacity: .5, y: 15 },
+     visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.30, ease: "easeInOut" }
      }
 };

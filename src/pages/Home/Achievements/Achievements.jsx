@@ -49,9 +49,6 @@ const Achievements = () => {
                                    whileHover={{ y: -8 }}
                                    className="group p-8 rounded-2xl bg-base-200/25 border border-base-100/5 hover:border-primary/40 active:border-primary/40 transition-all duration-500 text-center"
                               >
-                                   {/* <div className="flex items-center justify-center w-14 h-14 rounded-2xl border border-primary/15 mx-auto text-primary text-2xl bg-primary/10 mb-8 transition-all duration-300 group-hover:bg-primary/15 group-hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-hover:border-primary/20 group-active:bg-primary/15 group-active:drop-shadow-[0_0_20px_rgba(242,201,76,0.5)] group-active:border-primary/20">
-                                        {stat.icon}
-                                   </div> */}
                                    {/* Icon Box */}
                                    <IconBox icon={stat.icon} className="mb-8 mx-auto" />
 

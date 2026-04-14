@@ -1,65 +1,66 @@
-
 import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
+import { FiLayers, FiTarget } from "react-icons/fi";
+import { IoFlashOutline } from "react-icons/io5";
 
 const SocialMediaDesign = () => {
 
      const serviceData = {
-          badge: "",
+          badge: "Design",
 
           header: {
-               title1: "",
-               title2: "",
-               subtitle: ""
+               title1: "Social",
+               title2: "Media Design",
+               subtitle: "From feed posts to stories and reels covers, we ensure every visual communicates your brand's premium quality. Our designers combine aesthetic excellence with strategic thinking, creating visuals that not only look beautiful but also drive action and engagement."
           },
 
           serviceImage: web_dev,
-          serviceAlt: "",
+          serviceAlt: "Social Media Design",
 
           statsData: [
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
+               { label: "Designs Created", value: "150+" },
+               { label: "Avg. Engagement Lift", value: "3x" },
+               { label: "Brands Styled", value: "25+" },
+               { label: "Avg. Turnaround", value: "24h" },
           ],
 
           about: {
-               des1: "",
+               des1: "Our design team creates stunning social media graphics that align with your brand identity and stop users mid-scroll.",
 
-               des2: ""
+               des2: "From feed posts to stories and reels covers, we ensure every visual communicates your brand's premium quality. Our designers combine aesthetic excellence with strategic thinking, creating visuals that not only look beautiful but also drive action and engagement."
           },
 
           benefitsData: [
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Brand-consistent designs",
+                    "Story & reel templates",
+                    "Event & promotion graphics",
+                    "Custom illustration",
                ],
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Feed aesthetic planning",
+                    "Carousel post designs",
+                    "Brand guideline development",
+                    "Animated post designs",
                ],
           ],
 
           featuresData: [
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FiLayers ,
+                    title: "Pixel-Perfect Quality",
+                    desc: "Every design is meticulously crafted with attention to detail."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: IoFlashOutline,
+                    title: "Quick Turnaround",
+                    desc: "Most designs delivered within 24 hours — without compromising quality."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FiTarget,
+                    title: "Conversion-Focused",
+                    desc: "Designs that don't just look good — they drive clicks and engagement."
                },
 
           ],
@@ -67,29 +68,29 @@ const SocialMediaDesign = () => {
           processData: [
                {
                     id: "01",
-                    title: "",
-                    desc: ""
+                    title: "Brand Discovery",
+                    desc: "Understand your brand aesthetics, colors, typography, and visual preferences."
                },
                {
                     id: "02",
-                    title: "",
-                    desc: ""
+                    title: "Design Concepts",
+                    desc: "Create initial design templates, mood boards, and style guides for approval."
                },
                {
                     id: "03",
-                    title: "",
-                    desc: ""
+                    title: "Production",
+                    desc: "Produce high-quality graphics on schedule for all platforms and formats."
                },
                {
                     id: "04",
-                    title: "",
-                    desc: ""
+                    title: "Iterate & Refine",
+                    desc: "Continuously improve designs based on engagement data and feedback."
                }
           ],
 
-          toolsData: ["", "", "", "", "", ""],
+          toolsData: ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Canva Pro", "After Effects", "Procreate"],
 
-          relatedServices: services.slice(1, 4)
+          relatedServices: services.slice(5, 8)
      }
 
 

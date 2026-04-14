@@ -20,10 +20,10 @@ const DigitalMarketing = () => {
                serviceAlt: "digital marketing",
      
                statsData: [
-                    { label: "Avg. Traffic Increase", value: "300%" },
-                    { label: "Avg. ROAS", value: "2.5x" },
-                    { label: "Lower CPA", value: "45%" },
-                    { label: "Campaigns Managed", value: "150+" },
+                    { label: "Avg. Traffic Increase", value: "250%" },
+                    { label: "Avg. ROAS", value: "2.0x" },
+                    { label: "Lower CPA", value: "40%" },
+                    { label: "Campaigns Managed", value: "100+" },
                ],
      
                about: {

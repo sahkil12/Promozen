@@ -1,4 +1,3 @@
-
 import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
@@ -22,9 +21,9 @@ const SocialMediaMarketing = () => {
 
           statsData: [
                { label: "Avg. Engagement Boost", value: "200%" },
-               { label: "Followers Generated", value: "50K+" },
-               { label: "Brands Managed", value: "40+" },
-               { label: "Campaigns Launched", value: "500+" },
+               { label: "Followers Generated", value: "20K+" },
+               { label: "Brands Managed", value: "30+" },
+               { label: "Campaigns Launched", value: "200+" },
           ],
 
           about: {

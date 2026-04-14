@@ -1,65 +1,67 @@
-
 import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
+import { IoFlashOutline } from "react-icons/io5";
+import { FaChartBar } from "react-icons/fa";
+import { FiTarget } from "react-icons/fi";
 
 const YouTubeVideoSEO = () => {
 
      const serviceData = {
-          badge: "",
+          badge: "SEO",
 
           header: {
-               title1: "",
-               title2: "",
-               subtitle: ""
+               title1: "YouTube",
+               title2: "Video SEO",
+               subtitle: "We convert watchers into loyal subscribers through strategic optimization of every element — from titles and descriptions to tags, playlists, and end screens. Our comprehensive approach covers both on-video and channel-level optimization for maximum growth."
           },
 
           serviceImage: web_dev,
-          serviceAlt: "",
+          serviceAlt: "YouTube Video SEO",
 
           statsData: [
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
-               { label: "", value: "" },
+               { label: "Avg. View Increase", value: "200%" },
+               { label: "Subscribers Generated", value: "10K+" },
+               { label: "Channels Optimized", value: "30+" },
+               { label: "Avg. Video Ranking", value: "Top 10" },
           ],
 
           about: {
-               des1: "",
+               des1: "YouTube is the world's second-largest search engine. Our YouTube SEO services ensure your videos rank higher and reach more viewers.",
 
-               des2: ""
+               des2: "We convert watchers into loyal subscribers through strategic optimization of every element — from titles and descriptions to tags, playlists, and end screens. Our comprehensive approach covers both on-video and channel-level optimization for maximum growth."
           },
 
           benefitsData: [
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Video keyword research",
+                    "Tag & category strategy",
+                    "End screen & card strategy",
+                    "Competitor channel analysis",
                ],
                [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "Title & description optimization",
+                    "Playlist optimization",
+                    "Channel SEO audit",
+                    "YouTube Analytics interpretation",
                ],
           ],
 
           featuresData: [
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FaChartBar,
+                    title: "Algorithm Expertise",
+                    desc: "We understand YouTube's algorithm and how to work with it."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: FiTarget,
+                    title: "Search Intent Focus",
+                    desc: "We target keywords with high intent for maximum viewer engagement."
                },
                {
-                    icon: '',
-                    title: "",
-                    desc: ""
+                    icon: IoFlashOutline,
+                    title: "Fast Implementation",
+                    desc: "Quick optimization turnaround so your content starts ranking sooner."
                },
 
           ],
@@ -67,29 +69,29 @@ const YouTubeVideoSEO = () => {
           processData: [
                {
                     id: "01",
-                    title: "",
-                    desc: ""
+                    title: "Channel Audit",
+                    desc: "Analyze your channel's current SEO performance, metadata gaps, and growth opportunities."
                },
                {
                     id: "02",
-                    title: "",
-                    desc: ""
+                    title: "Keyword Research",
+                    desc: "Identify high-value, low-competition keywords for your niche and content strategy."
                },
                {
                     id: "03",
-                    title: "",
-                    desc: ""
+                    title: "Video Optimization",
+                    desc: "Optimize titles, descriptions, tags, thumbnails, and metadata for every video."
                },
                {
                     id: "04",
-                    title: "",
-                    desc: ""
+                    title: "Growth Tracking",
+                    desc: "Monitor views, rankings, watch time, and subscriber growth with regular reports."
                }
           ],
 
-          toolsData: ["", "", "", "", "", ""],
+          toolsData: ["TubeBuddy", "VidIQ", "Ahrefs", "Google Trends", "YouTube Studio", "Keyword Tool"],
 
-          relatedServices: services.slice(1, 4)
+          relatedServices: services.slice(2, 5)
      }
 
 

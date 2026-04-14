@@ -19,10 +19,10 @@ const WebDevelopment = () => {
           serviceAlt: "web development",
 
           statsData: [
-               { label: "Projects Completed", value: "100+" },
-               { label: "Client Satisfaction", value: "99.9%" },
-               { label: "Page Load Speed", value: "< 2s" },
-               { label: "Happy Clients", value: "50+" },
+               { label: "Projects Completed", value: "50+" },
+               { label: "Client Satisfaction", value: "95%" },
+               { label: "Page Load Speed", value: "< 3s" },
+               { label: "Happy Clients", value: "30+" },
           ],
 
           about: {
@@ -86,7 +86,7 @@ const WebDevelopment = () => {
                }
           ],
 
-          toolsData: ["React", "Node.js", "MongoDB", "Tailwind", "Next.js", "Framer"],
+          toolsData: ["React", "Node.js", "MongoDB", "Tailwind", "Next.js", "Typescript"],
 
           relatedServices: services.slice(0, 3)
      }

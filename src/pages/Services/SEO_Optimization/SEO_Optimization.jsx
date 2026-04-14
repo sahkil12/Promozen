@@ -1,7 +1,6 @@
 import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
-import { IoLayersOutline } from "react-icons/io5";
 import { FiLayers } from "react-icons/fi";
 import { FaChartBar } from "react-icons/fa";
 import { AiOutlineSafety } from "react-icons/ai";
@@ -21,10 +20,10 @@ const SEO_Optimization = () => {
           serviceAlt: "seo optimization",
 
           statsData: [
-               { label: "Avg. Organic Growth", value: "500%" },
-               { label: "Avg. Ranking Position", value: "Top 3" },
-               { label: "Keywords on Page 1", value: "85%" },
-               { label: "Sites Optimized", value: "60+" },
+               { label: "Avg. Organic Growth", value: "200%" },
+               { label: "Avg. Ranking Position", value: "Top 5-10" },
+               { label: "Keywords on Page 1", value: "80%" },
+               { label: "Sites Optimized", value: "30+" },
           ],
 
           about: {

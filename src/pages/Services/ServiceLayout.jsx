@@ -13,7 +13,7 @@ const ServiceLayout = ({ data }) => {
 
                <div className=''>
                     {/* 1. Hero Section */}
-                    <section className="pt-32 pb-20 w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
+                    <section className="pt-28 md:pt-32 pb-20 w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                               <motion.div
                                    initial={{ opacity: 0, x: -50 }}
@@ -28,9 +28,9 @@ const ServiceLayout = ({ data }) => {
                                    </div>
 
                                    <h1 className="poppins text-4xl sm:text-5xl font-bold leading-tight mt-5">
-                                        {header.title1} <span className="text-primary">{header.title2}</span>
+                                        {header.title1} <span className="text-primary drop-shadow-[0_0_10px_rgba(242,201,76,0.35)]">{header.title2}</span>
                                    </h1>
-                                   <p className="text-[#a1a1a1] text-lg max-w-xl my-8">
+                                   <p className="text-[#a1a1a1] text-lg max-w-xl  my-8">
                                         {header.subtitle}
                                    </p>
                                    {/* cta button */}
@@ -60,10 +60,10 @@ const ServiceLayout = ({ data }) => {
                          </div>
                     </section>
                     {/* 2. Stats Bar */}
-                    <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
+                    <div className="w-full xl:max-w-[75%] mx-auto px-4 md:px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-base-100/5">
                          {statsData.map((stat, i) => (
                               <div key={i} className="text-center">
-                                   <h3 className="text-3xl font-bold text-primary">{stat.value}</h3>
+                                   <h3 className="text-3xl poppins drop-shadow-[0_0_20px_rgba(242,201,76,0.3)] font-bold text-primary">{stat.value}</h3>
                                    <p className="text-sm text-[#a1a1a1] mt-1">{stat.label}</p>
                               </div>
                          ))}

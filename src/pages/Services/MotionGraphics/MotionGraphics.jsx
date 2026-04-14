@@ -2,8 +2,7 @@ import { services } from "../../../utils/cardsData";
 import web_dev from '../../../../public/Images/services/web_devlopment.webp'
 import ServiceLayout from "../ServiceLayout";
 import { AiOutlineSafety } from "react-icons/ai";
-import { IoFlashOutline, IoLayersOutline } from "react-icons/io5";
-import { BsLayers } from "react-icons/bs";
+import { IoFlashOutline } from "react-icons/io5";
 import { FiLayers } from "react-icons/fi";
 
 const MotionGraphics = () => {
@@ -21,9 +20,9 @@ const MotionGraphics = () => {
           serviceAlt: "motion graphics",
 
           statsData: [
-               { label: "Animations Created", value: "500+" },
-               { label: "Total Views", value: "1M+" },
-               { label: "Client Satisfaction", value: "95%" },
+               { label: "Animations Created", value: "100+" },
+               { label: "Total Views", value: "500k+" },
+               { label: "Client Satisfaction", value: "90%" },
                { label: "Avg. Delivery Time", value: "48h" },
           ],
 

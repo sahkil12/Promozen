@@ -38,6 +38,45 @@
       "tools": [
         "After Effects"
       ]
+    },
+    {
+      "title": "E-Commerce Clothing Website",
+      "category": "Web Development",
+      "description": "Modern responsive E-Commerce clothing website designed for high conversion.",
+      "type": "image",
+      "thumbnail": "/Images/b4-style-project-pm.jpeg",
+      "preview": "/Images/B4-Style.webp",
+      "tools": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "JWT",
+        "Express",
+        "Tailwind"
+      ]
+    },
+    {
+      "title": "Social Media Banner",
+      "category": "Graphics Design",
+      "description": "Creative banner & poster design for real estate promotion and business campaign.",
+      "type": "image",
+      "thumbnail": "/Images/social-media-design-pm.jpeg",
+      "preview": "/Images/promozen-design.jpeg",
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
+    },
+    {
+      "title": "Product Promo Video",
+      "category": "Motion Graphics",
+      "description": "Short promotional video for product launch campaign.",
+      "type": "video",
+      "thumbnail": "/Images/ctg-blood-connect.webp",
+      "preview": "/Images/motion-graphics.mp4",
+      "tools": [
+        "After Effects"
+      ]
     }
   ]
 }

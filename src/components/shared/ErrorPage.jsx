@@ -27,7 +27,7 @@ const ErrorPage = () => {
                          <motion.div
                               animate={{ y: [0, -20, 0] }}
                               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                              className="absolute top-1/2 left-72 -translate-x-1/2 -translate-y-1/2 text-base-100/70 text-6xl md:text-8xl"
+                              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-base-100/70 text-6xl md:text-8xl"
                          >
                               <FiSearch className=''/>
                          </motion.div>

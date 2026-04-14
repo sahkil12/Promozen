@@ -33,7 +33,7 @@ const Services = () => {
                          ))}
                     </motion.div>
 
-                    <CTA mb={"mb-2"} />
+                    <CTA mb={"mb-2 mt-28"} />
                </div>
           </section>
      );

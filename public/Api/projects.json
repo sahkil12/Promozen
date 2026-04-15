@@ -40,12 +40,12 @@
       ]
     },
     {
-      "title": "E-Commerce Clothing Website",
+      "title": "A Parcel Delivery Website",
       "category": "Web Development",
-      "description": "Modern responsive E-Commerce clothing website designed for high conversion.",
+      "description": "Modern responsive Parcel Delivery Website website designed for high conversion.",
       "type": "image",
-      "thumbnail": "/Images/b4-style-project-pm.jpeg",
-      "preview": "/Images/B4-Style.webp",
+      "thumbnail": "/Images/proshift.webp",
+      "preview": "/Images/proshift.webp",
       "tools": [
         "React",
         "Node.js",

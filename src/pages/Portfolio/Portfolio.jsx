@@ -10,7 +10,7 @@ const Portfolio = () => {
      const [category, setCategory] = useState("All")
      const projects = projectsData.projects;
 
-     const categories = ["All", "Web Development", "Social Media Design", "Motion Graphics", "SEO", "Thumbnail Design",]
+     const categories = ["All", "Web Development", "Graphics Design", "Motion Graphics", "SEO", "Thumbnail Design",]
 
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">

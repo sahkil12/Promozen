@@ -18,14 +18,14 @@ const ProjectCard = ({ cardVariants, project, onView }) => {
                          alt={project.title}
                          className="h-60 md:h-[270px] w-full object-cover group-hover:scale-105 transition-all duration-300 group-active:scale-105 "
                     />
-                    {/*  */}
+                    {/* video badge */}
                     {
-                         project.type === "video" ? <div className='absolute flex items-center gap-1 text-base-200 py-1 px-3 rounded-full z-10 font-bold top-3 right-4 bg-primary text-sm '>
+                         project.type === "video" ? <div className='absolute flex items-center gap-1 text-base-200 py-1 px-3 rounded-full font-bold top-3 right-4 bg-primary text-sm '>
                               <FaCirclePlay size={12} /> Video
                          </div> : ''
                     }
                     {/* hover overlay */}
-                    <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity group-active:opacity-100  duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity group-active:opacity-100 duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
                          <button
                               onClick={onView}
                               className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 active:scale-110 transition-transform cursor-pointer"

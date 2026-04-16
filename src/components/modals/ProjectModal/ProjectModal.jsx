@@ -4,7 +4,6 @@ import { RxCross2 } from "react-icons/rx";
 const ProjectModal = ({ project, onClose }) => {
      return (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-base-200/60 backdrop-blur-sm px-4">
-
                {/* modal box */}
                <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}

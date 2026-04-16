@@ -4,6 +4,7 @@ import SectionHeader from "../../utils/SectionHeader";
 import CTA from "../Home/CTA/CTA";
 import { motion } from 'framer-motion';
 import fullTeams from '../../../public/Api/teams.json'
+const [selectedMember, setSelectedMember] = useState(null);
 
 const Team = () => {
 

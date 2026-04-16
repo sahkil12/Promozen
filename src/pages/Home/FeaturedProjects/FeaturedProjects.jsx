@@ -6,9 +6,13 @@ import projectsData from "../../../../public/Api/projects.json"
 import SectionHeader from '../../../utils/SectionHeader';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import ProjectCard from '../../../utils/Cards/ProjectCard';
+import { useState } from 'react';
+import ProjectModal from '../../../components/modals/ProjectModal/ProjectModal';
 
 const FeaturedProjects = () => {
      const projects = projectsData.projects;
+
+     const [selectedProject, setSelectedProject] = useState(null);
 
      return (
           <section className="relative py-16 lg:py-20 bg-secondary text-base-100 inter">
@@ -27,7 +31,7 @@ const FeaturedProjects = () => {
                     <div
                          className="absolute top-1/10 md:top-8 -right-20 md:right-80 w-[380px] h-80 bg-primary/15 blur-[120px] rounded-full">
                     </div>
-                   
+
                     {/* grid */}
                     <motion.div
                          variants={containerVariants}
@@ -40,6 +44,7 @@ const FeaturedProjects = () => {
                                    key={index}
                                    cardVariants={cardVariants}
                                    project={project}
+                                   onView={() => setSelectedProject(project)}
                               />
                          ))}
                     </motion.div>
@@ -53,6 +58,13 @@ const FeaturedProjects = () => {
                               <FiArrowRight />
                          </Link>
                     </div>
+                    {/*  Modal */}
+                    {selectedProject && (
+                         <ProjectModal
+                              project={selectedProject}
+                              onClose={() => setSelectedProject(null)}
+                         />
+                    )}
                </div>
           </section>
      );

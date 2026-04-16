@@ -7,7 +7,6 @@ import { stats } from '../../../utils/cardsData';
 import IconBox from '../../../utils/IconBox';
 
 const Achievements = () => {
-
      // Trust Points Data
      const trustPoints = [
           "Google Ads & Meta Ads Certified Team",

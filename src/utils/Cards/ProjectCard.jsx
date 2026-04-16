@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
+import { FaCirclePlay } from 'react-icons/fa6';
 import { FiEye } from 'react-icons/fi';
 
-const ProjectCard = ({ cardVariants, project }) => {
+const ProjectCard = ({ cardVariants, project, onView }) => {
 
      return (
           <motion.div
+               onClick={onView}
                variants={cardVariants}
                className="group relative rounded-2xl border border-primary/10 overflow-hidden transition-all duration-500 hover:border-primary/45 hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)]
-                                   active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)] cursor-pointer"
+               active:border-primary/45 active:drop-shadow-[0_0_20px_rgba(242,201,76,0.15)] cursor-pointer inter"
           >
                {/* image */}
                <div className="relative overflow-hidden rounded-t-xl">
@@ -16,9 +18,16 @@ const ProjectCard = ({ cardVariants, project }) => {
                          alt={project.title}
                          className="h-60 md:h-[270px] w-full object-cover group-hover:scale-105 transition-all duration-300 group-active:scale-105 "
                     />
+                    {/*  */}
+                    {
+                         project.type === "video" ? <div className='absolute flex items-center gap-1 text-base-200 py-1 px-3 rounded-full z-10 font-bold top-3 right-4 bg-primary text-sm '>
+                              <FaCirclePlay size={12} /> Video
+                         </div> : ''
+                    }
                     {/* hover overlay */}
                     <div className="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity group-active:opacity-100  duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
                          <button
+                              onClick={onView}
                               className="w-12 h-12 rounded-xl bg-primary text-secondary flex items-center justify-center text-xl hover:scale-110 active:scale-110 transition-transform cursor-pointer"
                          >
                               <FiEye />

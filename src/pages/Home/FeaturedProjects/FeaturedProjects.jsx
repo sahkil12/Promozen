@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiEye, FiExternalLink, FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight } from 'react-icons/fi';
 import BgGridDesign from '../../../utils/BgGridDesign';
 import { Link } from 'react-router-dom';
 import projectsData from "../../../../public/Api/projects.json"

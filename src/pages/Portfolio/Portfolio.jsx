@@ -28,11 +28,6 @@ const Portfolio = () => {
                ? projects
                : projects.filter((p) => p.category === category);
 
-     console.log(selectedProject);
-     console.log(category);
-     console.log(projects);
-     console.log(filteredProjects);
-
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
 
@@ -58,14 +53,15 @@ const Portfolio = () => {
                     </div>
                     {/* project Grid */}
                     <motion.div
+                         key={category}
                          variants={containerVariants}
                          initial="hidden"
                          whileInView='show'
-                         viewport={{ once: true }}
+                         viewport={{ once: false }}
                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                          {filteredProjects?.map((project, index) => (
                               <ProjectCard
-                                   key={index}
+                                   key={`${project.title}-${index}`}
                                    cardVariants={cardVariants}
                                    project={project}
                                    onView={() => setSelectedProject(project)}

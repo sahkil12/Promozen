@@ -7,10 +7,13 @@ import CTA from '../CTA/CTA';
 import { cardVariants, containerVariants } from '../../../utils/animationsValue';
 import TeamCard from '../../../utils/Cards/TeamCard';
 import fullTeams from '../../../../public/Api/teams.json'
+import { useState } from 'react';
+import TeamModal from '../../../components/modals/TeamModal/TeamModal';
 
 const TeamSection = () => {
 
-   const teamMembers = fullTeams?.teams
+  const teamMembers = fullTeams?.teams
+  const [selectedMember, setSelectedMember] = useState(null);
 
   return (
     <section className="relative py-16 lg:py-20 bg-secondary text-base-100 overflow-hidden inter">
@@ -37,9 +40,10 @@ const TeamSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {teamMembers.map((member, index) => (
             <TeamCard
-              key={index}
+              key={`${member.name}-${index}`}
               cardVariants={cardVariants}
               member={member}
+              onView={() => setSelectedMember(member)}
             />
           ))}
         </motion.div>
@@ -53,8 +57,13 @@ const TeamSection = () => {
             <FiArrowRight className="group-hover:translate-x-1 group-active:translate-x-1 transition-transform" />
           </Link>
         </div>
-        {/* cta card */}
-        {/* <CTA></CTA> */}
+        {/* modal */}
+        {selectedMember && (
+          <TeamModal
+            member={selectedMember}
+            onClose={() => setSelectedMember(null)}
+          />
+        )}
       </div>
     </section>
   );

@@ -71,7 +71,7 @@ const Portfolio = () => {
 
                     <CTA mb={"mb-2 mt-28"} />
 
-                    {/* ✅ Modal */}
+                    {/*  Modal */}
                     {selectedProject && (
                          <ProjectModal
                               project={selectedProject}

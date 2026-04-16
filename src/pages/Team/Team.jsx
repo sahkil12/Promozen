@@ -4,11 +4,13 @@ import SectionHeader from "../../utils/SectionHeader";
 import CTA from "../Home/CTA/CTA";
 import { motion } from 'framer-motion';
 import fullTeams from '../../../public/Api/teams.json'
-const [selectedMember, setSelectedMember] = useState(null);
+import { useState } from "react";
+import TeamModal from "../../components/modals/TeamModal/TeamModal";
 
 const Team = () => {
 
      const teamMembers = fullTeams?.teams
+     const [selectedMember, setSelectedMember] = useState(null);
 
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
@@ -26,18 +28,26 @@ const Team = () => {
                          variants={containerVariants}
                          initial="hidden"
                          whileInView='show'
-                         viewport={{ once: true }}
+                         viewport={{ once: false }}
                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-28">
                          {teamMembers.map((member, index) => (
                               <TeamCard
-                                   key={index}
+                                   key={`${member.name}-${index}`}
                                    cardVariants={cardVariants}
                                    member={member}
+                                   onView={() => setSelectedMember(member)}
                               />
                          ))}
                     </motion.div>
 
                     <CTA mb={"mb-2"} />
+                    {/* modal */}
+                    {selectedMember && (
+                         <TeamModal
+                              member={selectedMember}
+                              onClose={() => setSelectedMember(null)}
+                         />
+                    )}
                </div>
           </section>
      );

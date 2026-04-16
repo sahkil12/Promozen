@@ -28,7 +28,7 @@ const ProjectModal = ({ project, onClose }) => {
                          {/* close */}
                          <button
                               onClick={onClose}
-                              className="absolute cursor-pointer top-4 right-4 p-2  rounded-full text-primary bg-accent/80 hover:bg-primary hover:text-base-200 transition-colors active:bg-primary active:text-base-200"
+                              className="absolute cursor-pointer top-4 right-4 p-2.5 rounded-full text-primary bg-accent/80 hover:bg-primary hover:text-base-200 transition-colors active:bg-primary active:text-base-200"
                          >
                               <RxCross2 />
                          </button>
@@ -56,7 +56,7 @@ const ProjectModal = ({ project, onClose }) => {
                                    {project.tools.map((tool, i) => (
                                         <span
                                              key={i}
-                                             className="px-4 py-1 text-xs bg-primary/5 border border-primary/35 rounded-full text-primary"
+                                             className="px-4 py-1 text-xs bg-primary/5 border border-primary/35 rounded-full text-primary font-medium"
                                         >
                                              {tool}
                                         </span>

@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
-const TeamCard = ({cardVariants, member}) => {
+const TeamCard = ({ cardVariants, member, onView }) => {
      return (
           <motion.div
+               onClick={onView}
                variants={cardVariants}
                className={`group relative rounded-3xl bg-base-200/55 border-2 transition-all duration-500 overflow-hidden border-primary/5 hover:border-primary/35 active:border-primary/35
-              hover:shadow-primary/20 active:shadow-primary/20 shadow-2xl/50 cursor-pointer
+               hover:shadow-primary/20 active:shadow-primary/20 shadow-2xl/50 cursor-pointer
                 `}
           >
                {/* Image Placeholder */}

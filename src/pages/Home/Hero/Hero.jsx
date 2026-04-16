@@ -83,7 +83,8 @@ const Hero = () => {
           className="flex-5 relative group">
           <div className="relative p-2 rounded-[2rem] bg-gradient-to-br from-base-100/10 to-transparent border border-base-100/5 backdrop-blur-sm shadow-2xl hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] transition-all duration-300 hover:-translate-y-1.5 active:-translate-y-1.5">
             <img
-              src="/Promozen team.jpeg"
+              src="/Images/Promozen team.jpeg"
+              loading='lazy'
               className="rounded-[1.8rem] w-full h-[560px] object-cover object-top"
               alt="Promozen Team"
             />

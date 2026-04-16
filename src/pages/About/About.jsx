@@ -88,7 +88,8 @@ const About = () => {
                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-all"></div>
 
                                    <img
-                                        src="/Promozen team.jpeg"
+                                        src="/Images/Promozen team.jpeg"
+                                        loading='lazy'
                                         alt="promozen team"
                                         className='h-full w-full object-cover'
                                    />

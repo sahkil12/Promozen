@@ -27,7 +27,7 @@ const Footer = () => {
                          {/* column 1 */}
                          <motion.div variants={item}>
                               <Link to="/" className="flex items-center gap-1 mb-4">
-                                   <img src="/Promozen-logo.png" className="w-10" alt="Logo" />
+                                   <img src="/Images/Promozen-logo.png" className="w-10" alt="Logo" />
 
                                    <span className="text-base-100 font-bold text-2xl tracking-tight poppins">
                                         Promo<span className="text-primary">zen</span>

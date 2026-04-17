@@ -10,7 +10,6 @@ import ProjectModal from "../../components/modals/ProjectModal/ProjectModal";
 const Portfolio = () => {
      const [category, setCategory] = useState("All")
      const [selectedProject, setSelectedProject] = useState(null);
-
      const projects = projectsData.projects;
 
      const categories = [
@@ -31,7 +30,7 @@ const Portfolio = () => {
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
 
-               <div className="py-8 md:py-14 w-full xl:max-w-[75%] mx-auto px-6 md:px-8">
+               <div className="py-8 md:py-14 w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
                     <SectionHeader
                          header="Our Work"
                          title1="Featured"
@@ -69,16 +68,17 @@ const Portfolio = () => {
                          ))}
                     </motion.div>
 
-                    <CTA mb={"mb-2 mt-28"} />
-
-                    {/*  Modal */}
-                    {selectedProject && (
-                         <ProjectModal
-                              project={selectedProject}
-                              onClose={() => setSelectedProject(null)}
-                         />
-                    )}
                </div>
+
+               <CTA mb={"mb-2 mt-28"} />
+
+               {/*  Modal */}
+               {selectedProject && (
+                    <ProjectModal
+                         project={selectedProject}
+                         onClose={() => setSelectedProject(null)}
+                    />
+               )}
           </section>
      );
 };

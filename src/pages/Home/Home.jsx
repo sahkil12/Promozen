@@ -1,5 +1,4 @@
 import Achievements from "./Achievements/Achievements";
-import CTA from "./CTA/CTA";
 import FAQs from "./FAQs/FAQs";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 import Hero from "./Hero/Hero";
@@ -21,7 +20,6 @@ const Home = () => {
                <Testimonials />
                <TeamSection />
                <FAQs />
-               <CTA mb={"mb-24 md:mb-28"} />
           </div >
      );
 };

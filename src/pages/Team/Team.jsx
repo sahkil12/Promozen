@@ -15,7 +15,7 @@ const Team = () => {
      return (
           <section className="inter bg-secondary py-20 md:py-24 overflow-hidden text-base-100">
 
-               <div className="py-8 md:py-14 w-full xl:max-w-[75%] mx-auto px-6 md:px-8">
+               <div className="py-8 md:py-14 w-full xl:max-w-[75%] mx-auto px-4 md:px-8">
                     <SectionHeader
                          header="Our Team"
                          title1="Meet the"
@@ -39,16 +39,16 @@ const Team = () => {
                               />
                          ))}
                     </motion.div>
-
-                    <CTA mb={"mb-2"} />
-                    {/* modal */}
-                    {selectedMember && (
-                         <TeamModal
-                              member={selectedMember}
-                              onClose={() => setSelectedMember(null)}
-                         />
-                    )}
                </div>
+
+               <CTA mb={"mb-2"} />
+               {/* modal */}
+               {selectedMember && (
+                    <TeamModal
+                         member={selectedMember}
+                         onClose={() => setSelectedMember(null)}
+                    />
+               )}
           </section>
      );
 };

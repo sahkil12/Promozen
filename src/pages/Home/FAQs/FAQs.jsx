@@ -4,6 +4,7 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 import { FaRegQuestionCircle } from "react-icons/fa";
 import BgGridDesign from '../../../utils/BgGridDesign';
 import SectionHeader from '../../../utils/SectionHeader';
+import CTA from './../CTA/CTA';
 
 
 const FAQs = () => {
@@ -40,7 +41,7 @@ const FAQs = () => {
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-               <div className="relative z-10 max-w-4xl mx-auto px-6">
+               <div className="relative z-10 max-w-4xl mx-auto px-6 pb-20">
                     {/* Header Section */}
                     <SectionHeader
                          header="FAQs"
@@ -92,6 +93,7 @@ const FAQs = () => {
                          ))}
                     </div>
                </div>
+               <CTA mb={"my-20"} />
           </section>
      );
 };

@@ -10,10 +10,10 @@ const TeamModal = ({ member, onClose }) => {
                <motion.div
                     initial={{ scale: 0.85, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="relative w-full max-w-3xl rounded-2xl overflow-hidden border border-primary/20 bg-secondary inter"
+                    className="relative mt-20 w-full max-w-2xl rounded-2xl overflow-hidden border border-primary/20 bg-secondary inter"
                >
                     {/* image top */}
-                    <div className="relative h-[280px] md:h-[420px] overflow-hidden">
+                    <div className="relative h-[250px] md:h-[350px] overflow-hidden">
                          <img
                               src={member.image}
                               alt={member.name}
@@ -30,7 +30,7 @@ const TeamModal = ({ member, onClose }) => {
                          </button>
                     </div>
                     {/* content */}
-                    <div className="px-6 md:px-8 pb-8 -mt-20 relative z-10">
+                    <div className="px-4 md:px-8 pb-8 -mt-20 relative z-10">
                          <h2 className="text-2xl md:text-3xl font-bold poppins">
                               {member.name}
                          </h2>
@@ -43,7 +43,7 @@ const TeamModal = ({ member, onClose }) => {
                               <span> <RiSuitcaseLine className="text-primary text-xl"/></span> {member.experience}
                          </p>
                          {/* description */}
-                         <p className="text-[#a1a1a1] mb-6 leading-relaxed">
+                         <p className="text-[#a1a1a1] text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
                               {member.description}
                          </p>
                          {/* skills */}
@@ -54,7 +54,7 @@ const TeamModal = ({ member, onClose }) => {
                                    {member.skills.map((skill, i) => (
                                         <span
                                              key={i}
-                                             className="px-5 py-1.5 text-xs rounded-full font-medium border border-primary/35 bg-primary/5 text-primary"
+                                             className="px-5 py-1.5 text-[11px] md:text-xs rounded-full font-medium border border-primary/35 bg-primary/5 text-primary"
                                         >
                                              {skill}
                                         </span>

@@ -37,14 +37,9 @@ const Contact = () => {
 
      const sendEmail = async (e) => {
           e.preventDefault();
-          console.log(
-               formRef.current.name.value,
-               formRef.current.email.value,
-               formRef.current.subject.value,
-               formRef.current.message.value,
-          );
+         
           try {
-               // 1️⃣ Agency mail (client data)
+               // 1️ Agency mail (client data)
                await emailjs.sendForm(
                     "service_xrt6fqq",
                     "template_m2ve1is",
@@ -52,10 +47,10 @@ const Contact = () => {
                     "jatsq2jQBk55dqi95"
                );
 
-               // 2️⃣ Auto reply (client ke mail)
+               // 2️⃣ Auto reply (client mail)
                await emailjs.send(
                     "service_xrt6fqq",
-                    "template_06ixuwv", // client template
+                    "template_06ixuwv",
                     {
                          name: formRef.current.name.value,
                          email: formRef.current.email.value,
@@ -65,13 +60,10 @@ const Contact = () => {
                     },
                     "jatsq2jQBk55dqi95"
                );
-               console.log("success");
                toast.success("Message sent successfully 🚀");
                formRef.current.reset();
-               console.log("done");
 
           } catch (error) {
-               console.log(error);
                toast.error("Something went wrong ❌");
           }
      };

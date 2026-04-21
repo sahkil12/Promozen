@@ -39,24 +39,6 @@
                ]
           },
           {
-               "name": "Nilwal Sayeed Nishan",
-               "role": "Socail Media Marketer",
-               "image": "/Images/Team/team-7.jpeg",
-               "social": {
-                    "facebook": ":https://www.facebook.com/share/18MBqygjW2/",
-                    "linkedin": "https://linkedin.com/",
-                    "instagram": "https://www.instagram.com/nsnishan60?igsh=aDdoNm1pd3RjdmRi"
-               },
-               "experience": "1+ years experience",
-               "description": "I specialize in creating effective strategies, managing campaigns, and helping businesses build strong brand awareness across digital platforms.",
-               "skills": [
-                    "Keyword Research",
-                    "Screeming frog",
-                    "Ahraf",
-                    "Vid iq"
-               ]
-          },
-          {
                "name": "Kazi Sakib",
                "role": "SEO Experts",
                "image": "/Images/Team/team-3.jpeg",
@@ -90,6 +72,24 @@
                     "Adobe after effects",
                     "Adobe Illustrator",
                     "Adobe animate"
+               ]
+          },
+          {
+               "name": "Nilwal Sayeed Nishan",
+               "role": "Socail Media Marketer",
+               "image": "/Images/Team/team-7.jpeg",
+               "social": {
+                    "facebook": ":https://www.facebook.com/share/18MBqygjW2/",
+                    "linkedin": "https://linkedin.com/",
+                    "instagram": "https://www.instagram.com/nsnishan60?igsh=aDdoNm1pd3RjdmRi"
+               },
+               "experience": "1+ years experience",
+               "description": "I specialize in creating effective strategies, managing campaigns, and helping businesses build strong brand awareness across digital platforms.",
+               "skills": [
+                    "Keyword Research",
+                    "Screeming frog",
+                    "Ahraf",
+                    "Vid iq"
                ]
           },
           {

@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiClock, FiSend } from 'react-icons/fi';
 import IconBox from '../../utils/IconBox';
+import { useRef } from 'react';
+import emailjs from "@emailjs/browser";
+import toast from 'react-hot-toast';
 
 const Contact = () => {
      const contactDetails = [
@@ -30,6 +33,49 @@ const Contact = () => {
           }
      ];
 
+     const formRef = useRef();
+
+     const sendEmail = async (e) => {
+          e.preventDefault();
+          console.log(
+               formRef.current.name.value,
+               formRef.current.email.value,
+               formRef.current.subject.value,
+               formRef.current.message.value,
+          );
+          try {
+               // 1️⃣ Agency mail (client data)
+               await emailjs.sendForm(
+                    "service_xrt6fqq",
+                    "template_m2ve1is",
+                    formRef.current,
+                    "jatsq2jQBk55dqi95"
+               );
+
+               // 2️⃣ Auto reply (client ke mail)
+               await emailjs.send(
+                    "service_xrt6fqq",
+                    "template_06ixuwv", // client template
+                    {
+                         name: formRef.current.name.value,
+                         email: formRef.current.email.value,
+                         subject: formRef.current.subject.value,
+                         message: formRef.current.message.value,
+                         time: new Date().toLocaleString(),
+                    },
+                    "jatsq2jQBk55dqi95"
+               );
+               console.log("success");
+               toast.success("Message sent successfully 🚀");
+               formRef.current.reset();
+               console.log("done");
+
+          } catch (error) {
+               console.log(error);
+               toast.error("Something went wrong ❌");
+          }
+     };
+
      const inputClass = "w-full bg-base-200 border border-base-100/5 rounded-xl p-4 outline-none focus:border-primary/20 focus:drop-shadow-[0_0_15px_rgba(242,201,76,0.06)] transition-all duration-300"
 
      return (
@@ -53,7 +99,10 @@ const Contact = () => {
                               transition={{ duration: 0.5 }}
                               className="lg:col-span-7"
                          >
-                              <form className="space-y-6">
+                              <form
+                                   ref={formRef}
+                                   onSubmit={sendEmail}
+                                   className="space-y-6">
                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {/* name */}
                                         <input
@@ -61,11 +110,13 @@ const Contact = () => {
                                              placeholder="Your Name"
                                              name='name'
                                              className={`${inputClass}`}
+                                             required
                                         />
                                         {/* email */}
                                         <input
                                              type="email"
                                              name='email'
+                                             required
                                              placeholder="Your Email"
                                              className={`${inputClass}`}
                                         />
@@ -74,19 +125,26 @@ const Contact = () => {
                                    <input
                                         type="text"
                                         name='subject'
+                                        required
                                         placeholder="Subject"
                                         className={`${inputClass}`}
+                                   />
+                                   <input
+                                        type="hidden"
+                                        name="time"
+                                        value={new Date().toLocaleString()}
                                    />
                                    {/* your message */}
                                    <textarea
                                         rows="8"
                                         name='message'
+                                        required
                                         placeholder="Your Message"
                                         className={`${inputClass} resize-none`}
                                    ></textarea>
                                    {/* submit button */}
                                    <button
-                                        type='button'
+                                        type="submit"
                                         className="flex items-center gap-2 bg-primary text-base-200 font-bold py-4 px-10 cursor-pointer rounded-xl hover:drop-shadow-[0_0_10px_rgba(242,201,76,0.3)] group transition-all">
                                         Send Message
                                         <FiSend className='group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform group-active:translate-x-1 group-active:-translate-y-1' />

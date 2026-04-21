@@ -5,9 +5,9 @@
                "role": "Web Developer",
                "image": "/Images/Team/team-1.jpeg",
                "social": {
-                    "facebook": "https://facebook.com/",
-                    "linkedin": "https://linkedin.com/",
-                    "twitter": "https://twitter.com/"
+                    "facebook": "https://www.facebook.com/web.mustafatazwer/",
+                    "linkedin": "https://mustafa-tazwer.vercel.app/",
+                    "instagram": "https://www.instagram.com/mustafatazwer/"
                },
                "experience": "1+ year experience",
                "description": "Building modern, responsive, and high-performance web applications using the latest technologies to help businesses grow faster.",
@@ -21,60 +21,93 @@
                ]
           },
           {
-               "name": "Mohinul Islam",
-               "role": "Graphics Designer",
+               "name": "Mohinul Alam Siam",
+               "role": "Graphics Designer & Founder",
                "image": "/Images/Team/team-2.jpeg",
                "social": {
-                    "facebook": "https://facebook.com/",
-                    "linkedin": "https://linkedin.com/",
-                    "twitter": "https://twitter.com/"
+                    "facebook": "https://www.facebook.com/share/18YPy7FxNX/",
+                    "linkedin": "https://www.linkedin.com/in/mohinul-alam?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                    "Instagram": "https://www.instagram.com/mohinulalamsiam?igsh=MWI4dXEybGZ1ZnMweQ=="
                },
-               "experience": "2+ years experience",
-               "description": "Creating visually appealing designs, branding materials, and digital assets that enhance user engagement and brand identity.",
+               "experience": "1+ years experience",
+               "description": "Graphic designer and founder of Promozen, turning creative ideas into results-driven visuals that grow brands",
                "skills": [
-                    "Photoshop",
-                    "Illustrator",
-                    "Figma",
-                    "Branding",
-                    "UI Design"
+                    "Adobe Photoshop",
+                    "Google Ads",
+                    "Meta Ads",
+                    "Canva"
                ]
           },
           {
-               "name": "Tanvir Hossain",
-               "role": "SEO Expert",
+               "name": "Nilwal Sayeed Nishan",
+               "role": "Socail Media Marketer",
+               "image": "/Images/Team/team-4.jpeg",
+               "social": {
+                    "facebook": ":https://www.facebook.com/share/18MBqygjW2/",
+                    "linkedin": "https://linkedin.com/",
+                    "instagram": "https://www.instagram.com/nsnishan60?igsh=aDdoNm1pd3RjdmRi"
+               },
+               "experience": "1+ years experience",
+               "description": "I specialize in creating effective strategies, managing campaigns, and helping businesses build strong brand awareness across digital platforms.",
+               "skills": [
+                    "Keyword Research",
+                    "Screeming frog",
+                    "Ahraf",
+                    "Vid iq"
+               ]
+          },
+          {
+               "name": "Kazi Sakib",
+               "role": "SEO Experts",
                "image": "/Images/Team/team-3.jpeg",
                "social": {
-                    "facebook": "https://facebook.com/",
-                    "linkedin": "https://linkedin.com/",
-                    "twitter": "https://twitter.com/"
+                    "facebook": "https://www.facebook.com/share/1Axmaczkfw/",
+                    "linkedin": " https://www.linkedin.com/in/kazi-sajjad-hossen-shakib-00a350366?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+                    "instagram": " https://www.instagram.com/quzishsakib"
                },
-               "experience": "2+ years experience",
-               "description": "Optimizing websites to rank higher on search engines, increase organic traffic, and improve overall online visibility.",
-               "skills": [
-                    "SEO",
-                    "Keyword Research",
-                    "On-page SEO",
-                    "Technical SEO",
-                    "Google Analytics"
-               ]
-          },
-          {
-               "name": "Morshed Khan",
-               "role": "Motion Design Expert",
-               "image": "/Images/Team/team-6.jpeg",
-               "social": {
-                    "facebook": "https://facebook.com/",
-                    "linkedin": "https://linkedin.com/",
-                    "twitter": "https://twitter.com/"
-               },
-               "experience": "3+ years experience",
-               "description": "Designing engaging motion graphics and animations that bring ideas to life and create impactful visual storytelling.",
+               "experience": "1+ years experience",
+               "description": "SEO Expert service will help your business rank on Google. Increase traffic, sales and brand value with the right SEO strategy.",
                "skills": [
                     "After Effects",
                     "Premiere Pro",
                     "Motion Graphics",
                     "Animation",
                     "Video Editing"
+               ]
+          },
+          {
+               "name": "Abdulla All Noman",
+               "role": "Motion Designer ",
+               "image": "/Images/Team/team-6.jpeg",
+               "social": {
+                    "facebook": "https://www.facebook.com/share/1AJJMLtjdU/?mibextid=wwXIfr",
+                    "linkedin": "https://www.linkedin.com/in/abdulla-all-noman-38540a286?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+                    "instagram": ""
+               },
+               "experience": "2+ years experience",
+               "description": "As a motion graphics designer and animator, my job is to bring simple ideas to life through visual art and movement. ",
+               "skills": [
+                    "Adobe after effects",
+                    "Adobe Illustrator",
+                    "Adobe animate"
+               ]
+          },
+          {
+               "name": "Nandini Chakraborty",
+               "role": "Client Acquisition Specialist",
+               "image": "/Images/Team/team-5.jpeg",
+               "social": {
+                    "facebook": "https://nandinichakraborty801@gmail.com/",
+                    "linkedin": "https://linkedin.com/",
+                    "instagram": "https://@Nandinicha44608/"
+               },
+               "experience": "1+ years experience",
+               "description": "Identify and target potential clients Generate and qualify leads Communicate with prospects through calls, messages, or email Present products or services effectively Build long-term client relationships Achieve sales and acquisition targets.",
+               "skills": [
+                    "Lead Generation Sales",
+                    "Negotiation",
+                    "Market Research",
+                    "Problem-Solving"
                ]
           }
      ]

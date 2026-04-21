@@ -88,7 +88,7 @@ const Hero = () => {
               src="/Images/team cover.jpeg"
               loading='lazy'
               className="rounded-[1.8rem] w-full h-[560px] object-cover object-top"
-              alt="Promozen Team"
+              alt="Promozen Team Image"
             />
             {/* Team Info Overlay */}
             <div className="absolute bottom-4 left-6 right-6 p-5 rounded-2xl bg-secondary/60 backdrop-blur-md border border-base-100/10 flex items-center gap-4">

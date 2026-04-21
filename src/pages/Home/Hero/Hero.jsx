@@ -56,7 +56,9 @@ const Hero = () => {
             <Link
               to={'/contact'}
               className="btn btn-primary h-auto py-4 px-8 rounded-xl font-bold text-base border-none hover:scale-105 transition-transform flex items-center gap-2 group text-base-200">
-              Start a Project <FiArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform group-active:translate-x-1 group-active:-translate-y-1" />
+              Start a Project 
+              <FiArrowUpRight size={20} 
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform group-active:translate-x-1 group-active:-translate-y-1" />
             </Link>
             {/*  */}
             <Link
@@ -83,7 +85,7 @@ const Hero = () => {
           className="flex-5 relative group">
           <div className="relative p-2 rounded-[2rem] bg-gradient-to-br from-base-100/10 to-transparent border border-base-100/5 backdrop-blur-sm shadow-2xl hover:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] active:drop-shadow-[0_0_20px_rgba(242,201,76,0.1)] transition-all duration-300 hover:-translate-y-1.5 active:-translate-y-1.5">
             <img
-              src="/public/Images/team cover.jpeg"
+              src="/Images/team cover.jpeg"
               loading='lazy'
               className="rounded-[1.8rem] w-full h-[560px] object-cover object-top"
               alt="Promozen Team"

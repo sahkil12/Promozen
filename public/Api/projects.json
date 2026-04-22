@@ -5,8 +5,8 @@
       "category": "Web Development",
       "description": "Modern responsive E-Commerce clothing website designed for high conversion.",
       "type": "image",
-      "thumbnail": "/Images/b4-style-project-pm.jpeg",
-      "preview": "/Images/B4-Style.webp",
+      "thumbnail": "/Images/projects-Image/b4-style-project-pm.jpeg",
+      "preview": "/Images/projects-Image/B4-Style.webp",
       "tools": [
         "React",
         "Node.js",
@@ -21,8 +21,8 @@
       "category": "Graphics Design",
       "description": "Creative banner & poster design for real estate promotion and business campaign.",
       "type": "image",
-      "thumbnail": "/Images/social-media-design-pm.jpeg",
-      "preview": "/Images/promozen-design.jpeg",
+      "thumbnail": "/Images/projects-Image/social-media-design-pm.jpeg",
+      "preview": "/Images/projects-Image/promozen-design.jpeg",
       "tools": [
         "Photoshop",
         "Illustrator"
@@ -33,10 +33,11 @@
       "category": "Motion Graphics",
       "description": "Short promotional video for product launch campaign.",
       "type": "video",
-      "thumbnail": "/Images/ctg-blood-connect.webp",
-      "preview": "/Images/motion-graphics.mp4",
+      "thumbnail": "/Images/projects-Image/motion-img-2.png",
+      "preview": "/Images/projects-Image/motion-1.MP4",
       "tools": [
-        "After Effects"
+        "After Effects",
+        "Illustrator"
       ]
     },
     {
@@ -44,8 +45,8 @@
       "category": "Web Development",
       "description": "Modern responsive Parcel Delivery Website website designed for high conversion.",
       "type": "image",
-      "thumbnail": "/Images/proshift.webp",
-      "preview": "/Images/proshift.webp",
+      "thumbnail": "/Images/projects-Image/delivey-prev.jpeg",
+      "preview": "/Images/projects-Image/proshift.webp",
       "tools": [
         "React",
         "Node.js",
@@ -60,22 +61,46 @@
       "category": "Graphics Design",
       "description": "Creative banner & poster design for real estate promotion and business campaign.",
       "type": "image",
-      "thumbnail": "/Images/social-media-design-pm.jpeg",
-      "preview": "/Images/promozen-design.jpeg",
+      "thumbnail": "/Images/projects-Image/social-poster.jpeg",
+      "preview": "/Images/projects-Image/social-poster.jpeg",
       "tools": [
         "Photoshop",
         "Illustrator"
       ]
     },
     {
-      "title": "Product Promo Video",
-      "category": "Motion Graphics",
-      "description": "Short promotional video for product launch campaign.",
-      "type": "video",
-      "thumbnail": "/Images/ctg-blood-connect.webp",
-      "preview": "/Images/motion-graphics.mp4",
+      "title": "Youtube Thumbnails Design",
+      "category": "Thumbnail Design",
+      "description": "Professional YouTube Thumbnails Design",
+      "type": "image",
+      "thumbnail": "/Images/projects-Image/project page promozen thum.jpg.jpeg",
+      "preview": "/Images/projects-Image/project page promozen thum.jpg.jpeg",
       "tools": [
         "After Effects"
+      ]
+    },
+    {
+      "title": "You Tube SEO ",
+      "category": "SEO",
+      "description": "You Tube SEO. Grow Your You Tube Channel Organic.",
+      "type": "image",
+      "thumbnail": "/Images/projects-Image/Seo-1.jpeg",
+      "preview": "/Images/projects-Image/Seo-1.jpeg",
+      "tools": [
+        "Photoshop",
+        "Illustrator"
+      ]
+    },
+    {
+      "title": "watch motion ads",
+      "category": "Motion Graphics",
+      "description": "Creative motion design estate promotion and business campaign.",
+      "type": "video",
+      "thumbnail": "/Images/projects-Image/motion-img-1.jpeg",
+      "preview": "/Images/projects-Image/motion-2.MP4",
+      "tools": [
+        "Adobe after effects",
+        "Illustrator"
       ]
     }
   ]

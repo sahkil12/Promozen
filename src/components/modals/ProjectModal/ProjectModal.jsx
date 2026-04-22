@@ -15,14 +15,14 @@ const ProjectModal = ({ project, onClose }) => {
                          {project.type === "image" ? (
                               <img
                                    src={project.preview}
-                                   className="w-full h-[250px] md:h-[400px] lg:h-[460px] object-cover"
+                                   className="w-full h-[250px] md:h-[400px] lg:h-[500px] object-cover"
                               />
                          ) : (
                               <video
                                    src={project.preview}
                                    controls
                                    autoPlay
-                                   className="w-full h-[250px] md:h-[400px] lg:h-[460px] object-cover"
+                                   className="w-full h-[250px] md:h-[400px] lg:h-[520px] object-cover"
                               />
                          )}
                          {/* close */}

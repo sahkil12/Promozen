@@ -76,7 +76,23 @@
       "thumbnail": "/Images/projects-Image/project page promozen thum.jpg.jpeg",
       "preview": "/Images/projects-Image/project page promozen thum.jpg.jpeg",
       "tools": [
-        "After Effects"
+        "Illustrator",
+        "Photoshop"
+      ]
+    },
+    {
+      "title": "Blood Donation Website",
+      "category": "Web Development",
+      "description": "A digital blood donation website for chittagong area. Users Find blood donors in there area easily",
+      "type": "image",
+      "thumbnail": "/Images/projects-Image/ctg-blood-prev.jpeg",
+      "preview": "/Images/projects-Image/ctg-blood-connect.webp",
+      "tools": [
+        "Node.js",
+        "React",
+        "Express",
+        "MongoDB",
+        "JWT"
       ]
     },
     {
@@ -87,7 +103,6 @@
       "thumbnail": "/Images/projects-Image/Seo-1.jpeg",
       "preview": "/Images/projects-Image/Seo-1.jpeg",
       "tools": [
-        "Photoshop",
         "Illustrator"
       ]
     },

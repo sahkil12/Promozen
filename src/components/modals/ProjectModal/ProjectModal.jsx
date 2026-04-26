@@ -8,14 +8,14 @@ const ProjectModal = ({ project, onClose }) => {
                <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="bg-base-200 w-full max-w-4xl rounded-2xl overflow-hidden border border-primary/20"
+                    className="bg-base-200 w-full max-w-4xl rounded-2xl overflow-hidden border border-primary/20 mt-4 lg:mt-20"
                >
                     {/* top preview */}
                     <div className="relative">
                          {project.type === "image" ? (
                               <img
                                    src={project.preview}
-                                   className="w-full h-[250px] md:h-[400px] lg:h-[500px] object-cover"
+                                   className="w-full h-[250px] md:h-[420px] lg:h-[540px] object-cover"
                               />
                          ) : (
                               <video

@@ -2,7 +2,6 @@ import {
   FiFacebook,
   FiInstagram,
   FiLinkedin,
-  FiTwitter,
   FiMail,
   FiPhone,
   FiMapPin
@@ -11,20 +10,16 @@ import {
 export const socialLinks = [
   {
     icon: FiFacebook,
-    link: "#"
+    link: "https://www.facebook.com/share/17UwZUo2m5/"
   },
   {
     icon: FiInstagram,
-    link: "#"
+    link: "https://www.instagram.com/prom.ozen?igsh=M2E5YXY0ZzIwY2N2"
   },
   {
     icon: FiLinkedin,
-    link: "#"
+    link: "https://www.linkedin.com/company/promozenagency/"
   },
-  {
-    icon: FiTwitter,
-    link: "#"
-  }
 ];
 
 export const quickLinks = [

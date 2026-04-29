@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
@@ -66,7 +67,7 @@ const TeamModal = ({ member, onClose }) => {
                               {[
                                    { icon: FaFacebookF, link: member.social.facebook },
                                    { icon: FaLinkedinIn, link: member.social.linkedin },
-                                   { icon: FaTwitter, link: member.social.twitter },
+                                   { icon: FaInstagram, link: member.social.instagram },
                               ].map(({ icon: Icon, link }, i) => (
                                    <a
                                         key={i}

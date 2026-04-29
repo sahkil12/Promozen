@@ -58,6 +58,27 @@
                ]
           },
           {
+               "name": "Jahed Hasan",
+               "role": "Ai SEO Specialist",
+               "image": "/Images/Team/team-4.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "www.linkedin.com/in/jahedhasan-seospecialist",
+                    "instagram": "jahedhasan_seo_specialist"
+               },
+               "experience": "2+ year experience",
+               "description": "Local Growth Specialist helping businesses get more traffic and leads through SEO, Google Business Profile, and AI-driven search optimization. Focused on building authority, trust, and long-term organic visibility.",
+               "skills": [
+                    "Keyword Research",
+                    "On-Page SEO",
+                    "Technical SEO",
+                    "AEO",
+                    "GEO",
+                    "LLM Optimization",
+                    "Voice Search Optimization"
+               ]
+          },
+          {
                "name": "Abdulla All Noman",
                "role": "Motion Designer ",
                "image": "/Images/Team/team-6.jpeg",

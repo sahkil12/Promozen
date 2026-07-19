@@ -2,22 +2,28 @@
      "teams": [
           {
                "name": "Mustafa Tazwer",
-               "role": "Web Developer",
+               "role": "Web Developer & AI Automation Expert",
                "image": "/Images/Team/team-8.png",
                "social": {
                     "facebook": "https://www.facebook.com/web.mustafatazwer/",
                     "linkedin": "https://mustafa-tazwer.vercel.app/",
                     "instagram": "https://www.instagram.com/mustafatazwer/"
                },
-               "experience": "1+ year experience",
-               "description": "Building modern, responsive, and high-performance web applications using the latest technologies to help businesses grow faster.",
-               "skills": [    
+               "experience": "1+ Years of Learning & Building Projects",
+               "description": "I build fast, scalable, and SEO friendly web applications using modern technologies. I also create AI-powered automation workflows that streamline business operations, save time, and improve productivity through tools like n8n, Zapier, and AI agents.",
+               "skills": [
                     "React",
                     "Next.js",
                     "MongoDB",
                     "Express.js",
                     "Node.js",
-                    "TypeScript"
+                    "MongoDB",
+                    "TypeScript",
+                    "n8n",
+                    "Ai Automation",
+                    "Zapier",
+                    "OpenAI API",
+                    "RAG"
                ]
           },
           {
@@ -111,24 +117,6 @@
                     "Screeming frog",
                     "Ahraf",
                     "Vid iq"
-               ]
-          },
-          {
-               "name": "Nandini Chakraborty",
-               "role": "Client Acquisition Specialist",
-               "image": "/Images/Team/team-5.jpeg",
-               "social": {
-                    "facebook": "https://nandinichakraborty801@gmail.com/",
-                    "linkedin": "https://linkedin.com/",
-                    "instagram": "https://@Nandinicha44608/"
-               },
-               "experience": "1+ years experience",
-               "description": "Identify and target potential clients Generate and qualify leads Communicate with prospects through calls, messages, or email Present products or services effectively Build long-term client relationships Achieve sales and acquisition targets.",
-               "skills": [
-                    "Lead Generation Sales",
-                    "Negotiation",
-                    "Market Research",
-                    "Problem-Solving"
                ]
           }
      ]

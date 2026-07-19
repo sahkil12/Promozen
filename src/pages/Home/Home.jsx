@@ -10,6 +10,7 @@ import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
 
 const Home = () => {
      return (
+          
           <div>
                <Hero />
                <Service />
@@ -21,6 +22,7 @@ const Home = () => {
                <TeamSection />
                <FAQs />
           </div >
+          
      );
 };
 

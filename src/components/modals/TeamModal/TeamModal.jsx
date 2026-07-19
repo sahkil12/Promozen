@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 
 const TeamModal = ({ member, onClose }) => {
      return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-base-200/70 backdrop-blur-sm px-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-base-200/70 backdrop-blur-md px-4">
 
                <motion.div
                     initial={{ scale: 0.85, opacity: 0 }}

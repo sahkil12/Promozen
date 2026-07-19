@@ -42,10 +42,10 @@ const TeamCard = ({ cardVariants, member, onView }) => {
                </div>
                {/* Content */}
                <div className="p-6 text-center">
-                    <h4 className={`text-xl font-semibold mb-1 transition-colors text-base-100 group-hover:text-primary poppins`}>
+                    <h4 className={`text-xl font-semibold mb-2 transition-colors text-base-100 group-hover:text-primary poppins`}>
                          {member.name}
                     </h4>
-                    <p className="text-primary/90 text-xs font-medium uppercase tracking-wider">
+                    <p className="text-primary/90 text-xs font-semibold uppercase tracking-wider">
                          {member.role}
                     </p>
                </div>

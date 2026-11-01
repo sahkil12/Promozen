@@ -37,7 +37,7 @@ const TeamSection = () => {
           initial="hidden"
           whileInView='show'
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 xl:gap-12">
           {teamMembers.slice(0, 4).map((member, index) => (
             <TeamCard
               key={`${member.name}-${index}`}

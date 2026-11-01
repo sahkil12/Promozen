@@ -18,7 +18,7 @@ const TeamCard = ({ cardVariants, member, onView }) => {
                     <img
                          src={member.image}
                          alt={member.name}
-                         className='h-86 w-full' />
+                         className='h-86 xl:h-96 w-full ' />
                     {/* Social Icons Overlay */}
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 duration-400 overflow-hidden p-2">
 
@@ -51,6 +51,6 @@ const TeamCard = ({ cardVariants, member, onView }) => {
                </div>
           </motion.div>
      );
-};
+};                       
 
 export default TeamCard;

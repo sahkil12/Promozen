@@ -29,7 +29,7 @@ const Team = () => {
                          initial="hidden"
                          whileInView='show'
                          viewport={{ once: false }}
-                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mb-28">
+                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-6 xl:gap-12 mb-28 ">
                          {teamMembers.map((member, index) => (
                               <TeamCard
                                    key={`${member.name}-${index}`}

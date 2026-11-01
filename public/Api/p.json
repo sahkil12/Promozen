@@ -1,21 +1,3 @@
-{
-     "name": "Nandini Chakraborty",
-     "role": "Client Acquisition Specialist",
-     "image": "/Images/Team/team-3.jpeg",
-     "social": {
-          "facebook": "https://nandinichakraborty801@gmail.com/",
-          "linkedin": "https://linkedin.com/",
-          "instagram": "https://@Nandinicha44608/"
-     },
-     "experience": "1+ years experience",
-     "description": "Identify and target potential clients Generate and qualify leads Communicate with prospects through calls, messages, or email Present products or services effectively Build long-term client relationships Achieve sales and acquisition targets.",
-     "skills": [
-          "Lead Generation Sales",
-          "Negotiation",
-          "Market Research",
-          "Problem-Solving",
-     ]
-}
 
 {
      "name": "Abdulla All Noman",
@@ -34,27 +16,28 @@
           "Adobe animate",
      ]
 }
-
-
-{
-     "name": "Nilwal Sayeed Nishan",
-     "role": "Socail Media Marketer",
-     "image": "/Images/Team/team-3.jpeg",
-     "social": {
-          "facebook": ":https://www.facebook.com/share/18MBqygjW2/",
-          "linkedin": "",
-          "instagram": "https://www.instagram.com/nsnishan60?igsh=aDdoNm1pd3RjdmRi"
-     },
-     "experience": "1+ years experience",
-     "description": "I am a Social Media Marketing (SMM) expert with experience in growing online presence, increasing engagement, and driving targeted results. I specialize in creating effective strategies, managing campaigns, and helping businesses build strong brand awareness across digital platforms.",
-     "skills": [
-          "Keyword Research",
-          "Screeming frog",
-          "Ahraf",
-          "Vid iq",
-     ]
-}
-
+,
+          {
+               "name": "Jahed Hasan",
+               "role": "Ai SEO Specialist",
+               "image": "/Images/Team/team-4.jpeg",
+               "social": {
+                    "facebook": "https://facebook.com/",
+                    "linkedin": "www.linkedin.com/in/jahedhasan-seospecialist",
+                    "instagram": "jahedhasan_seo_specialist"
+               },
+               "experience": "2+ year experience",
+               "description": "Local Growth Specialist helping businesses get more traffic and leads through SEO, Google Business Profile, and AI-driven search optimization. Focused on building authority, trust, and long-term organic visibility.",
+               "skills": [
+                    "Keyword Research",
+                    "On-Page SEO",
+                    "Technical SEO",
+                    "AEO",
+                    "GEO",
+                    "LLM Optimization",
+                    "Voice Search Optimization"
+               ]
+          }
 {
      "name": "Mohinul Alam Siam",
      "role": "Graphics Designer & Founder",

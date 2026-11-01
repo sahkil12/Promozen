@@ -62,62 +62,6 @@
                     "Animation",
                     "Video Editing"
                ]
-          },
-          {
-               "name": "Jahed Hasan",
-               "role": "Ai SEO Specialist",
-               "image": "/Images/Team/team-4.jpeg",
-               "social": {
-                    "facebook": "https://facebook.com/",
-                    "linkedin": "www.linkedin.com/in/jahedhasan-seospecialist",
-                    "instagram": "jahedhasan_seo_specialist"
-               },
-               "experience": "2+ year experience",
-               "description": "Local Growth Specialist helping businesses get more traffic and leads through SEO, Google Business Profile, and AI-driven search optimization. Focused on building authority, trust, and long-term organic visibility.",
-               "skills": [
-                    "Keyword Research",
-                    "On-Page SEO",
-                    "Technical SEO",
-                    "AEO",
-                    "GEO",
-                    "LLM Optimization",
-                    "Voice Search Optimization"
-               ]
-          },
-          {
-               "name": "Abdulla All Noman",
-               "role": "Motion Designer ",
-               "image": "/Images/Team/team-6.jpeg",
-               "social": {
-                    "facebook": "https://www.facebook.com/share/1AJJMLtjdU/?mibextid=wwXIfr",
-                    "linkedin": "https://www.linkedin.com/in/abdulla-all-noman-38540a286?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-                    "instagram": ""
-               },
-               "experience": "2+ years experience",
-               "description": "As a motion graphics designer and animator, my job is to bring simple ideas to life through visual art and movement. ",
-               "skills": [
-                    "Adobe after effects",
-                    "Adobe Illustrator",
-                    "Adobe animate"
-               ]
-          },
-          {
-               "name": "Nilwal Sayeed Nishan",
-               "role": "Socail Media Marketer",
-               "image": "/Images/Team/team-7.jpeg",
-               "social": {
-                    "facebook": ":https://www.facebook.com/share/18MBqygjW2/",
-                    "linkedin": "https://linkedin.com/",
-                    "instagram": "https://www.instagram.com/nsnishan60?igsh=aDdoNm1pd3RjdmRi"
-               },
-               "experience": "1+ years experience",
-               "description": "I specialize in creating effective strategies, managing campaigns, and helping businesses build strong brand awareness across digital platforms.",
-               "skills": [
-                    "Keyword Research",
-                    "Screeming frog",
-                    "Ahraf",
-                    "Vid iq"
-               ]
           }
      ]
 }

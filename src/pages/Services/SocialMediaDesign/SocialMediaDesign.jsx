@@ -90,7 +90,7 @@ const SocialMediaDesign = () => {
 
           toolsData: ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Canva Pro", "After Effects", "Procreate"],
 
-          relatedServices: services.slice(5, 8)
+          relatedServices: services.slice(0, 2)
      }
 
 

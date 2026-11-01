@@ -16,7 +16,7 @@ const Portfolio = () => {
           "All",
           "Web Development",
           "Graphics Design",
-          "Motion Graphics",
+          // "Motion Graphics",
           "SEO",
           "Thumbnail Design",
      ]

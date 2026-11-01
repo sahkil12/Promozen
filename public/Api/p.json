@@ -76,3 +76,18 @@
           "Video Editing"
      ]
 }
+
+
+,
+    {
+      "title": "Product Promo Video",
+      "category": "Motion Graphics",
+      "description": "Short promotional video for product launch campaign.",
+      "type": "video",
+      "thumbnail": "/Images/projects-Image/motion-img-2.png",
+      "preview": "/Images/projects-Image/motion-1.MP4",
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ]
+    }

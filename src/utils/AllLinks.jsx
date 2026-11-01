@@ -36,7 +36,8 @@ export const serviceLinks = [
   { name: "SEO Optimization", link: "/services/seo_optimization" },
   { name: "Social Media Marketing", link: "/services/social_media_marketing" },
   { name: "Web Development", link: "/services/web_development" },
-  { name: "Motion Graphics", link: "/services/motion_graphics" },
+  { name: "Social Media Design", link: "/services/social_media_design" },
+  // { name: "Motion Graphics", link: "/services/motion_graphics" },
   { name: "View All Services", link: "/services" }
 ];
 

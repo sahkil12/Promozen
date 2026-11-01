@@ -50,10 +50,10 @@ export const router = createBrowserRouter([
                     path: '/services/digital_marketing',
                     element: <DigitalMarketing />
                },
-               {
-                    path: '/services/motion_graphics',
-                    element: <MotionGraphics />
-               },
+               // {
+               //      path: '/services/motion_graphics',
+               //      element: <MotionGraphics />
+               // },
                {
                     path: '/services/seo_optimization',
                     element: <SEO_Optimization />
@@ -70,14 +70,14 @@ export const router = createBrowserRouter([
                     path: '/services/web_development',
                     element: <WebDevelopment />
                },
-               {
-                    path: '/services/youtube_thumbnail_design',
-                    element: <YouTubeThumbnail />
-               },
-               {
-                    path: '/services/youtube_video_seo',
-                    element: <YouTubeVideoSEO />
-               },
+               // {
+               //      path: '/services/youtube_thumbnail_design',
+               //      element: <YouTubeThumbnail />
+               // },
+               // {
+               //      path: '/services/youtube_video_seo',
+               //      element: <YouTubeVideoSEO />
+               // },
           ]
      },
 ]);

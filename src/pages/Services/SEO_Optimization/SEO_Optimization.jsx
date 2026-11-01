@@ -91,7 +91,7 @@ const SEO_Optimization = () => {
 
           toolsData: ["Ahrefs", "SEMrush", "Google Search Console", "Screaming Frog", "Moz", "Surfer SEO"],
 
-          relatedServices: services.slice(5, 8)
+          relatedServices: services.slice(3, 6)
      }
 
 

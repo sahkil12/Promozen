@@ -69,29 +69,29 @@ const AiAutomation = () => {
           processData: [
                {
                     id: "01",
-                    title: "Creative Brief",
-                    desc: "Define the vision, style, objectives, and key messages for your animation project."
+                    title: "Discovery & Mapping",
+                    desc: "We audit your current workflows and identify the tasks that waste the most time and money."
                },
                {
                     id: "02",
-                    title: "Storyboarding",
-                    desc: "Create detailed storyboards, motion concepts, and style frames for approval."
+                    title: "Blueprint Design",
+                    desc: "We design the automation architecture — triggers, AI agents, and every tool in the chain."
                },
                {
                     id: "03",
-                    title: "Animation Production",
-                    desc: "Bring storyboards to life with professional 2D/3D animation and sound design."
+                    title: "Build & Integrate",
+                    desc: "We build the workflows in n8n, Zapier, Langflow, or GoHighLevel and connect all your apps."
                },
                {
                     id: "04",
-                    title: "Review & Deliver",
-                    desc: "Refine based on feedback and deliver in all required formats and resolutions."
+                    title: "Test, Launch & Optimize",
+                    desc: "We test every path, launch your automations, then continuously monitor and improve them."
                }
           ],
 
-          toolsData: ["After Effects", "Cinema 4D", "Premiere Pro", "Blender", "Lottie", "DaVinci Resolve"],
+          toolsData: ["n8n", "Zapier", "Langflow", "GoHighLevel", "OpenAI", "Make"],
 
-          relatedServices: services.slice(1, 4)
+          relatedServices: services.slice(2, 5)
      }
 
 

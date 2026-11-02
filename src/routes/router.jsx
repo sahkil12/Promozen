@@ -15,6 +15,7 @@ import WebDevelopment from "../pages/Services/WebDevelopment/WebDevelopment";
 import YouTubeThumbnail from "../pages/Services/YouTubeThumbnail/YouTubeThumbnail";
 import YouTubeVideoSEO from "../pages/Services/YouTubeVideoSEO/YouTubeVideoSEO";
 import ErrorPage from "../components/shared/ErrorPage";
+import AiAutomation from "../pages/Services/Ai_Automation/AiAutomation";
 
 export const router = createBrowserRouter([
      {
@@ -50,10 +51,10 @@ export const router = createBrowserRouter([
                     path: '/services/digital_marketing',
                     element: <DigitalMarketing />
                },
-               // {
-               //      path: '/services/motion_graphics',
-               //      element: <MotionGraphics />
-               // },
+               {
+                    path: '/services/ai_automation',
+                    element: <AiAutomation />
+               },
                {
                     path: '/services/seo_optimization',
                     element: <SEO_Optimization />

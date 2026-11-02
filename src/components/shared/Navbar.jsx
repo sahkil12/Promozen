@@ -6,6 +6,7 @@ import {
   FiTarget, FiSearch, FiShare2, FiPenTool,
   FiYoutube, FiTrendingUp, FiLayers, FiCode
 } from "react-icons/fi";
+import { RiRobot2Line } from "react-icons/ri";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
   const serviceItems = [
     { title: "Digital Marketing", desc: "Strategic campaigns that drive ROI", icon: <FiTarget /> },
     { title: "Web Development", desc: "Modern, responsive websites", icon: <FiCode /> },
-    // { title: "Motion Graphics", desc: "Captivating brand animations", icon: <FiLayers /> },
+    { title: "AI Automation", desc: "Ai agents & workflow automation", icon: <RiRobot2Line /> },
     { title: "SEO Optimization", desc: "Dominate search rankings", icon: <FiSearch /> },
     { title: "Social Media Marketing", desc: "Build brand presence & community", icon: <FiShare2 /> },
     { title: "Social Media Design", desc: "Scroll-stopping creatives", icon: <FiPenTool /> },

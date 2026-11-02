@@ -29,9 +29,9 @@ const Navbar = () => {
   const serviceItems = [
     { title: "Digital Marketing", desc: "Strategic campaigns that drive ROI", icon: <FiTarget /> },
     { title: "Web Development", desc: "Modern, responsive websites", icon: <FiCode /> },
+    { title: "Social Media Marketing", desc: "Build brand presence & community", icon: <FiShare2 /> },
     { title: "AI Automation", desc: "Ai agents & workflow automation", icon: <RiRobot2Line /> },
     { title: "SEO Optimization", desc: "Dominate search rankings", icon: <FiSearch /> },
-    { title: "Social Media Marketing", desc: "Build brand presence & community", icon: <FiShare2 /> },
     { title: "Social Media Design", desc: "Scroll-stopping creatives", icon: <FiPenTool /> },
     // { title: "YouTube Thumbnail Design", desc: "High-CTR thumbnail design", icon: <FiYoutube /> },
     // { title: "YouTube Video SEO", desc: "Optimize for visibility & growth", icon: <FiTrendingUp /> },

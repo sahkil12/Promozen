@@ -3,6 +3,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { FiAward, FiBarChart2, FiClock, FiCode, FiGlobe, FiHeart, FiMessageSquare, FiSearch, FiShare2, FiShield, FiTarget, FiTrendingUp, FiUsers, FiYoutube, FiZap } from "react-icons/fi";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { LuFilm } from "react-icons/lu";
+import { RiRobot2Line } from "react-icons/ri";
 import { TfiAnnouncement } from "react-icons/tfi";
 
 
@@ -101,14 +102,9 @@ export const services = [
           icon: <TfiAnnouncement />,
      },
      {
-          title: "SEO Optimization",
-          desc: "Dominate search rankings with data-driven SEO strategies that bring organic traffic to your doorstep.",
-          icon: <FiSearch />,
-     },
-     {
-          title: "Social Media Design",
-          desc: "Scroll-stopping social media creatives that capture attention and drive engagement.",
-          icon: <IoColorPaletteOutline size={28} />,
+          icon: <RiRobot2Line />,
+          title: "Ai Automation",
+          desc: "Ai agents and smart workflow with n8n, Zapier, Langflow & GoHighLevel that run your business on autopilot.",
      },
      {
           title: "Web Development",
@@ -116,15 +112,20 @@ export const services = [
           icon: <FiCode />,
      },
      {
+          title: "Social Media Design",
+          desc: "Scroll-stopping social media creatives that capture attention and drive engagement.",
+          icon: <IoColorPaletteOutline size={28} />,
+     },
+     {
+          title: "SEO Optimization",
+          desc: "Dominate search rankings with data-driven SEO strategies that bring organic traffic to your doorstep.",
+          icon: <FiSearch />,
+     },
+     {
           icon: <FiShare2 />,
           title: "Social Media Marketing",
           desc: "Boost your brand awareness and engage with your audience through effective social media campaigns.",
      },
-     // {
-     //      icon: <FaArrowTrendUp />,
-     //      title: "YouTube Video SEO",
-     //      desc: "Optimize your video content for maximum visibility and subscriber growth on YouTube.",
-     // },
      // {
      //      icon: <LuFilm />,
      //      title: "Motion Graphics",
